@@ -4,11 +4,7 @@
     <bookmark url="file://$PROJECT_DIR$/vue/accueil.php" line="62" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d0964dfb-2937-459c-b8ae-a0b73ba1d265" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Documentation/Journal/Journal_de_travail_KPR.xlsm" beforeDir="false" afterPath="$PROJECT_DIR$/../Documentation/Journal/Journal_de_travail_KPR.xlsm" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Documentation/Rapport/Rapport_TPI2019_KPR.docx" beforeDir="false" afterPath="$PROJECT_DIR$/../Documentation/Rapport/Rapport_TPI2019_KPR.docx" afterDir="false" />
-    </list>
+    <list default="true" id="d0964dfb-2937-459c-b8ae-a0b73ba1d265" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -85,7 +81,7 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="-7" />
     <option name="width" value="974" />
     <option name="height" value="1047" />
@@ -158,7 +154,7 @@
     <option name="totallyTimeSpent" value="2723000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="7" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.12473348" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
