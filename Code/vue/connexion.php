@@ -44,7 +44,7 @@
                         <div class="col-lg-12">
                             <div class="p-5">
                                 <div class="text-center">
-                                    <h1 class="h4 text-gray-900 mb-4">Bienvenu(e) sur ElectroStock</h1>
+                                    <h1 class="h4 text-gray-900 mb-4">Bienvenue sur ElectroStock</h1>
                                 </div>
                                 <form class="user">
                                     <div class="form-group">
@@ -53,14 +53,14 @@
                                     <div class="form-group">
                                         <input type="password" class="form-control form-control-user" id="exampleInputPassword" placeholder="Mot de passe">
                                     </div>
-                                    <a href="index.html" class="btn btn-primary btn-user btn-block">
-                                        Login
+                                    <a href="#" class="btn btn-primary btn-user btn-block">
+                                        Connexion
                                     </a>
                                     <hr>
                                 </form>
                                 <hr>
                                 <div class="text-center">
-                                    <a class="small" href="register.html">Inscription</a>
+                                    <a class="small" href="">Inscription</a>
                                 </div>
                             </div>
                         </div>

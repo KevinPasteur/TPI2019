@@ -14,8 +14,11 @@ try {
     if(isset($_GET['action'])){
         $action = $_GET['action'];
         switch ($action){
-            case 'vue_accueil':
-                accueil();
+            case 'connexion':
+                connexion();
+                break;
+            case 'inscription':
+                inscription();
                 break;
 
             default:
@@ -24,7 +27,7 @@ try {
         }
     }
     else
-        accueil();
+        connexion();
 }
 catch(Exception $e) {
     erreur($e->getMessage());
