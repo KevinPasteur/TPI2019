@@ -1,20 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="BookmarkManager">
-    <bookmark url="file://$PROJECT_DIR$/vue/connexion.php" line="62" />
+    <bookmark url="file://$PROJECT_DIR$/vue/connexion.php" line="61" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d0964dfb-2937-459c-b8ae-a0b73ba1d265" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/contenu/css/font/all.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contenu/css/sb-admin-2.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/contenu/css/sb-admin-2.min.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/controleur/controleur.php" beforeDir="false" afterPath="$PROJECT_DIR$/controleur/controleur.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vue/accueil.php" beforeDir="false" afterPath="$PROJECT_DIR$/vue/connexion.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modele/modele_getbd.php" beforeDir="false" afterPath="$PROJECT_DIR$/modele/modele_getbd.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/connexion.php" beforeDir="false" afterPath="$PROJECT_DIR$/vue/connexion.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/inscription.php" beforeDir="false" afterPath="$PROJECT_DIR$/vue/inscription.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Documentation/BaseDeDonnees/Modelisation/MCD/MCD.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/../Documentation/BaseDeDonnees/Modelisation/MCD/MCD.pdf" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Documentation/BaseDeDonnees/Modelisation/MCD/MCD.vsdx" beforeDir="false" afterPath="$PROJECT_DIR$/../Documentation/BaseDeDonnees/Modelisation/MCD/MCD.vsdx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Documentation/BaseDeDonnees/Modelisation/MLD/Electrostock.mwb" beforeDir="false" afterPath="$PROJECT_DIR$/../Documentation/BaseDeDonnees/Modelisation/MLD/Electrostock.mwb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Documentation/BaseDeDonnees/Modelisation/MLD/Electrostock.mwb.bak" beforeDir="false" afterPath="$PROJECT_DIR$/../Documentation/BaseDeDonnees/Modelisation/MLD/Electrostock.mwb.bak" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Documentation/Journal/Journal_de_travail_KPR.xlsm" beforeDir="false" afterPath="$PROJECT_DIR$/../Documentation/Journal/Journal_de_travail_KPR.xlsm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Documentation/Maquettes/ElectroStock_WF.bmpr" beforeDir="false" afterPath="$PROJECT_DIR$/../Documentation/Maquettes/ElectroStock_WF.bmpr" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Documentation/Rapport/Rapport_TPI2019_KPR.docx" beforeDir="false" afterPath="$PROJECT_DIR$/../Documentation/Rapport/Rapport_TPI2019_KPR.docx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Documentation/Rapport/Rapport_TPI2019_KPR.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/../Documentation/Rapport/Rapport_TPI2019_KPR.pdf" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -32,8 +37,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="374">
-              <caret line="22" lean-forward="true" selection-start-line="22" selection-end-line="22" />
+            <state relative-caret-position="285">
+              <caret line="23" column="23" selection-start-line="23" selection-start-column="23" selection-end-line="23" selection-end-column="23" />
               <folding>
                 <element signature="e#6#95#0#PHP" expanded="true" />
               </folding>
@@ -42,10 +47,38 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/vue/accueil.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="484">
+              <caret line="94" column="32" selection-start-line="94" selection-start-column="32" selection-end-line="94" selection-end-column="32" />
+              <folding>
+                <element signature="e#857#884#0#HTML" expanded="true" />
+                <element signature="e#962#989#0#HTML" expanded="true" />
+                <element signature="e#1708#1732#0#HTML" expanded="true" />
+                <element signature="e#1845#1872#0#HTML" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/vue/gabarit.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="472">
+              <caret line="290" column="57" selection-start-line="290" selection-start-column="57" selection-end-line="290" selection-end-column="57" />
+              <folding>
+                <element signature="e#6#95#0#PHP" expanded="true" />
+                <element signature="e#17981#17987#0#HTML" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/controleur/controleur.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="268">
-              <caret line="32" column="9" lean-forward="true" selection-start-line="32" selection-start-column="9" selection-end-line="32" selection-end-column="9" />
+            <state relative-caret-position="306">
+              <caret line="45" column="17" lean-forward="true" selection-start-line="45" selection-start-column="17" selection-end-line="45" selection-end-column="17" />
               <folding>
                 <element signature="e#6#95#0#PHP" expanded="true" />
               </folding>
@@ -56,10 +89,12 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/vue/inscription.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="46" column="41" selection-start-line="46" selection-start-column="41" selection-end-line="46" selection-end-column="41" />
+            <state relative-caret-position="100">
+              <caret line="53" column="87" lean-forward="true" selection-start-line="53" selection-start-column="37" selection-end-line="53" selection-end-column="87" />
               <folding>
                 <element signature="e#7#96#0#PHP" expanded="true" />
+                <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#2;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -68,8 +103,23 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/modele/modele_getbd.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="5" lean-forward="true" selection-start-column="5" selection-end-column="5" />
+            <state relative-caret-position="255">
+              <caret line="15" selection-start-line="15" selection-end-line="15" />
+              <folding>
+                <element signature="e#7#96#0#PHP" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/modele/modele_authentication.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-327">
+              <caret line="18" column="45" lean-forward="true" selection-start-line="18" selection-start-column="45" selection-end-line="18" selection-end-column="45" />
+              <folding>
+                <element signature="e#7#96#0#PHP" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -77,10 +127,11 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/vue/connexion.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="13" column="6" lean-forward="true" selection-end-line="89" />
+            <state relative-caret-position="357">
+              <caret line="63" column="34" lean-forward="true" selection-start-line="63" selection-start-column="34" selection-end-line="63" selection-end-column="34" />
               <folding>
                 <element signature="e#6#95#0#PHP" expanded="true" />
+                <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -94,25 +145,35 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/vue/accueil.php" />
         <option value="$PROJECT_DIR$/modele/modele_getbd.php" />
         <option value="$PROJECT_DIR$/vue/inscription.php" />
         <option value="$PROJECT_DIR$/index.php" />
+        <option value="$PROJECT_DIR$/modele/modele_authentication.php" />
         <option value="$PROJECT_DIR$/controleur/controleur.php" />
+        <option value="$PROJECT_DIR$/vue/connexion.php" />
+        <option value="$PROJECT_DIR$/vue/gabarit.php" />
+        <option value="$PROJECT_DIR$/vue/accueil.php" />
+        <option value="$PROJECT_DIR$/vue/test.php" />
       </list>
     </option>
   </component>
   <component name="PhpDebugGeneral" listening_started="true" />
   <component name="PhpServers">
     <servers>
-      <server host="localhost" id="e0774e94-f15c-4284-9899-95c309836cc3" name="localhost" port="8082" />
+      <server host="localhost" id="e0774e94-f15c-4284-9899-95c309836cc3" name="localhost" port="8082" use_path_mappings="true">
+        <path_mappings>
+          <mapping local-root="$PROJECT_DIR$" remote-root="C:/Users/Kevin.PASTEUR/Desktop/TPI-KPR/Code" />
+        </path_mappings>
+      </server>
     </servers>
   </component>
+  <component name="PhpWebServerValidation" deployment_server_id="4a54447e-0f91-4e94-aa65-c0453428273e" path_to_validation_script="C:\Users\Kevin.PASTEUR\Desktop\TPI-KPR\Code" selected_validation_type="LOCAL" web_path_to_validation_script="http://localhost:8082/" />
   <component name="PhpWorkspaceProjectConfiguration" interpreter_name="PHP" />
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-7" />
+    <option name="x" value="402" />
+    <option name="y" value="-12" />
     <option name="width" value="974" />
-    <option name="height" value="1047" />
+    <option name="height" value="1050" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -159,7 +220,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="settings.editor.selected.configurable" value="web.server" />
+    <property name="settings.editor.selected.configurable" value="web-ide.project.structure" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -196,23 +257,24 @@
       <workItem from="1557476210302" duration="28000" />
       <workItem from="1557476307199" duration="598000" />
       <workItem from="1557902032015" duration="3244000" />
+      <workItem from="1557988453222" duration="17203000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="5967000" />
+    <option name="totallyTimeSpent" value="23170000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.12579957" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.12686567" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.3261105" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4989339" weight="0.3261105" />
+      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.4989339" weight="0.3997833" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -220,38 +282,49 @@
       <window_info anchor="bottom" id="Database Changes" order="8" />
       <window_info anchor="bottom" id="Version Control" order="9" />
       <window_info anchor="bottom" id="Terminal" order="10" />
-      <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
+      <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.5010661" side_tool="true" weight="0.3997833" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="Database" order="3" />
     </layout>
+    <layout-to-restore>
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.12686567" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4989339" weight="0.3261105" />
+      <window_info active="true" anchor="bottom" id="Debug" order="3" sideWeight="0.4989339" visible="true" weight="0.3997833" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Database Changes" order="8" />
+      <window_info anchor="bottom" id="Version Control" order="9" />
+      <window_info anchor="bottom" id="Terminal" order="10" />
+      <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.5010661" side_tool="true" visible="true" weight="0.3997833" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Database" order="3" />
+    </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/vue/connexion.php">
+    <entry file="jar://$APPLICATION_HOME_DIR$/lib/platform-impl.jar!/resources/html5-schema/html5/web-forms.rnc">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="13" column="6" lean-forward="true" selection-end-line="89" />
-          <folding>
-            <element signature="e#6#95#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/modele/modele_getbd.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="5" lean-forward="true" selection-start-column="5" selection-end-column="5" />
+        <state relative-caret-position="448">
+          <caret line="495" column="9" lean-forward="true" selection-start-line="495" selection-start-column="9" selection-end-line="495" selection-end-column="9" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/index.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="22" lean-forward="true" selection-start-line="22" selection-end-line="22" />
+        <state relative-caret-position="285">
+          <caret line="23" column="23" selection-start-line="23" selection-start-column="23" selection-end-line="23" selection-end-column="23" />
           <folding>
             <element signature="e#6#95#0#PHP" expanded="true" />
           </folding>
@@ -260,8 +333,41 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/vue/inscription.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="46" column="41" selection-start-line="46" selection-start-column="41" selection-end-line="46" selection-end-column="41" />
+        <state relative-caret-position="100">
+          <caret line="53" column="87" lean-forward="true" selection-start-line="53" selection-start-column="37" selection-end-line="53" selection-end-column="87" />
+          <folding>
+            <element signature="e#7#96#0#PHP" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#2;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vue/connexion.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="63" column="34" lean-forward="true" selection-start-line="63" selection-start-column="34" selection-end-line="63" selection-end-column="34" />
+          <folding>
+            <element signature="e#6#95#0#PHP" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/modele/modele_getbd.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="15" selection-start-line="15" selection-end-line="15" />
+          <folding>
+            <element signature="e#7#96#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/modele/modele_authentication.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-327">
+          <caret line="18" column="45" lean-forward="true" selection-start-line="18" selection-start-column="45" selection-end-line="18" selection-end-column="45" />
           <folding>
             <element signature="e#7#96#0#PHP" expanded="true" />
           </folding>
@@ -270,10 +376,44 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/controleur/controleur.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="268">
-          <caret line="32" column="9" lean-forward="true" selection-start-line="32" selection-start-column="9" selection-end-line="32" selection-end-column="9" />
+        <state relative-caret-position="306">
+          <caret line="45" column="17" lean-forward="true" selection-start-line="45" selection-start-column="17" selection-end-line="45" selection-end-column="17" />
           <folding>
             <element signature="e#6#95#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vue/gabarit.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="472">
+          <caret line="290" column="57" selection-start-line="290" selection-start-column="57" selection-end-line="290" selection-end-column="57" />
+          <folding>
+            <element signature="e#6#95#0#PHP" expanded="true" />
+            <element signature="e#17981#17987#0#HTML" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vue/test.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="44" column="30" selection-start-line="44" selection-start-column="30" selection-end-line="44" selection-end-column="30" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vue/accueil.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="484">
+          <caret line="94" column="32" selection-start-line="94" selection-start-column="32" selection-end-line="94" selection-end-column="32" />
+          <folding>
+            <element signature="e#857#884#0#HTML" expanded="true" />
+            <element signature="e#962#989#0#HTML" expanded="true" />
+            <element signature="e#1708#1732#0#HTML" expanded="true" />
+            <element signature="e#1845#1872#0#HTML" expanded="true" />
           </folding>
         </state>
       </provider>

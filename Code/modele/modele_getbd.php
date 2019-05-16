@@ -1,5 +1,11 @@
 <?php
 
+/**
+ * Created by PhpStorm.
+ * User: Kevin.PASTEUR
+ * Date: 16.05.2019
+ */
+
 function GetBD()
 {
     // connexion au server de BD MySQL et à la BD

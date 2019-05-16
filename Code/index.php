@@ -20,6 +20,9 @@ try {
             case 'inscription':
                 inscription();
                 break;
+            case 'accueil':
+                accueil();
+                break;
 
             default:
                 throw new Exception("action non valide");

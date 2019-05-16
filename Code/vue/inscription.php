@@ -49,24 +49,30 @@
                                 <div class="text-center">
                                     <h1 class="h4 text-gray-900 mb-4">Bienvenue sur ElectroStock</h1>
                                 </div>
-                                <form class="user" method="POST" action="index.php?action=inscription">
+                                <?php if(isset($_GET['email'])) { ?> <div class="alert alert-danger" style="text-align: center" role="alert"> Cet email existe déjà.</div> <?php } ?>
+                                <?php if(isset($_GET['erreur'])) { ?> <div class="alert alert-danger" style="text-align: center" role="alert"> Veuillez vérifier les champs.</div> <?php } ?>
+                                <form method="POST" action="index.php?action=inscription">
                                     <div class="form-group">
-                                        <input type="email" class="form-control form-control-user"
-                                               id="exampleInputEmail" aria-describedby="emailHelp"
-                                               placeholder="Adresse email">
+                                        <input type="text" class="form-control form-control-user" id="nom" name="nom" placeholder="Nom" required>
                                     </div>
                                     <div class="form-group">
-                                        <input type="password" class="form-control form-control-user"
-                                               id="exampleInputPassword" placeholder="Mot de passe">
+                                        <input type="text" class="form-control form-control-user" id="prenom" name="prenom" placeholder="Prenom" required>
                                     </div>
-                                    <a href="#" class="btn btn-primary btn-user btn-block">
-                                        Connexion
-                                    </a>
+                                    <div class="form-group">
+                                        <input type="email" class="form-control form-control-user" id="email" name="email" placeholder="Email" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="password" class="form-control form-control-user" id="mdp" name="mdp" placeholder="Mot de passe" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="password" class="form-control form-control-user" id="confM" name="confM" placeholder="Confirmation" required>
+                                    </div>
+                                    <button class="btn btn-primary btn-userbtn-block col-lg-12"  type="submit"><i class="fa fa-pencil"></i> Envoyer</button>
                                     <hr>
                                 </form>
                                 <hr>
                                 <div class="text-center">
-                                    <a class="small" href="">Inscription</a>
+                                    <a class="small" href="index.php?action=connexion"><- Retour</a>
                                 </div>
                             </div>
                         </div>

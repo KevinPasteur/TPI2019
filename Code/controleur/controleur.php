@@ -7,12 +7,54 @@
  */
 
 require "modele/modele_getbd.php";
+require "modele/modele_authentication.php";
 
 /**
  * Description : Affiche l'accueil ()
  */
 function connexion()
 {
+    //Si la variable session email est déjà initié on la détruit
+    if(isset($_SESSION['email']) && !isset($_GET['vide'])){
+        unset($_SESSION['email']);
+
+        session_destroy();
+
+        header('Location: index.php?action=connexion');
+        exit;
+    }
+    //Sinon on se connecte
+    else if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+        if (!empty($_POST['email']) && !empty($_POST['mdp'])) {
+
+            $infos = $_POST;
+            $resultat = GetLogin($infos); // pour récupérer les données du login dans la BD
+
+            //Boucle afin de récupérer les infos dans des variables session
+            foreach ($resultat as $compte) :
+                $_SESSION['id'] = $compte['idComptes'];
+                $_SESSION['email'] = $compte['email'];
+                $_SESSION['prenom'] = $compte['prenom'];
+                $_SESSION['nom'] = $compte['nom'];
+                switch ($compte['role']) {
+                    case '2':
+                        $_SESSION['role'] = "Client";
+                        break;
+                    case '1':
+                        $_SESSION['role'] = "Administrateur";
+                        break;
+                }
+            endforeach;
+            header('Location: index.php?action=accueil');
+            exit;
+        }
+        else
+        {
+            header('Location: index.php?action=connexion&vide');
+            exit;
+        }
+
+    }
     require "vue/connexion.php";
 }
 
@@ -22,25 +64,31 @@ function connexion()
 function inscription()
 {
     if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-        if (!(empty($_POST['prenom'])) || !(empty($_POST['nom'])) || !(empty($_POST['email']))|| !(empty($_POST['mdp']))|| !(empty($_POST['confmdp']))) {
-            if ($_POST['mdp'] == $_POST['confmdp']) {
-                Register($_POST);
+
+        if (!(empty($_POST['prenom'])) || !(empty($_POST['nom'])) || !(empty($_POST['email']))|| !(empty($_POST['mdp']))|| !(empty($_POST['confM']))) {
+            if ($_POST['mdp'] == $_POST['confM']) {
+                $infos = $_POST;
+                Register($infos);
             }
             else {
-                $_SESSION['info'] = 'mdp';
-                require 'vue/inscription.php';
+
+                header('Location: index.php?action=inscription&erreur');
+                exit;
             }
         }
         else
         {
-            $_SESSION['info'] = 'vide';
-            require 'vue/inscription.php';
+            header('Location: index.php?action=inscription&erreur');
+            exit;
         }
     }
-    $_SESSION['erreur'] = '';
     require 'vue/inscription.php';
 }
 
+function accueil()
+{
+    require "vue/accueil.php";
+}
 
 
 
@@ -51,7 +99,7 @@ function inscription()
 function erreur($e)
 {
   $_SESSION['erreur']=$e;
-  require "vue/vue_erreur.php";
+  require "vue/erreur.php";
 }
 
 
