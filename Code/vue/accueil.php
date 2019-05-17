@@ -9,6 +9,7 @@
 $titre = "Accueil";
 Ob_start();
 ?>
+
     <!-- Begin Page Content -->
     <div class="container-fluid">
 
@@ -28,7 +29,7 @@ Ob_start();
                         <div class="row no-gutters align-items-center">
                             <div class="col mr-2">
                                 <div class="text-xs font-weight-bold text-info text-uppercase mb-1" style="text-align: center;">Total matériel</div>
-                                <div class="h5 mb-0 font-weight-bold text-gray-800" style="text-align: center;">$215,000</div>
+                                <div class="h5 mb-0 font-weight-bold text-gray-800" style="text-align: center;"><?= $totalM[0]; ?></div>
                             </div>
                             <div class="col-auto">
                                 <i class="fas fa-dollar-sign fa-tv text-gray-300"></i>
@@ -45,7 +46,7 @@ Ob_start();
                         <div class="row no-gutters align-items-center">
                             <div class="col mr-2">
                                 <div class="text-xs font-weight-bold text-info text-uppercase mb-1" style="text-align: center;">Total consommables</div>
-                                <div class="h5 mb-0 font-weight-bold text-gray-800" style="text-align: center;">$215,000</div>
+                                <div class="h5 mb-0 font-weight-bold text-gray-800" style="text-align: center;"><?= $totalC[0]; ?></div>
                             </div>
                             <div class="col-auto">
                                 <i class="fas fa-dollar-sign fa-tint text-gray-300"></i>
@@ -63,20 +64,7 @@ Ob_start();
                     <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
                         <h6 class="m-0 font-weight-bold text-primary">Statut Matériel</h6>
                     </div>
-                    <!-- Card Body -->
-                    <div class="card-body">
-                        <div class="chart-pie pt-4 pb-2">
-                            <canvas id="GraphM"></canvas>
-                        </div>
-                        <div class="mt-4 text-center small">
-                    <span class="mr-2">
-                      <i class="fas fa-circle text-success"></i> Disponible
-                    </span>
-                    <span class="mr-2">
-                      <i class="fas fa-circle text-danger"></i> Indisponible
-                    </span>
-                        </div>
-                    </div>
+                    <div id="donutchart" style="width: 900px; height: 500px;"></div>
                 </div>
             </div>
 
@@ -87,20 +75,7 @@ Ob_start();
                     <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
                         <h6 class="m-0 font-weight-bold text-primary">Statut Consommables</h6>
                     </div>
-                    <!-- Card Body -->
-                    <div class="card-body">
-                        <div class="chart-pie pt-4 pb-2">
-                            <canvas id="GraphC"></canvas>
-                        </div>
-                        <div class="mt-4 text-center small">
-                    <span class="mr-2">
-                      <i class="fas fa-circle text-success"></i> Disponible
-                    </span>
-                    <span class="mr-2">
-                      <i class="fas fa-circle text-success"></i> Données
-                    </span>
-                        </div>
-                    </div>
+                    <div id="donutchart2" style="width: 900px; height: 500px;"></div>
                 </div>
             </div>
         </div>

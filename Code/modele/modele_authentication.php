@@ -18,7 +18,7 @@ function GetLogin($infos)
 
     $Password = hash('sha256',$infos['mdp']);
     // Création de la string pour la requête
-    $requete = "select idComptes,nom,prenom,email,fkRoles AS role from comptes WHERE email ='".$infos['email']."' AND motdepasse = '".$Password."'";
+    $requete = "select idComptes,nom,prenom,email,fkRoles AS role from Comptes WHERE email ='".$infos['email']."' AND motdepasse = '".$Password."'";
     // Exécution de la requête
     $resultat = $connexion->query($requete);
 
@@ -35,7 +35,7 @@ function Register($infos)
     $connexion = GetBD();
 
     //Test pour savoir si l'adresse email existe déjà
-    $requeteE = "select Count(email) from comptes WHERE email =  '".$infos['email']."'";
+    $requeteE = "select Count(email) from Comptes WHERE email =  '".$infos['email']."'";
 
     // Exécution de la requête
     $resultatE = $connexion->query($requeteE);
@@ -47,7 +47,7 @@ function Register($infos)
         $hash = hash('sha256', $infos['mdp']);
 
         // Ajout du compte
-        $reqIns = "INSERT INTO comptes (nom,prenom,motdepasse,email,fkRoles) VALUES ('" . $infos['nom'] . "','" . $infos['prenom'] . "','" . $hash . "','" . $infos['email'] . "','2')";
+        $reqIns = "INSERT INTO Comptes (nom,prenom,motdepasse,email,fkRoles) VALUES ('" . $infos['nom'] . "','" . $infos['prenom'] . "','" . $hash . "','" . $infos['email'] . "','2')";
         $connexion->exec($reqIns);
 
         header('Location: index.php?action=connexion&ok');

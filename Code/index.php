@@ -23,6 +23,10 @@ try {
             case 'accueil':
                 accueil();
                 break;
+            case 'materiel':
+                materiel();
+                break;
+
 
             default:
                 throw new Exception("action non valide");

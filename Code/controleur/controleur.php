@@ -8,6 +8,9 @@
 
 require "modele/modele_getbd.php";
 require "modele/modele_authentication.php";
+require "modele/modele_getChart.php";
+require "modele/modele_materiel.php";
+require "modele/modele_consommables.php";
 
 /**
  * Description : Affiche l'accueil ()
@@ -45,7 +48,13 @@ function connexion()
                         break;
                 }
             endforeach;
-            header('Location: index.php?action=accueil');
+
+            //Test pour savoir si l'id est valide
+            if(!empty($_SESSION['id'])) {
+                header('Location: index.php?action=accueil');
+                exit;
+            }
+            header('Location: index.php?action=connexion&vide');
             exit;
         }
         else
@@ -87,8 +96,105 @@ function inscription()
 
 function accueil()
 {
-    require "vue/accueil.php";
+    if(!empty($_SESSION['role'])) {
+        $resultat = CountAllMaterial();
+        $totalM = $resultat->fetch(PDO::FETCH_BOTH);
+
+        $resultat = CountAllConsumables();
+        $totalC = $resultat->fetch(PDO::FETCH_BOTH);
+
+        graphC();
+        graphM();
+        require "vue/accueil.php";
+    }
+    else
+        require "vue/erreur403.php";
 }
+
+function materiel()
+{
+
+    if(!empty($_SESSION['role'])) {
+
+        $result = GetAllMaterial();
+
+        require "vue/toutlemateriel.php";
+    }
+    else
+        require "vue/erreur403.php";
+
+}
+
+function graphM()
+{
+    $resultat = GetChartM(); // pour récupérer les données des graphiques
+
+    //Boucle afin de récupérer les infos dans des variables session
+    foreach ($resultat as $resultats) :
+        $disponible = $resultats['disponible'];
+        $indisponible = $resultats['indisponible'];
+    endforeach;
+
+    $rDisponible = $disponible - $indisponible;
+    ?>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+        google.charts.load("current", {packages:["corechart"]});
+        google.charts.setOnLoadCallback(drawChart);
+        function drawChart() {
+            var data = google.visualization.arrayToDataTable([
+                ['Task', 'Hours per Day'],
+                ['Disponible',     <?= $rDisponible; ?>],
+                ['Indisponible',      <?= $indisponible; ?>],
+
+            ]);
+
+            var options = {
+                pieHole: 0.5,
+            };
+
+            var chart = new google.visualization.PieChart(document.getElementById('donutchart'));
+            chart.draw(data, options);
+        }
+    </script>
+    <?php
+}
+
+function graphC()
+{
+    $resultat = GetChartC(); // pour récupérer les données des graphiques
+
+    //Boucle afin de récupérer les infos dans des variables session
+    foreach ($resultat as $resultats) :
+        $disponible = $resultats['disponible'];
+        $indisponible = $resultats['indisponible'];
+    endforeach;
+
+    $rDisponible = $disponible - $indisponible;
+    ?>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+        google.charts.load("current", {packages:["corechart"]});
+        google.charts.setOnLoadCallback(drawChart);
+        function drawChart() {
+            var data = google.visualization.arrayToDataTable([
+                ['Task', 'Hours per Day'],
+                ['Disponible',     <?= $rDisponible; ?>],
+                ['Indisponible',      <?= $indisponible; ?>],
+
+            ]);
+
+            var options = {
+                pieHole: 0.5,
+            };
+
+            var chart = new google.visualization.PieChart(document.getElementById('donutchart2'));
+            chart.draw(data, options);
+        }
+    </script>
+    <?php
+}
+
 
 
 

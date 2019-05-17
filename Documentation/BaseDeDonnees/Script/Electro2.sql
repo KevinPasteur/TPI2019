@@ -84,7 +84,7 @@ ENGINE = InnoDB;
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `Electrostock_db`.`StatutsE` (
   `idStatutsE` TINYINT NOT NULL AUTO_INCREMENT,
-  `nom` VARCHAR(15) NOT NULL,
+  `nom` VARCHAR(25) NOT NULL,
   PRIMARY KEY (`idStatutsE`))
 ENGINE = InnoDB;
 
@@ -96,13 +96,13 @@ CREATE TABLE IF NOT EXISTS `Electrostock_db`.`Emprunt` (
   `idEmprunt` INT NOT NULL AUTO_INCREMENT,
   `fkComptes` INT NOT NULL,
   `fkMateriels` INT NOT NULL,
-  `fkStatuts` TINYINT NOT NULL,
+  `fkStatutsE` TINYINT NOT NULL,
   `date_e` DATE NULL,
   `date_r` DATE NULL,
   PRIMARY KEY (`idEmprunt`),
   INDEX `fk_Emprunt_Comptes1_idx` (`fkComptes` ASC) VISIBLE,
   INDEX `fk_Emprunt_Materiels1_idx` (`fkMateriels` ASC) VISIBLE,
-  INDEX `fk_Emprunt_Statuts1_idx` (`fkStatuts` ASC) VISIBLE,
+  INDEX `fk_Emprunt_Statuts1_idx` (`fkStatutsE` ASC) VISIBLE,
   CONSTRAINT `fk_Emprunt_Comptes1`
     FOREIGN KEY (`fkComptes`)
     REFERENCES `Electrostock_db`.`Comptes` (`idComptes`)
@@ -114,7 +114,7 @@ CREATE TABLE IF NOT EXISTS `Electrostock_db`.`Emprunt` (
     ON DELETE NO ACTION
     ON UPDATE NO ACTION,
   CONSTRAINT `fk_Emprunt_Statuts1`
-    FOREIGN KEY (`fkStatuts`)
+    FOREIGN KEY (`fkStatutsE`)
     REFERENCES `Electrostock_db`.`StatutsE` (`idStatutsE`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
@@ -154,7 +154,7 @@ ENGINE = InnoDB;
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `Electrostock_db`.`StatutsO` (
   `idStatutsO` TINYINT NOT NULL AUTO_INCREMENT,
-  `nom` VARCHAR(15) NOT NULL,
+  `nom` VARCHAR(25) NOT NULL,
   PRIMARY KEY (`idStatutsO`))
 ENGINE = InnoDB;
 
@@ -226,7 +226,7 @@ ENGINE = InnoDB;
 Insert into roles (nom) values ('Administrateur');
 Insert into roles (nom) values ('Client');
 
-Insert into comptes (fkRoles,nom,prenom,email,motdepasse) values ('1','Pasteur','Kevin','kevin.pasteur@cpnv.ch',123);
+Insert into comptes (fkRoles,nom,prenom,email,motdepasse) values ('1','Pasteur','Kevin','kevin.pasteur@cpnv.ch','a665a45920422f9d417e4867efdc4fb8a04a1f3fff1fa07e998e86f7f7a27ae3');
 
 Insert into categoriesc (nom) values ('Résistances');
 Insert into categoriesc (nom) values ('Condensateurs');
@@ -239,12 +239,27 @@ INSERT into categoriesm (nom) values ('Alimentations');
 INSERT into categoriesm (nom) values ('Raspberry');
 INSERT into categoriesm (nom) values ('PC');
 
+INSERT INTO consommables (modele, nb_exemp, fkCategoriesC) values ('220 kOhm/2W','75', '1');
+INSERT INTO consommables (modele, nb_exemp, fkCategoriesC) values ('450mF/63V','50', '2');
+INSERT INTO consommables (modele, nb_exemp, fkCategoriesC) values ('1NO','26', '3');
+INSERT INTO consommables (modele, nb_exemp, fkCategoriesC) values ('2.2uF/450V','18', '2');
+INSERT INTO consommables (modele, nb_exemp, fkCategoriesC) values ('120 Ohm/2W','65', '1');
+INSERT INTO consommables (modele, nb_exemp, fkCategoriesC) values ('5 mm','75', '4');
+
+
 INSERT INTO materiels (modele, n_inventaire ,n_serie, n_reference, prix, fkCategoriesM) values ('Synology','1','Vf4fsd','1214151','300','1');
 INSERT INTO materiels (modele, n_inventaire, n_serie, n_reference, prix, fkCategoriesM) values ('MKR Zero','2','afdsa4f5','4556121','90','2');
 INSERT INTO materiels (modele, n_inventaire, n_serie, n_reference, prix, fkCategoriesM) values ('Proto Shield','3','adsf88','5175371','25','2');
 INSERT INTO materiels (modele, n_inventaire, n_serie, n_reference, prix, fkCategoriesM) values ('Dell','4','ez7rt5','175134147','1200','5');
 INSERT INTO materiels (modele, n_inventaire, n_serie, n_reference, prix, fkCategoriesM) values ('Banggood','5','bcx5xb5','471243147','50','3');
 INSERT INTO materiels (modele, n_inventaire, n_serie, n_reference, prix, fkCategoriesM) values ('Zero','6','wer5qr465','14624713471','75','4');
+
+INSERT into statutse (nom) values ('En cours');
+INSERT into statutse (nom) values ('Archivé / Validé');
+INSERT into statutse (nom) values ('Archivé / Refusé');
+
+INSERT into statutso (nom) values ('Archivé / Validé');
+INSERT into statutso (nom) values ('Archivé / Refusé');
 
 SET SQL_MODE=@OLD_SQL_MODE;
 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS;
