@@ -18,7 +18,7 @@ Ob_start();
     <h1 class="h3 mb-2 text-gray-800">Tout le matériel</h1>
     <hr>
     <div>
-        <a class="btn btn-primary btn-icon-split" href="#">
+        <a class="btn btn-primary btn-icon-split" href="index.php?action=emprunt">
             <span class="text">Emprunter</span>
         </a>
         <form class="d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100 navbar-search">
@@ -61,7 +61,7 @@ Ob_start();
                             <td><?= $materiel['N° Inventaire']; ?> </td>
                             <td><?= $materiel['N° Série']; ?> </td>
                             <td>
-                                <?php  if (!isset($materiel["Statut"]))echo "<span class=\"text-success\">Disponible</span>";
+                                <?php  if ($materiel["Statut"] == 1 || !isset($materiel["Statut"]) )echo "<span class=\"text-success\">Disponible</span>";
                                 else echo "<span class=\"text-danger\">Indisponible</span>";
                                 ?>
                             </td>
@@ -74,7 +74,7 @@ Ob_start();
                             <td><?= $materiel['N° Référence']; ?></td>
                             <td><?= $materiel['prix']; ?> CHF</td>
                             <td>
-                                    <a href="#"><button class="btn btn-info btn-xs"><i class="fa fa-shopping-basket "></i></button></a>
+                                <?php  if ($materiel["Statut"] == '1') { ?><a href="#"><button class="btn btn-info btn-xs"><i class="fa fa-shopping-basket "></i></button></a><?php } ?>
                                     <a href="#"><button class="btn btn-primary btn-xs"><i class="fa fa-pen"></i></button></a>
                                     <a href="#" onclick="return confirm('Supprimer ce matériel ?')"> <button class="btn btn-danger btn-xs"><i class="fa fa-trash "></i></button></a>
                             </td>

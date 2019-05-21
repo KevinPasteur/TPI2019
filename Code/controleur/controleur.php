@@ -116,9 +116,8 @@ function materiel()
 
     if(!empty($_SESSION['role'])) {
 
-        $result = GetAllMaterial();
-
-        require "vue/toutlemateriel.php";
+            $result = GetAllMaterial();
+            require "vue/toutlemateriel.php";
     }
     else
         require "vue/erreur403.php";
@@ -135,7 +134,6 @@ function graphM()
         $indisponible = $resultats['indisponible'];
     endforeach;
 
-    $rDisponible = $disponible - $indisponible;
     ?>
     <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
     <script type="text/javascript">
@@ -144,7 +142,7 @@ function graphM()
         function drawChart() {
             var data = google.visualization.arrayToDataTable([
                 ['Task', 'Hours per Day'],
-                ['Disponible',     <?= $rDisponible; ?>],
+                ['Disponible',     <?= $disponible; ?>],
                 ['Indisponible',      <?= $indisponible; ?>],
 
             ]);
@@ -196,7 +194,90 @@ function graphC()
 }
 
 
+function emprunt()
+{
+    if(!empty($_SESSION['role'])) {
 
+        if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+
+            if($_POST['modele'] == -1 || !isset($_POST['modele']))
+            {
+                header('Location: index.php?action=emprunt&erreur');
+                exit;
+            }
+            else
+            {
+                $infos = $_POST;
+                LoanMaterial($infos);
+            }
+            require "vue/emprunt.php";
+        }
+        else {
+            $result = GetAllCategoriesM();
+            require "vue/emprunt.php";
+        }
+
+    }
+    else
+        require "vue/erreur403.php";
+}
+
+
+function demprunt()
+{
+
+    if(!empty($_SESSION['role']) && $_SESSION['role'] == "Administrateur" ) {
+
+
+        if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+
+
+        }
+
+        //Vue lorsque les demandes sont "en attente"
+        if (isset($_GET['EA']))
+        {
+            if (isset($_GET['Accept']))
+            {
+                $info = $_GET['Accept'];
+                AcceptRequest($info);
+            }
+
+            if (isset($_GET['Decline']))
+            {
+                $info = $_GET['Decline'];
+                DeclineRequest($info);
+            }
+            if (isset($_GET['Remind']))
+            {
+
+            }
+            $statut = 1;
+            $result = GetRequests($statut);
+
+            require "vue/demprunt.php";
+        }
+
+        //Vue lorsque les demandes sont "en cours"
+        if (isset($_GET['EC']))
+        {
+            $statut = 2;
+            $result = GetRequests($statut);
+            require "vue/demprunt.php";
+        }
+
+        //Vue lorsque les demandes sont "Archivés"
+        if (isset($_GET['AV']))
+        {
+            $statut = 3;
+            $result = GetRequests($statut);
+            require "vue/demprunt.php";
+        }
+
+    }
+    else
+        require "vue/erreur403.php";
+}
 
 /**
  * Description : Fonction si une action n'est pas reconnue

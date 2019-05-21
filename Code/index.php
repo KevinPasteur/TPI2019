@@ -26,6 +26,12 @@ try {
             case 'materiel':
                 materiel();
                 break;
+            case 'emprunt':
+                emprunt();
+                break;
+            case 'demprunt':
+                demprunt();
+                break;
 
 
             default:

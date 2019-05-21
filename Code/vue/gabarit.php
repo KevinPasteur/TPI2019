@@ -72,6 +72,30 @@
         <!-- Divider -->
         <hr class="sidebar-divider d-none d-md-block">
 
+        <!-- Nav Item - Pages Collapse Menu -->
+        <li class="nav-item">
+            <a class="nav-link collapsed" href="index.php?action=demprunt" data-toggle="collapse" data-target="#collapsePages" aria-expanded="true" aria-controls="collapsePages">
+                <i class="fas fa-fw fa-tasks"></i>
+                <span>Demandes emprunt</span>
+            </a>
+            <div id="collapsePages" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
+                <div class="bg-white py-2 collapse-inner rounded">
+                    <h6 class="collapse-header">Demandes :</h6>
+                    <a class="collapse-item" href="index.php?action=demprunt&EA">En attente</a>
+                    <a class="collapse-item" href="index.php?action=demprunt&EC">En cours</a>
+                    <a class="collapse-item" href="index.php?action=demprunt&A">Archivés</a>
+                </div>
+            </div>
+        </li>
+
+        <li class="nav-item">
+            <a class="nav-link" href="index.php?action=#">
+                <i class="fas fa-fw fa-tasks"></i>
+                <span>Demandes octroi</span></a>
+        </li>
+
+        <hr class="sidebar-divider d-none d-md-block">
+
         <!-- Sidebar Toggler (Sidebar) -->
         <div class="text-center d-none d-md-inline">
             <button class="rounded-circle border-0" id="sidebarToggle"></button>
@@ -201,6 +225,7 @@
     <!-- Page level plugins -->
     <script src="contenu/js/jquery.dataTables.min.js"></script>
     <script src="contenu/js/dataTables.bootstrap4.min.js"></script>
+    <script src="contenu/js/search_material.js"></script>
 
 </body>
 
