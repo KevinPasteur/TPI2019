@@ -44,7 +44,11 @@ function LoanMaterial($infos)
 {
 
     $connexion = GetBD();
-    $requeteIns = "INSERT INTO Emprunt (fkComptes,fkMateriels,fkStatutsE,date_e,date_r) values ('".$_SESSION['id']."','".$infos['modele']."','1','".$infos['date_e']."','".$infos['date_r']."')";
+    $requeteIns = "INSERT INTO Emprunt (fkComptes,fkStatutsE,date_e,date_r) values ('".$_SESSION['id']."','1','".$infos['date_e']."','".$infos['date_r']."')";
+    $connexion->exec($requeteIns);
+    $id = $connexion->lastInsertId();
+
+    $requeteIns = "INSERT INTO EmpruntMate (fkEmprunt,fkMateriels) values ('".$id."','".$infos['modele']."')";
     $connexion->exec($requeteIns);
 
     $requeteUpd = "UPDATE Materiels SET fkStatutsM=2 WHERE idMateriels = '".$infos["modele"]."'";
@@ -58,6 +62,7 @@ function GetRequests($statut)
     //Récupération de toutes les catégories sauf celles en prêt
     $requete = "SELECT idEmprunt,idMateriels,email, modele, date_e, date_r FROM Emprunt
                 INNER JOIN Comptes on idComptes = fkComptes
+                INNER JOIN empruntmate on idEmprunt = fkEmprunt
                 INNER JOIN Materiels on idMateriels = fkMateriels
                 WHERE fkStatutsE = '".$statut."'";
 
