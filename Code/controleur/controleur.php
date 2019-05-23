@@ -279,6 +279,19 @@ function demprunt()
         require "vue/erreur403.php";
 }
 
+function recherche()
+{
+
+    if(!empty($_SESSION['role'])) {
+
+
+        require "vue/recherche.php";
+    }
+    else
+        require "vue/erreur403.php";
+
+}
+
 /**
  * Description : Fonction si une action n'est pas reconnue
  * @param $e

@@ -32,6 +32,9 @@ try {
             case 'demprunt':
                 demprunt();
                 break;
+            case 'recherche':
+                recherche();
+                break;
 
 
             default:
