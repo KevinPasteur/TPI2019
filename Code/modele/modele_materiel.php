@@ -1,5 +1,8 @@
 <?php
 
+/**
+ * @return false|PDOStatement
+ */
 function CountAllMaterial(){
 
     // Connexion à la BD et au serveur
@@ -13,7 +16,9 @@ function CountAllMaterial(){
 
 }
 
-
+/**
+ * @return false|PDOStatement
+ */
 function GetAllMaterial()
 {
     $connexion = GetBD();
@@ -27,6 +32,9 @@ function GetAllMaterial()
 
 }
 
+/**
+ * @return false|PDOStatement
+ */
 function GetAllCategoriesM()
 {
     $connexion = GetBD();
@@ -40,6 +48,9 @@ function GetAllCategoriesM()
     return $resultat;
 }
 
+/**
+ * @param $infos
+ */
 function LoanMaterial($infos)
 {
 
@@ -55,16 +66,20 @@ function LoanMaterial($infos)
     $connexion->exec($requeteUpd);
 }
 
-
+/**
+ * @param $statut
+ * @return false|PDOStatement
+ */
 function GetRequests($statut)
 {
     $connexion = GetBD();
     //Récupération de toutes les catégories sauf celles en prêt
-    $requete = "SELECT idEmprunt,idMateriels,email, modele, date_e, date_r,fkStatutsE FROM Emprunt
+    $requete = "SELECT idEmprunt,idMateriels,email, modele, date_e, date_r,fkStatutsE,StatutsE.nom as 'Statut' FROM Emprunt
                 INNER JOIN Comptes on idComptes = fkComptes
-                INNER JOIN empruntmate on idEmprunt = fkEmprunt
+                INNER JOIN EmpruntMate on idEmprunt = fkEmprunt
                 INNER JOIN Materiels on idMateriels = fkMateriels
-                WHERE fkStatutsE = '".$statut."'";
+                INNER JOIN StatutsE on idStatutsE = fkStatutsE
+                WHERE fkStatutsE = $statut";
 
     // Exécution de la requête
     $resultat = $connexion->query($requete);
@@ -72,31 +87,46 @@ function GetRequests($statut)
     return $resultat;
 }
 
-
+/**
+ * @param $infos
+ */
 function AcceptRequest($infos)
 {
 
     $connexion = GetBD();
-    $requeteUpd = "UPDATE Emprunt SET fkStatutsE=2 WHERE idEmprunt = '".@$infos["idEmprunt"]."'";
+    $requeteUpd = "UPDATE Emprunt SET fkStatutsE=2 WHERE idEmprunt = '".@$infos."'";
+
     $connexion->exec($requeteUpd);
 }
 
-function DeclineRequest($infos)
+/**
+ * @param $emprunt
+ * @param $materiel
+ */
+function DeclineRequest($emprunt,$materiel)
 {
 
     $connexion = GetBD();
-    $requeteUpd = "UPDATE Emprunt SET fkStatutsE=4 WHERE idEmprunt = '".@$infos["idEmprunt"]."'";
+
+    $requeteUpd = "UPDATE Emprunt SET fkStatutsE=4 WHERE idEmprunt = '".@$emprunt."'";
+    $connexion->exec($requeteUpd);
+
+    $requeteUpd = "UPDATE Materiels SET fkStatutsM=1 WHERE idMateriels = '".@$materiel."'";
     $connexion->exec($requeteUpd);
 }
 
-function CheckRequest($infos)
+/**
+ * @param $emprunt
+ * @param $materiel
+ */
+function CheckRequest($emprunt,$materiel)
 {
 
     $connexion = GetBD();
 
-    $requeteUpd = "UPDATE Emprunt SET fkStatutsE=3 WHERE idEmprunt = '".@$infos["idEmprunt"]."'";
+    $requeteUpd = "UPDATE Emprunt SET fkStatutsE=3 WHERE idEmprunt = '".@$emprunt."'";
     $connexion->exec($requeteUpd);
 
-    $requeteUpd = "UPDATE Materiels SET fkStatutsM=1 WHERE idMateriels = '".@$infos["idEmprunt"]."'";
+    $requeteUpd = "UPDATE Materiels SET fkStatutsM=1 WHERE idMateriels = '".@$materiel."'";
     $connexion->exec($requeteUpd);
 }

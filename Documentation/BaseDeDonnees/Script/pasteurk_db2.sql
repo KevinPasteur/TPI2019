@@ -256,7 +256,7 @@ DEFAULT CHARACTER SET = utf8;
 Insert into Roles (nom) values ('Administrateur');
 Insert into Roles (nom) values ('Client');
 
-Insert into Comptes (fkRoles,nom,prenom,email,motdepasse) values ('1','Pasteur','Kevin','kevin.pasteur@cpnv.ch','a665a45920422f9d417e4867efdc4fb8a04a1f3fff1fa07e998e86f7f7a27ae3');
+Insert into Comptes (fkRoles,nom,prenom,email,motdepasse) values ('1','Pasteur','Kevin','kevin.pasteur@cpnv.ch','a665a45920422f9d417e4867efdc4fb8a04a1f3fff1fa07e998e86f7f7a27ae3'),('1','Admin','Admin','Admin@electrostock.mycpnv.ch','a665a45920422f9d417e4867efdc4fb8a04a1f3fff1fa07e998e86f7f7a27ae3');
 
 Insert into CategoriesC (nom) values ('Résistances');
 Insert into CategoriesC (nom) values ('Condensateurs');

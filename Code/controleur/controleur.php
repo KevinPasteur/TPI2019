@@ -256,15 +256,13 @@ function demprunt()
                 AcceptRequest($info);
             }
 
-            if (isset($_GET['Decline']))
+            if (isset($_GET['Decline']) && isset($_GET['Materiel']))
             {
-                $info = $_GET['Decline'];
-                DeclineRequest($info);
+                $emprunt = $_GET['Decline'];
+                $materiel = $_GET['Materiel'];
+                DeclineRequest($emprunt, $materiel);
             }
-            if (isset($_GET['Remind']))
-            {
 
-            }
             $statut = 1;
             $result = GetRequests($statut);
 
@@ -274,10 +272,16 @@ function demprunt()
         //Vue lorsque les demandes sont "en cours"
         if (isset($_GET['EC']))
         {
-            if(isset($_GET['Check']))
+            if(isset($_GET['Check']) && isset($_GET['Materiel']))
             {
-                $info = $_GET['Check'];
-                CheckRequest($info);
+                $emprunt = $_GET['Check'];
+                $materiel = $_GET['Materiel'];
+                CheckRequest($emprunt, $materiel);
+            }
+
+            if (isset($_GET['Remind']))
+            {
+
             }
             $statut = 2;
             $result = GetRequests($statut);
@@ -287,11 +291,10 @@ function demprunt()
         //Vue lorsque les demandes sont "Archivés"
         if (isset($_GET['AV']))
         {
-            $statut = 3;
+            $statut = "'3' or fkStatutsE = '4'";
             $result = GetRequests($statut);
             require "vue/demprunt.php";
         }
-
     }
     else
         require "vue/erreur403.php";

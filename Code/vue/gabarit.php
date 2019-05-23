@@ -53,7 +53,7 @@
         <li class="nav-item">
             <a class="nav-link" href="index.php?action=accueil">
                 <i class="fas fa-fw fa-tachometer-alt"></i>
-                <span>Tableau de bord</span></a>
+                <span>Accueil</span></a>
         </li>
 
         <!-- Nav Item - Charts -->
@@ -84,7 +84,7 @@
                     <h6 class="collapse-header">Demandes :</h6>
                     <a class="collapse-item" href="index.php?action=demprunt&EA">En attente</a>
                     <a class="collapse-item" href="index.php?action=demprunt&EC">En cours</a>
-                    <a class="collapse-item" href="index.php?action=demprunt&A">Archivés</a>
+                    <a class="collapse-item" href="index.php?action=demprunt&AV">Archivés</a>
                 </div>
             </div>
         </li>
