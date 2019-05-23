@@ -88,3 +88,15 @@ function DeclineRequest($infos)
     $requeteUpd = "UPDATE Emprunt SET fkStatutsE=4 WHERE idEmprunt = '".@$infos["idEmprunt"]."'";
     $connexion->exec($requeteUpd);
 }
+
+function CheckRequest($infos)
+{
+
+    $connexion = GetBD();
+
+    $requeteUpd = "UPDATE Emprunt SET fkStatutsE=3 WHERE idEmprunt = '".@$infos["idEmprunt"]."'";
+    $connexion->exec($requeteUpd);
+
+    $requeteUpd = "UPDATE Materiels SET fkStatutsM=1 WHERE idMateriels = '".@$infos["idEmprunt"]."'";
+    $connexion->exec($requeteUpd);
+}

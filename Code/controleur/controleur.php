@@ -274,6 +274,11 @@ function demprunt()
         //Vue lorsque les demandes sont "en cours"
         if (isset($_GET['EC']))
         {
+            if(isset($_GET['Check']))
+            {
+                $info = $_GET['Check'];
+                CheckRequest($info);
+            }
             $statut = 2;
             $result = GetRequests($statut);
             require "vue/demprunt.php";
