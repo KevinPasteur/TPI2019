@@ -69,6 +69,7 @@
                 <span>Consommables</span></a>
         </li>
 
+        <?php if ($_SESSION['role'] == "Administrateur") { ?>
         <!-- Divider -->
         <hr class="sidebar-divider d-none d-md-block">
 
@@ -93,6 +94,8 @@
                 <i class="fas fa-fw fa-tasks"></i>
                 <span>Demandes octroi</span></a>
         </li>
+
+        <?php } ?>
 
         <hr class="sidebar-divider d-none d-md-block">
 

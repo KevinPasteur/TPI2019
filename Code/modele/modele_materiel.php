@@ -60,7 +60,7 @@ function GetRequests($statut)
 {
     $connexion = GetBD();
     //Récupération de toutes les catégories sauf celles en prêt
-    $requete = "SELECT idEmprunt,idMateriels,email, modele, date_e, date_r FROM Emprunt
+    $requete = "SELECT idEmprunt,idMateriels,email, modele, date_e, date_r,fkStatutsE FROM Emprunt
                 INNER JOIN Comptes on idComptes = fkComptes
                 INNER JOIN empruntmate on idEmprunt = fkEmprunt
                 INNER JOIN Materiels on idMateriels = fkMateriels

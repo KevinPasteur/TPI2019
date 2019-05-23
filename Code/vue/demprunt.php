@@ -51,12 +51,12 @@ Ob_start();
                             <td><?= $demande['date_e']; ?> </td>
                             <td><?= $demande['date_r']; ?> </td>
                             <td>
-                                <?php if ($_SESSION['role'] == "Administrateur") { ?>
+                                <?php if ($_SESSION['role'] == "Administrateur" && $demande['fkStatutsE'] == 1) { ?>
                                     <a href="index.php?action=demprunt&EA&Accept=<?= $demande['idEmprunt']; ?>" onclick="return confirm('Accepter cette demande ?')"><button class="btn btn-success btn-xs"><i class="fa fa-check"></i></button></a>
                                     <a href="index.php?action=demprunt&EA&Decline=<?= $demande['idEmprunt']; ?>" onclick="return confirm('Refuser cette demande ?')"> <button class="btn btn-danger btn-xs"><i class="fa fa-times "></i></button></a>
-                                    <?php
-
-                                    if ($demande['date_r'] < date("Y-m-d")) { ?> <a href="#"> <button class="btn btn-primary btn-xs"><i class="fa fa-bell "></i></button></a> <?php } ?>
+                                    <?php if ($demande['date_r'] < date("Y-m-d")) { ?> <a href="#"> <button class="btn btn-primary btn-xs"><i class="fa fa-bell "></i></button></a> <?php } ?>
+                                <?php } if ($_SESSION['role'] == "Administrateur" && $demande['fkStatutsE'] == 2) { ?>
+                                            <a href="index.php?action=demprunt&EC&Check=<?= $demande['idEmprunt']; ?>" onclick="return confirm('Accepter cette demande ?')"><button class="btn btn-success btn-xs"><i class="fa fa-check"></i></button></a>
                                     <?php } ?>
                             </td>
                         </tr>

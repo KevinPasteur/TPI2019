@@ -11,6 +11,7 @@ require "modele/modele_authentication.php";
 require "modele/modele_getChart.php";
 require "modele/modele_materiel.php";
 require "modele/modele_consommables.php";
+require "modele/modele_search_m.php";
 
 /**
  * Description : Affiche l'accueil ()
@@ -116,8 +117,20 @@ function materiel()
 
     if(!empty($_SESSION['role'])) {
 
+        require "vue/menu_materiel.php";
+        if (isset($_POST['q']))
+        {
+            $materielr = $_POST['q'];
+            $articles = SearchM($materielr);
+            require "vue/recherche.php";
+
+        }
+        else {
             $result = GetAllMaterial();
             require "vue/toutlemateriel.php";
+        }
+
+
     }
     else
         require "vue/erreur403.php";
@@ -279,18 +292,6 @@ function demprunt()
         require "vue/erreur403.php";
 }
 
-function recherche()
-{
-
-    if(!empty($_SESSION['role'])) {
-
-
-        require "vue/recherche.php";
-    }
-    else
-        require "vue/erreur403.php";
-
-}
 
 /**
  * Description : Fonction si une action n'est pas reconnue
