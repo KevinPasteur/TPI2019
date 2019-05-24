@@ -89,6 +89,16 @@ function GetRequests($statut)
     return $resultat;
 }
 
+function AddMaterial($infos)
+{
+
+    $connexion = GetBD();
+
+    $requeteIns = "INSERT INTO Materiels (modele,n_inventaire,n_serie,n_reference,prix,fkCategoriesM,fkStatutsM) values ('".$infos['modele']."','".$infos['n_inventaire']."','".$infos['n_serie']."','".$infos['n_reference']."','".$infos['prix']."','".$infos['categorie']."','1')";
+
+    $connexion->exec($requeteIns);
+}
+
 /**
  * @param $infos
  */

@@ -56,12 +56,12 @@ function connexion()
                 header('Location: index.php?action=accueil');
                 exit;
             }
-            header('Location: index.php?action=connexion&vide');
+            header('Location: index.php?action=connexion&erreur');
             exit;
         }
         else
         {
-            header('Location: index.php?action=connexion&vide');
+            header('Location: index.php?action=connexion&erreur');
             exit;
         }
 
@@ -110,7 +110,7 @@ function accueil()
         require "vue/accueil.php";
     }
     else
-        require "vue/erreur403.php";
+        erreur403();
 }
 
 function materiel()
@@ -134,7 +134,7 @@ function materiel()
 
     }
     else
-        require "vue/erreur403.php";
+        erreur403();
 
 }
 
@@ -158,7 +158,7 @@ function consommables()
 
     }
     else
-        require "vue/erreur403.php";
+        erreur403();
 
 }
 
@@ -259,7 +259,7 @@ function emprunt()
 
     }
     else
-        require "vue/erreur403.php";
+        erreur403();
 }
 
 
@@ -267,12 +267,6 @@ function demprunt()
 {
 
     if(!empty($_SESSION['role']) && $_SESSION['role'] == "Administrateur" ) {
-
-
-        if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-
-
-        }
 
         //Vue lorsque les demandes sont "en attente"
         if (isset($_GET['EA']))
@@ -327,9 +321,39 @@ function demprunt()
         }
     }
     else
-        require "vue/erreur403.php";
+        erreur403();
 }
 
+
+function ajoutmateriel()
+{
+    if(!empty($_SESSION['role']) && $_SESSION['role'] == "Administrateur" ) {
+
+        $result = GetAllCategoriesM();
+        if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+            if(!empty($_POST['modele']) && !empty($_POST['n_inventaire']) && !empty($_POST['n_serie']) && !empty($_POST['n_reference']) && !empty($_POST['prix']) && !empty($_POST['categorie']) ) {
+                $infos = $_POST;
+
+                AddMaterial($infos);
+
+                header('Location: index.php?action=ajoutmateriel&ok');
+                exit;
+            }
+        }
+
+
+            require "vue/ajoutmateriel.php";
+
+    }
+    else
+       erreur403();
+
+}
+
+function erreur403()
+{
+    require "vue/erreur403.php";
+}
 
 /**
  * Description : Fonction si une action n'est pas reconnue

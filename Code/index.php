@@ -38,9 +38,12 @@ try {
             case 'consommables':
                 consommables();
                 break;
+            case 'ajoutmateriel':
+                ajoutmateriel();
+                break;
 
             default:
-                throw new Exception("action non valide");
+                erreur403();
                 break;
         }
     }

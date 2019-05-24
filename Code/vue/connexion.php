@@ -46,13 +46,13 @@
                                 <div class="text-center">
                                     <h1 class="h4 text-gray-900 mb-4">Bienvenue sur ElectroStock</h1>
                                 </div>
-                                <?php if(isset($_GET['ok'])) { ?> <div class="alert alert-success" style="text-align: center" role="alert"> Votre compte a bien été créé !</div> <?php } ?>
+                                <?php if(isset($_GET['erreur'])) { ?> <div class="alert alert-danger" style="text-align: center" role="alert"> Veuillez vérifier les champs !</div> <?php } ?>
                                 <form method="POST" action="index.php?action=connexion">
                                     <div class="form-group">
-                                        <input type="email" class="form-control form-control-user" id="email" name="email" placeholder="Adresse email">
+                                        <input type="email" class="form-control form-control-user" id="email" name="email" placeholder="Adresse email" required>
                                     </div>
                                     <div class="form-group">
-                                        <input type="password" class="form-control form-control-user" id="mdp" name="mdp" placeholder="Mot de passe">
+                                        <input type="password" class="form-control form-control-user" id="mdp" name="mdp" placeholder="Mot de passe" required>
                                     </div>
                                     <button class="btn btn-primary btn-userbtn-block col-lg-12"  type="submit"><i class="fa fa-pencil"></i> Envoyer</button>
                                     <hr>
