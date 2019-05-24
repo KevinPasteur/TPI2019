@@ -269,12 +269,12 @@ INSERT into CategoriesM (nom) values ('Alimentations');
 INSERT into CategoriesM (nom) values ('Raspberry');
 INSERT into CategoriesM (nom) values ('PC');
 
-INSERT INTO Consommables (modele, nb_exemp, n_reference,prix,fkCategoriesC,fkFournisseursC) values ('220 kOhm/2W','75','300-47-011' , '2,45','1','1');
-INSERT INTO Consommables (modele, nb_exemp, n_reference,prix,fkCategoriesC,fkFournisseursC) values ('100uF/63VDC','50','301-08-251','0,61', '2','1');
-INSERT INTO Consommables (modele, nb_exemp, n_reference,prix,fkCategoriesC,fkFournisseursC) values ('1NO','26', '135-55-059','2,30','3','1');
-INSERT INTO Consommables (modele, nb_exemp, n_reference,prix,fkCategoriesC,fkFournisseursC) values ('2.2uF/100VDC','18', '301-12-255','0,1182','2','1');
-INSERT INTO Consommables (modele, nb_exemp, n_reference,prix,fkCategoriesC,fkFournisseursC) values ('120 Ohm/2W','65', '300-47-002','1,43','1','1');
-INSERT INTO Consommables (modele, nb_exemp, n_reference,prix,fkCategoriesC,fkFournisseursC) values ('5 mm','75','301-18-983','0,3621', '4','1');
+INSERT INTO Consommables (modele, nb_exemp, n_reference,prix,fkCategoriesC,fkFournisseursC) values ('220 kOhm/2W','75','300-47-011' , '2.45','1','1');
+INSERT INTO Consommables (modele, nb_exemp, n_reference,prix,fkCategoriesC,fkFournisseursC) values ('100uF/63VDC','50','301-08-251','0.61', '2','1');
+INSERT INTO Consommables (modele, nb_exemp, n_reference,prix,fkCategoriesC,fkFournisseursC) values ('1NO','26', '135-55-059','2.30','3','1');
+INSERT INTO Consommables (modele, nb_exemp, n_reference,prix,fkCategoriesC,fkFournisseursC) values ('2.2uF/100VDC','18', '301-12-255','0.1182','2','1');
+INSERT INTO Consommables (modele, nb_exemp, n_reference,prix,fkCategoriesC,fkFournisseursC) values ('120 Ohm/2W','65', '300-47-002','1.43','1','1');
+INSERT INTO Consommables (modele, nb_exemp, n_reference,prix,fkCategoriesC,fkFournisseursC) values ('5 mm','75','301-18-983','0.3621', '4','1');
 
 
 INSERT INTO Materiels (modele, n_inventaire ,n_serie, n_reference, prix,fkStatutsM, fkCategoriesM) values ('Synology','1','Vf4fsd','1214151','300','1','1');
