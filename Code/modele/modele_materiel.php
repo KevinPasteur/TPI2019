@@ -40,7 +40,9 @@ function GetAllCategoriesM()
     $connexion = GetBD();
     //Récupération de toutes les catégories sauf celles en prêt
 
-    $requete = "select distinct nom, idMateriels from CategoriesM RIGHT JOIN Materiels on fkCategoriesM = idCategoriesM WHERE fkStatutsM = 1";
+    $requete = "SELECT  distinct (nom), idCategoriesM FROM CategoriesM
+                INNER JOIN Materiels on idCategoriesM = fkCategoriesM
+                Where fkStatutsM in (1) ";
 
     // Exécution de la requête
     $resultat = $connexion->query($requete);

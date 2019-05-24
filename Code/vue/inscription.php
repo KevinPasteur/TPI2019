@@ -53,10 +53,10 @@
                                 <?php if(isset($_GET['erreur'])) { ?> <div class="alert alert-danger" style="text-align: center" role="alert"> Veuillez vérifier les champs.</div> <?php } ?>
                                 <form method="POST" action="index.php?action=inscription">
                                     <div class="form-group">
-                                        <input type="text" class="form-control form-control-user" id="nom" name="nom" placeholder="Nom" required>
+                                        <input type="text" class="form-control form-control-user" id="nom" name="nom" placeholder="Nom" pattern="[a-zA-ZÀ-ž-]+" required>
                                     </div>
                                     <div class="form-group">
-                                        <input type="text" class="form-control form-control-user" id="prenom" name="prenom" placeholder="Prenom" required>
+                                        <input type="text" class="form-control form-control-user" id="prenom" name="prenom" placeholder="Prenom" pattern="[a-zA-ZÀ-ž-]+" required>
                                     </div>
                                     <div class="form-group">
                                         <input type="email" class="form-control form-control-user" id="email" name="email" placeholder="Email" required>

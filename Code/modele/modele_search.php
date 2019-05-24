@@ -33,3 +33,19 @@ function SearchM($q)
         return $recherche;
 
 }
+
+
+function SearchC($q)
+{
+    $connexion = GetBD();
+    $q = htmlspecialchars($q);
+
+    $recherche = $connexion->query('');
+
+    if ($recherche->rowCount() == 0) {
+        $recherche = $connexion->query('');
+    }
+
+    return $recherche;
+
+}

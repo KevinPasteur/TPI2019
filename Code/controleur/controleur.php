@@ -11,7 +11,8 @@ require "modele/modele_authentication.php";
 require "modele/modele_getChart.php";
 require "modele/modele_materiel.php";
 require "modele/modele_consommables.php";
-require "modele/modele_search_m.php";
+require "modele/modele_search.php";
+require "modele/modele_mail.php";
 
 /**
  * Description : Affiche l'accueil ()
@@ -122,7 +123,7 @@ function materiel()
         {
             $materielr = $_POST['q'];
             $articles = SearchM($materielr);
-            require "vue/recherche.php";
+            require "vue/recherchem.php";
 
         }
         else {
@@ -130,6 +131,30 @@ function materiel()
             require "vue/toutlemateriel.php";
         }
 
+
+    }
+    else
+        require "vue/erreur403.php";
+
+}
+
+function consommables()
+{
+
+    if(!empty($_SESSION['role'])) {
+
+        require "vue/menu_consommable.php";
+        if (isset($_POST['q']))
+        {
+            $consommabler = $_POST['q'];
+            $articles = SearchM($consommabler);
+            require "vue/recherchec.php";
+
+        }
+        else {
+            $result = GetAllConsumables();
+            require "vue/toutlesconsommables.php";
+        }
 
     }
     else
@@ -222,8 +247,10 @@ function emprunt()
             {
                 $infos = $_POST;
                 LoanMaterial($infos);
+
+                header('Location: index.php?action=emprunt&ok');
+                exit;
             }
-            require "vue/emprunt.php";
         }
         else {
             $result = GetAllCategoriesM();
@@ -272,6 +299,10 @@ function demprunt()
         //Vue lorsque les demandes sont "en cours"
         if (isset($_GET['EC']))
         {
+            $statut = 2;
+            $result = GetRequests($statut);
+
+
             if(isset($_GET['Check']) && isset($_GET['Materiel']))
             {
                 $emprunt = $_GET['Check'];
@@ -281,10 +312,9 @@ function demprunt()
 
             if (isset($_GET['Remind']))
             {
-
+                $id = $_GET['Remind'];
+                email_remind($id);
             }
-            $statut = 2;
-            $result = GetRequests($statut);
             require "vue/demprunt.php";
         }
 

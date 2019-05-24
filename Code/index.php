@@ -35,7 +35,9 @@ try {
             case 'recherche':
                 recherche();
                 break;
-
+            case 'consommables':
+                consommables();
+                break;
 
             default:
                 throw new Exception("action non valide");

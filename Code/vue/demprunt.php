@@ -60,7 +60,7 @@ Ob_start();
                                 <?php } if ($demande['fkStatutsE'] == 2) { ?>
                                             <td>
                                                 <a href="index.php?action=demprunt&EC&Check=<?= $demande['idEmprunt']; ?>&Materiel=<?= $demande['idMateriels']; ?>" onclick="return confirm('Accepter cette demande ?')"><button class="btn btn-primary btn-xs">Check-Out</button></a>
-                                                <?php if ($demande['date_r'] < date("Y-m-d")) { ?> <a href="#"> <button class="btn btn-primary btn-xs"><i class="fa fa-bell "></i></button></a> <?php } ?>
+                                                <?php if ($demande['date_r'] < date("Y-m-d")) { ?> <a href="index.php?action=demprunt&EC&Remind=<?= $demande['idEmprunt']; ?>"> <button class="btn btn-primary btn-xs"><i class="fa fa-bell "></i></button></a> <?php } ?>
                                             </td>
                                         <?php } ?>
                         <?php if ($demande['fkStatutsE'] == 3 || $demande['fkStatutsE'] == 4) { ?> <td><?= $demande['Statut']; ?></td> <?php } ?>

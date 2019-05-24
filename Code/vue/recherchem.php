@@ -64,7 +64,11 @@ $titre = "Accueil";
     </div>
 </div></div>
 <?php } else { ?>
-    Aucun résultat pour: <?= $q ?>...
+        <div class="card shadow mb-4">
+            <div class="card-body">
+                <span class="text">Aucun résultat.</span>
+            </div>
+        </div>
 <?php } ?>
 
 <!-- End of Main Content -->

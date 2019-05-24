@@ -20,7 +20,8 @@ Ob_start();
             <?php if (isset($_GET['erreur'])) {?><div class="alert alert-danger" style="text-align: center" role="alert">Veuillez vérifier les champs</div> <?php }?>
 
             <!-- Si le ticket a bien été créé -->
-            <?php if (isset($_GET['ok'])) {?><div class="alert alert-success" style="text-align: center"  role="alert">Votre emprunt a bien été envoyé !</div> <?php }?>
+            <?php if (isset($_GET['ok'])) {?><div class="alert alert-success" style="text-align: center"  role="alert">Votre demande a bien été envoyé !</div> <?php }?>
+
             <form role="form" method="POST" id="ticket" action="index.php?action=emprunt" class="form-horizontal" enctype="multipart/form-data">
                 <div class="form-group">
                     <label class="col-lg-2 control-label">Catégorie</label>
@@ -29,7 +30,7 @@ Ob_start();
                             <option value='-1'>Aucun</option>
                             <?php
                             foreach ($result as $row) :
-                                echo "<option value='".$row["idMateriels"]."'>".$row["nom"]."</option>";
+                                echo "<option value='".$row["idCategoriesM"]."'>".$row["nom"]."</option>";
                             endforeach;
                             ?>
                         </SELECT>

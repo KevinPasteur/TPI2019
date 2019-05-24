@@ -1,11 +1,12 @@
 <?php
+
 /**
  * Created by PhpStorm.
  * User: Kevin.PASTEUR
- * Date: 16.05.2019
+ * Date: 24.05.2019
  */
 
-$titre = "Tout le matériel"; ?>
+$titre = "Tout les consommables"; ?>
         <!-- DataTales Example -->
         <div class="card shadow mb-4">
             <div class="card-body">
