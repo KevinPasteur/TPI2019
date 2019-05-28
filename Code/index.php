@@ -32,9 +32,6 @@ try {
             case 'demprunt':
                 demprunt();
                 break;
-            case 'recherche':
-                recherche();
-                break;
             case 'consommables':
                 consommables();
                 break;

@@ -9,7 +9,7 @@
 
 $titre = "Accueil";
 ?>
-<?php if($articles->rowCount() > 0) { ?>
+<?php if($rechercheM->rowCount() > 0) { ?>
 <!-- DataTales Example -->
     <div class="card shadow mb-4">
         <div class="card-body">
@@ -29,7 +29,7 @@ $titre = "Accueil";
                     </tr>
                     </thead>
                     <tbody>
-                        <?php while($a = $articles->fetch()) { ?>
+                        <?php while($a = $rechercheM->fetch()) { ?>
                             <tr>
                                 <td><?= $a['Catégorie']; ?> </td>
                                 <td><?= $a['Modèle']; ?> </td>

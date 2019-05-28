@@ -64,7 +64,7 @@
         </li>
 
         <li class="nav-item">
-            <a class="nav-link" href="#">
+            <a class="nav-link" href="index.php?action=consommables">
                 <i class="fas fa-fw fa-tint"></i>
                 <span>Consommables</span></a>
         </li>

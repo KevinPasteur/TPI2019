@@ -58,6 +58,7 @@ CREATE TABLE IF NOT EXISTS `pasteurk_db`.`Comptes` (
   `prenom` VARCHAR(50) NOT NULL,
   `email` VARCHAR(255) NOT NULL,
   `motdepasse` VARCHAR(254) NOT NULL,
+  `limite` INT(11) NULL,
   PRIMARY KEY (`idComptes`),
   INDEX `fk_Comptes_Roles_idx` (`fkRoles` ASC) ,
   CONSTRAINT `fk_Comptes_Roles`

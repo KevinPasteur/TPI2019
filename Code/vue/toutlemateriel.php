@@ -32,11 +32,11 @@ $titre = "Tout le matériel"; ?>
                                 <td><?= $materiel['N° Inventaire']; ?> </td>
                                 <td><?= $materiel['N° Série']; ?> </td>
                                 <td>
-                                    <?php  if ($materiel["Statut"] == 1 || !isset($materiel["Statut"]) )echo "<span class=\"text-success\">Disponible</span>";
+                                    <?php  if ($materiel["Statut"] == 1 )echo "<span class=\"text-success\">Disponible</span>";
                                     else echo "<span class=\"text-danger\">Indisponible</span>";
                                     ?>
                                 </td>
-                                <?php if ($_SESSION['role'] == "Client" && (!isset($materiel["Statut"]))) { ?>
+                                <?php if ($_SESSION['role'] == "Client" && $materiel["Statut"] == 1) { ?>
                                     <td>
                                         <a href="#"><button class="btn btn-info btn-xs"><i class="fa fa-shopping-basket "></i></button></a>
                                     </td>

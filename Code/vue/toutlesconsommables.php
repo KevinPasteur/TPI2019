@@ -16,39 +16,34 @@ $titre = "Tout les consommables"; ?>
                         <tr>
                             <th>Catégorie</th>
                             <th>Modèle</th>
-                            <th>N° Inventaire</th>
-                            <th>N° Série</th>
-                            <th>Statut</th>
+                            <th>Nb Exemplaire</th>
+                            <th>N° Référence</th>
                             <?php if ($_SESSION['role'] == "Administrateur") { ?>
-                                <th>N° Référence</th>
+                                <th>Fournisseur</th>
                                 <th>Prix</th>
                             <?php } ?>
                         </tr>
                         </thead>
                         <tbody>
-                        <?php foreach (@$result as $materiel) : ?>
+                        <?php foreach (@$result as $consommable) : ?>
                             <tr>
-                                <td><?= $materiel['Catégorie']; ?> </td>
-                                <td><?= $materiel['Modèle']; ?> </td>
-                                <td><?= $materiel['N° Inventaire']; ?> </td>
-                                <td><?= $materiel['N° Série']; ?> </td>
-                                <td>
-                                    <?php  if ($materiel["Statut"] == 1 || !isset($materiel["Statut"]) )echo "<span class=\"text-success\">Disponible</span>";
-                                    else echo "<span class=\"text-danger\">Indisponible</span>";
-                                    ?>
-                                </td>
-                                <?php if ($_SESSION['role'] == "Client" && (!isset($materiel["Statut"]))) { ?>
+                                <td><?= $consommable['categoriesc']; ?> </td>
+                                <td><?= $consommable['modele']; ?> </td>
+                                <td><?= $consommable['nb_exemp']; ?> </td>
+                                <td><?= $consommable['n_reference']; ?> </td>
+                                <?php if ($_SESSION['role'] == "Client") { ?>
                                     <td>
                                         <a href="#"><button class="btn btn-info btn-xs"><i class="fa fa-shopping-basket "></i></button></a>
                                     </td>
                                 <?php } ?>
                                 <?php if ($_SESSION['role'] == "Administrateur") { ?>
-                                <td><?= $materiel['N° Référence']; ?></td>
-                                <td><?= $materiel['prix']; ?> CHF</td>
+                                <td><?= $consommable['fournisseur']; ?></td>
+                                <td><?= $consommable['prix']; ?> CHF</td>
+
                                 <td>
-                                    <?php  if ($materiel["Statut"] == '1') { ?><a href="#"><button class="btn btn-info btn-xs"><i class="fa fa-shopping-basket "></i></button></a><?php } ?>
-                                        <a href="#"><button class="btn btn-primary btn-xs"><i class="fa fa-pen"></i></button></a>
-                                        <a href="#" onclick="return confirm('Supprimer ce matériel ?')"> <button class="btn btn-danger btn-xs"><i class="fa fa-trash "></i></button></a>
+                                    <a href="#"><button class="btn btn-info btn-xs"><i class="fa fa-shopping-basket "></i></button></a>
+                                    <a href="#"><button class="btn btn-primary btn-xs"><i class="fa fa-pen"></i></button></a>
+                                    <a href="#" onclick="return confirm('Supprimer ce consommable ?')"> <button class="btn btn-danger btn-xs"><i class="fa fa-trash "></i></button></a>
                                 </td>
                                 <?php } ?>
                             </tr>

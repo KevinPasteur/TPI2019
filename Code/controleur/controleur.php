@@ -122,7 +122,7 @@ function materiel()
         if (isset($_POST['q']))
         {
             $materielr = $_POST['q'];
-            $articles = SearchM($materielr);
+            $rechercheM = SearchM($materielr);
             require "vue/recherchem.php";
 
         }
@@ -147,7 +147,7 @@ function consommables()
         if (isset($_POST['q']))
         {
             $consommabler = $_POST['q'];
-            $articles = SearchM($consommabler);
+            $rechercheC = SearchC($consommabler);
             require "vue/recherchec.php";
 
         }
