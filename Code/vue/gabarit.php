@@ -229,6 +229,7 @@
     <script src="contenu/js/jquery.dataTables.min.js"></script>
     <script src="contenu/js/dataTables.bootstrap4.min.js"></script>
     <script src="contenu/js/search_material.js"></script>
+    <script src="contenu/js/add_form.js"></script>
 
 </body>
 

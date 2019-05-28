@@ -35,6 +35,12 @@ try {
             case 'consommables':
                 consommables();
                 break;
+            case 'octroi':
+                octroi();
+                break;
+            case 'doctroi':
+                doctroi();
+                break;
             case 'ajoutmateriel':
                 ajoutmateriel();
                 break;

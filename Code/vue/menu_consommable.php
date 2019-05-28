@@ -14,8 +14,8 @@ Ob_start(); ?>
     <h1 class="h3 mb-2 text-gray-800">Tout les consommables</h1>
     <hr>
     <div>
-        <a class="btn btn-primary btn-icon-split" href="index.php?action=emprunt">
-            <span class="text">Emprunter</span>
+        <a class="btn btn-primary btn-icon-split" href="index.php?action=octroi">
+            <span class="text">Demande d'octroi</span>
         </a>
         <form method="POST" action="index.php?action=consommables" class="d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100 navbar-search">
             <div class="input-group">
@@ -26,7 +26,7 @@ Ob_start(); ?>
             </div>
         </form>
         <a class="btn btn-primary btn-icon-split" href="#">
-            <span class="text">Ajouter un matériel</span>
+            <span class="text">Ajouter un consommable</span>
         </a>
     </div>
 

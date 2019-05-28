@@ -42,3 +42,41 @@ function GetAllConsumables()
     return $resultat;
 
 }
+
+
+/**
+ * @return false|PDOStatement
+ */
+function GetAllCategoriesC()
+{
+    $connexion = GetBD();
+    //Récupération de toutes les catégories sauf celles en prêt
+
+    $requete = "SELECT  distinct (nom), idCategoriesC FROM CategoriesC
+                INNER JOIN Consommables on idCategoriesC = fkCategoriesC
+                WHERE nb_exemp >= 1";
+
+    // Exécution de la requête
+    $resultat = $connexion->query($requete);
+
+    return $resultat;
+}
+
+
+/**
+ * @param $infos
+ */
+function GiveConsumable($infos)
+{
+
+    $connexion = GetBD();
+    $requeteIns = "INSERT INTO Emprunt (fkComptes,fkStatutsE,date_e,date_r) values ('".$_SESSION['id']."','1','".$infos['date_e']."','".$infos['date_r']."')";
+    $connexion->exec($requeteIns);
+    $id = $connexion->lastInsertId();
+
+    $requeteIns = "INSERT INTO EmpruntMate (fkEmprunt,fkMateriels) values ('".$id."','".$infos['modele']."')";
+    $connexion->exec($requeteIns);
+
+    $requeteUpd = "UPDATE Materiels SET fkStatutsM=2 WHERE idMateriels = '".$infos["modele"]."'";
+    $connexion->exec($requeteUpd);
+}

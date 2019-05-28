@@ -324,6 +324,36 @@ function demprunt()
         erreur403();
 }
 
+function octroi()
+{
+    if(!empty($_SESSION['role'])) {
+
+        if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+
+            if($_POST['modele'] == -1 || !isset($_POST['modele']))
+            {
+                header('Location: index.php?action=octroi&erreur');
+                exit;
+            }
+            else
+            {
+                $infos = $_POST;
+                //LoanConsumable($infos);
+
+                header('Location: index.php?action=octroi&ok');
+                exit;
+            }
+        }
+        else {
+            $result = GetAllCategoriesC();
+            require "vue/octroi.php";
+        }
+
+    }
+    else
+        erreur403();
+}
+
 
 function ajoutmateriel()
 {
