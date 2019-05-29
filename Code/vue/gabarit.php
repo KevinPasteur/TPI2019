@@ -69,6 +69,31 @@
                 <span>Consommables</span></a>
         </li>
 
+        <!-- Divider -->
+        <hr class="sidebar-divider d-none d-md-block">
+
+        <!-- Nav Item - Pages Collapse Menu -->
+        <li class="nav-item">
+            <a class="nav-link collapsed" href="index.php?action=demprunt" data-toggle="collapse" data-target="#collapsePages2" aria-expanded="true" aria-controls="collapsePages2">
+                <i class="fas fa-fw fa-tasks"></i>
+                <span>Mes emprunts</span>
+            </a>
+            <div id="collapsePages2" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
+                <div class="bg-white py-2 collapse-inner rounded">
+                    <h6 class="collapse-header">Mes demandes :</h6>
+                    <a class="collapse-item" href="index.php?action=mes_emprunts&EA">En attente</a>
+                    <a class="collapse-item" href="index.php?action=mes_emprunts&EC">En cours</a>
+                    <a class="collapse-item" href="index.php?action=mes_emprunts&AV">Archivés</a>
+                </div>
+            </div>
+        </li>
+
+        <li class="nav-item">
+            <a class="nav-link" href="#">
+                <i class="fas fa-fw fa-tasks"></i>
+                <span>Mes octrois</span></a>
+        </li>
+
         <?php if ($_SESSION['role'] == "Administrateur") { ?>
         <!-- Divider -->
         <hr class="sidebar-divider d-none d-md-block">
@@ -89,11 +114,20 @@
             </div>
         </li>
 
-        <li class="nav-item">
-            <a class="nav-link" href="#">
-                <i class="fas fa-fw fa-tasks"></i>
-                <span>Demandes octroi</span></a>
-        </li>
+            <!-- Nav Item - Pages Collapse Menu -->
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="index.php?action=demprunt" data-toggle="collapse" data-target="#collapsePages3" aria-expanded="true" aria-controls="collapsePages2">
+                    <i class="fas fa-fw fa-tasks"></i>
+                    <span>Demandes octroi</span>
+                </a>
+                <div id="collapsePages3" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
+                    <div class="bg-white py-2 collapse-inner rounded">
+                        <h6 class="collapse-header">Demandes :</h6>
+                        <a class="collapse-item" href="index.php?action=doctroi&EA">En attente</a>
+                        <a class="collapse-item" href="index.php?action=doctroi&AV">Archivés</a>
+                    </div>
+                </div>
+            </li>
 
         <?php } ?>
 

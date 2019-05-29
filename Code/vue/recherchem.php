@@ -23,7 +23,6 @@ $titre = "Accueil";
                         <th>N° Série</th>
                         <th>Statut</th>
                         <?php if ($_SESSION['role'] == "Administrateur") { ?>
-                            <th>N° Référence</th>
                             <th>Prix</th>
                         <?php } ?>
                     </tr>
@@ -46,7 +45,6 @@ $titre = "Accueil";
                                     </td>
                                 <?php } ?>
                                 <?php if ($_SESSION['role'] == "Administrateur") { ?>
-                                    <td><?= $a['N° Référence']; ?></td>
                                     <td><?= $a['prix']; ?> CHF</td>
                                     <td>
                                         <?php  if ($a["Statut"] == '1') { ?><a href="#"><button class="btn btn-info btn-xs"><i class="fa fa-shopping-basket "></i></button></a><?php } ?>

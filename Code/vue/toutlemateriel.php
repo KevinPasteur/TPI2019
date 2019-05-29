@@ -19,7 +19,6 @@ $titre = "Tout le matériel"; ?>
                             <th>N° Série</th>
                             <th>Statut</th>
                             <?php if ($_SESSION['role'] == "Administrateur") { ?>
-                                <th>N° Référence</th>
                                 <th>Prix</th>
                             <?php } ?>
                         </tr>
@@ -42,12 +41,12 @@ $titre = "Tout le matériel"; ?>
                                     </td>
                                 <?php } ?>
                                 <?php if ($_SESSION['role'] == "Administrateur") { ?>
-                                <td><?= $materiel['N° Référence']; ?></td>
                                 <td><?= $materiel['prix']; ?> CHF</td>
                                 <td>
-                                    <?php  if ($materiel["Statut"] == '1') { ?><a href="#"><button class="btn btn-info btn-xs"><i class="fa fa-shopping-basket "></i></button></a><?php } ?>
+                                    <?php  if ($materiel["Statut"] == '1') { ?><a href="#"><button class="btn btn-info btn-xs"><i class="fa fa-shopping-basket "></i></button></a>
                                         <a href="#"><button class="btn btn-primary btn-xs"><i class="fa fa-pen"></i></button></a>
                                         <a href="#" onclick="return confirm('Supprimer ce matériel ?')"> <button class="btn btn-danger btn-xs"><i class="fa fa-trash "></i></button></a>
+                                    <?php } ?>
                                 </td>
                                 <?php } ?>
                             </tr>

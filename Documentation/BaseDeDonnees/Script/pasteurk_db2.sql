@@ -58,7 +58,6 @@ CREATE TABLE IF NOT EXISTS `pasteurk_db`.`Comptes` (
   `prenom` VARCHAR(50) NOT NULL,
   `email` VARCHAR(255) NOT NULL,
   `motdepasse` VARCHAR(254) NOT NULL,
-  `limite` INT(11) NULL,
   PRIMARY KEY (`idComptes`),
   INDEX `fk_Comptes_Roles_idx` (`fkRoles` ASC) ,
   CONSTRAINT `fk_Comptes_Roles`
@@ -90,6 +89,7 @@ CREATE TABLE IF NOT EXISTS `pasteurk_db`.`Consommables` (
   `nb_exemp` INT(11) NOT NULL,
   `n_reference` VARCHAR(50) NOT NULL,
   `prix` FLOAT(11) NOT NULL,
+  `limite_inf` TINYINT(11) NULL,
   `fkCategoriesC` INT(11) NOT NULL,
   `fkFournisseursC` INT(11) NOT NULL,
   PRIMARY KEY (`idConsommables`),
@@ -124,7 +124,7 @@ DEFAULT CHARACTER SET = utf8;
 CREATE TABLE IF NOT EXISTS `pasteurk_db`.`Emprunt` (
   `idEmprunt` INT(11) NOT NULL AUTO_INCREMENT,
   `fkComptes` INT(11) NOT NULL,
-  `fkStatutsE` TINYINT(4) NOT NULL,
+  `fkStatutsE` TINYINT(4) NULL,
   `date_e` DATE NULL DEFAULT NULL,
   `date_r` DATE NULL DEFAULT NULL,
   PRIMARY KEY (`idEmprunt`),
@@ -159,7 +159,6 @@ CREATE TABLE IF NOT EXISTS `pasteurk_db`.`Materiels` (
   `modele` VARCHAR(50) NOT NULL,
   `n_inventaire` INT(11) NOT NULL,
   `n_serie` VARCHAR(50) NULL DEFAULT NULL,
-  `n_reference` VARCHAR(50) NULL DEFAULT NULL,
   `prix` FLOAT(11) NULL DEFAULT NULL,
   `fkCategoriesM` INT(11) NOT NULL,
   `fkStatutsM` INT(11) NOT NULL,
@@ -184,7 +183,6 @@ CREATE TABLE IF NOT EXISTS `pasteurk_db`.`StatutsO` (
   `nom` VARCHAR(25) NOT NULL,
   PRIMARY KEY (`idStatutsO`))
 ENGINE = InnoDB
-AUTO_INCREMENT = 3
 DEFAULT CHARACTER SET = utf8;
 
 
@@ -278,12 +276,12 @@ INSERT INTO Consommables (modele, nb_exemp, n_reference,prix,fkCategoriesC,fkFou
 INSERT INTO Consommables (modele, nb_exemp, n_reference,prix,fkCategoriesC,fkFournisseursC) values ('5 mm','75','301-18-983','0.3621', '4','1');
 
 
-INSERT INTO Materiels (modele, n_inventaire ,n_serie, n_reference, prix,fkStatutsM, fkCategoriesM) values ('Synology','1','Vf4fsd','1214151','300','1','1');
-INSERT INTO Materiels (modele, n_inventaire, n_serie, n_reference, prix,fkStatutsM, fkCategoriesM) values ('MKR Zero','2','afdsa4f5','4556121','90','1','2');
-INSERT INTO Materiels (modele, n_inventaire, n_serie, n_reference, prix,fkStatutsM, fkCategoriesM) values ('Proto Shield','3','adsf88','5175371','25','1','2');
-INSERT INTO Materiels (modele, n_inventaire, n_serie, n_reference, prix, fkStatutsM,fkCategoriesM) values ('Dell','4','ez7rt5','175134147','1200','1','5');
-INSERT INTO Materiels (modele, n_inventaire, n_serie, n_reference, prix,fkStatutsM, fkCategoriesM) values ('Banggood','5','bcx5xb5','471243147','50','1','3');
-INSERT INTO Materiels (modele, n_inventaire, n_serie, n_reference, prix,fkStatutsM, fkCategoriesM) values ('Zero','6','wer5qr465','14624713471','75','1','4');
+INSERT INTO Materiels (modele, n_inventaire, n_serie, prix,fkStatutsM, fkCategoriesM) values ('Synology','1','Vf4fsd','300','1','1');
+INSERT INTO Materiels (modele, n_inventaire, n_serie, prix,fkStatutsM, fkCategoriesM) values ('MKR Zero','2','afdsa4f5','90','1','2');
+INSERT INTO Materiels (modele, n_inventaire, n_serie, prix,fkStatutsM, fkCategoriesM) values ('Proto Shield','3','adsf88','25','1','2');
+INSERT INTO Materiels (modele, n_inventaire, n_serie, prix, fkStatutsM,fkCategoriesM) values ('Dell','4','ez7rt5','1200','1','5');
+INSERT INTO Materiels (modele, n_inventaire, n_serie, prix,fkStatutsM, fkCategoriesM) values ('Banggood','5','bcx5xb5','50','1','3');
+INSERT INTO Materiels (modele, n_inventaire, n_serie, prix,fkStatutsM, fkCategoriesM) values ('Zero','6','wer5qr465','75','1','4');
 
 
 INSERT into StatutsE (nom) values ('En attente');
@@ -291,6 +289,7 @@ INSERT into StatutsE (nom) values ('En cours');
 INSERT into StatutsE (nom) values ('Archivé / Validé');
 INSERT into StatutsE (nom) values ('Archivé / Refusé');
 
+INSERT into StatutsO (nom) values ('En attente');
 INSERT into StatutsO (nom) values ('Archivé / Validé');
 INSERT into StatutsO (nom) values ('Archivé / Refusé');
 

@@ -80,3 +80,24 @@ function GiveConsumable($infos)
     $requeteUpd = "UPDATE Materiels SET fkStatutsM=2 WHERE idMateriels = '".$infos["modele"]."'";
     $connexion->exec($requeteUpd);
 }
+
+/**
+ * @param $statut
+ * @return false|PDOStatement
+ */
+function GetRequestsC($statut)
+{
+    $connexion = GetBD();
+    //Récupération de toutes les catégories sauf celles en prêt
+    $requete = "SELECT idOctroi,idConsommables,email, modele, fkStatutsO,CategoriesC.nom as categorie FROM Octroi
+                INNER JOIN Comptes on idComptes = fkComptes
+                INNER JOIN OctroiConso on idOctroi = fkOctroi
+                INNER JOIN Consommables on idConsommables = fkConsommables
+                INNER JOIN CategoriesC on idCategoriesC = fkCategoriesC
+                WHERE fkStatutsO = $statut";
+
+    // Exécution de la requête
+    $resultat = $connexion->query($requete);
+
+    return $resultat;
+}

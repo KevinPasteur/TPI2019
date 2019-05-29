@@ -22,7 +22,7 @@ function CountAllMaterial(){
 function GetAllMaterial()
 {
     $connexion = GetBD();
-    $requete = "SELECT idMateriels, CategoriesM.nom as Catégorie, modele as 'Modèle', n_reference as 'N° Référence',prix,n_inventaire as 'N° Inventaire', n_serie as 'N° Série', fkStatutsM as Statut FROM Materiels
+    $requete = "SELECT idMateriels, CategoriesM.nom as Catégorie, modele as 'Modèle',prix,n_inventaire as 'N° Inventaire', n_serie as 'N° Série', fkStatutsM as Statut FROM Materiels
                 LEFT JOIN CategoriesM on fkCategoriesM = idCategoriesM";
 
     // Exécution de la requête
@@ -72,16 +72,39 @@ function LoanMaterial($infos)
  * @param $statut
  * @return false|PDOStatement
  */
-function GetRequests($statut)
+function GetRequestsM($statut)
 {
     $connexion = GetBD();
     //Récupération de toutes les catégories sauf celles en prêt
-    $requete = "SELECT idEmprunt,idMateriels,email, modele, date_e, date_r,fkStatutsE,StatutsE.nom as 'Statut' FROM Emprunt
+    $requete = "SELECT idEmprunt,idMateriels,email, modele, date_e, date_r,fkStatutsE,StatutsE.nom as 'Statut',CategoriesM.nom as categorie FROM Emprunt
                 INNER JOIN Comptes on idComptes = fkComptes
                 INNER JOIN EmpruntMate on idEmprunt = fkEmprunt
                 INNER JOIN Materiels on idMateriels = fkMateriels
                 INNER JOIN StatutsE on idStatutsE = fkStatutsE
+                INNER JOIN CategoriesM on idCategoriesM = fkCategoriesM
                 WHERE fkStatutsE = $statut";
+
+    // Exécution de la requête
+    $resultat = $connexion->query($requete);
+
+    return $resultat;
+}
+
+/**
+ * @param $statut
+ * @return false|PDOStatement
+ */
+function GetMyRequestsM($statut)
+{
+    $connexion = GetBD();
+    //Récupération de toutes les catégories sauf celles en prêt
+    $requete = "SELECT idEmprunt,idMateriels,email, modele, date_e, date_r,fkStatutsE,StatutsE.nom as 'Statut',CategoriesM.nom as categorie FROM Emprunt
+                INNER JOIN Comptes on idComptes = fkComptes
+                INNER JOIN EmpruntMate on idEmprunt = fkEmprunt
+                INNER JOIN Materiels on idMateriels = fkMateriels
+                INNER JOIN StatutsE on idStatutsE = fkStatutsE
+                INNER JOIN CategoriesM on idCategoriesM = fkCategoriesM
+                WHERE fkStatutsE = $statut AND email = '".$_SESSION['email']."'";
 
     // Exécution de la requête
     $resultat = $connexion->query($requete);
@@ -94,7 +117,14 @@ function AddMaterial($infos)
 
     $connexion = GetBD();
 
-    $requeteIns = "INSERT INTO Materiels (modele,n_inventaire,n_serie,n_reference,prix,fkCategoriesM,fkStatutsM) values ('".$infos['modele']."','".$infos['n_inventaire']."','".$infos['n_serie']."','".$infos['n_reference']."','".$infos['prix']."','".$infos['categorie']."','1')";
+    if(!empty($infos['n_serie']))
+    {
+        $requeteIns = "INSERT INTO Materiels (modele,n_inventaire,n_serie,prix,fkCategoriesM,fkStatutsM) values ('".$infos['modele']."','".$infos['n_inventaire']."','".$infos['n_serie']."','".$infos['prix']."','".$infos['categorie']."','1')";
+    }
+    else
+    {
+        $requeteIns = "INSERT INTO Materiels (modele,n_inventaire,prix,fkCategoriesM,fkStatutsM) values ('".$infos['modele']."','".$infos['n_inventaire']."','".$infos['prix']."','".$infos['categorie']."','1')";
+    }
 
     $connexion->exec($requeteIns);
 }
@@ -102,7 +132,7 @@ function AddMaterial($infos)
 /**
  * @param $infos
  */
-function AcceptRequest($infos)
+function AcceptRequestM($infos)
 {
 
     $connexion = GetBD();
@@ -115,7 +145,7 @@ function AcceptRequest($infos)
  * @param $emprunt
  * @param $materiel
  */
-function DeclineRequest($emprunt,$materiel)
+function DeclineRequestM($emprunt,$materiel)
 {
 
     $connexion = GetBD();
@@ -131,7 +161,7 @@ function DeclineRequest($emprunt,$materiel)
  * @param $emprunt
  * @param $materiel
  */
-function CheckRequest($emprunt,$materiel)
+function CheckRequestM($emprunt,$materiel)
 {
 
     $connexion = GetBD();

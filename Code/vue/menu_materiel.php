@@ -14,6 +14,15 @@ Ob_start(); ?>
 
 <h1 class="h3 mb-2 text-gray-800">Tout le matériel</h1>
 <hr>
+    <?php if ($_SERVER['REQUEST_METHOD'] == 'POST') {  ?>
+    <div>
+        <a class="btn btn-primary btn-icon-split" href="index.php?action=materiel">
+            <span class="text">Retour</span>
+        </a>
+    </div>
+    <br>
+    <?php } ?>
+
 <div>
     <a class="btn btn-primary btn-icon-split" href="index.php?action=emprunt">
         <span class="text">Emprunter</span>
@@ -26,11 +35,14 @@ Ob_start(); ?>
             </div>
         </div>
     </form>
+
     <?php if ($_SESSION['role'] == "Administrateur") {  ?>
         <a class="btn btn-primary btn-icon-split" href="index.php?action=ajoutmateriel">
             <span class="text">Ajouter un matériel</span>
         </a>
     <?php } ?>
+
+
 </div>
 
 

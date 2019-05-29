@@ -41,6 +41,12 @@ try {
             case 'doctroi':
                 doctroi();
                 break;
+            case 'mes_emprunts':
+                mesemprunts();
+                break;
+            case 'doctroi':
+                doctroi();
+                break;
             case 'ajoutmateriel':
                 ajoutmateriel();
                 break;

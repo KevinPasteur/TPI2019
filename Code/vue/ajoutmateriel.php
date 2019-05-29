@@ -49,13 +49,7 @@ Ob_start();
                 <br>
                 <div class="form-group">
                     <div class="form-group">
-                        <input type="text" class="form-control form-control-user col-lg-3"  name="n_serie" placeholder="N° de série"  required>
-                    </div>
-                </div>
-                <br>
-                <div class="form-group">
-                    <div class="form-group">
-                        <input type="text" class="form-control form-control-user col-lg-3" name="n_reference" placeholder="N° de référence" required>
+                        <input type="text" class="form-control form-control-user col-lg-3"  name="n_serie" placeholder="N° de série">
                     </div>
                 </div>
                 <br>

@@ -46,7 +46,7 @@
                                 <div class="text-center">
                                     <h1 class="h4 text-gray-900 mb-4">Bienvenue sur ElectroStock</h1>
                                 </div>
-                                <?php if(isset($_GET['erreur'])) { ?> <div class="alert alert-danger" style="text-align: center" role="alert"> Veuillez vérifier les champs !</div> <?php } ?>
+                                <?php if(isset($_GET['erreur'])) { ?> <div class="alert alert-danger" style="text-align: center" role="alert">Votre email ou mot de passe est incorrect</div> <?php } ?>
                                 <form method="POST" action="index.php?action=connexion">
                                     <div class="form-group">
                                         <input type="email" class="form-control form-control-user" id="email" name="email" placeholder="Adresse email" required>

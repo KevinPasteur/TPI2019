@@ -6,7 +6,7 @@
  */
 
 
-$titre = "Demandes d'emprunt";
+$titre = "Demandes d'octroi";
 Ob_start();
 
 ?>
@@ -44,8 +44,6 @@ Ob_start();
                         <th>Compte</th>
                         <th>Catégorie</th>
                         <th>Modèle</th>
-                        <th>Date Emprunt</th>
-                        <th>Date retour</th>
 
                     </tr>
                     </thead>
@@ -58,18 +56,13 @@ Ob_start();
                             <td><?= $demande['date_e']; ?> </td>
                             <td><?= $demande['date_r']; ?> </td>
 
-                                <?php if ($demande['fkStatutsE'] == 1) { ?>
-                                    <td>
-                                        <a href="index.php?action=demprunt&EA&Accept=<?= $demande['idEmprunt']; ?>" onclick="return confirm('Accepter cette demande ?')"><button class="btn btn-success btn-xs"><i class="fa fa-check"></i></button></a>
-                                        <a href="index.php?action=demprunt&EA&Decline=<?= $demande['idEmprunt']; ?>&Materiel=<?= $demande['idMateriels']; ?>" onclick="return confirm('Refuser cette demande ?')"> <button class="btn btn-danger btn-xs"><i class="fa fa-times "></i></button></a>
-                                    </td>
-                                <?php } if ($demande['fkStatutsE'] == 2) { ?>
-                                            <td>
-                                                <a href="index.php?action=demprunt&EC&Check=<?= $demande['idEmprunt']; ?>&Materiel=<?= $demande['idMateriels']; ?>" onclick="return confirm('Accepter cette demande ?')"><button class="btn btn-primary btn-xs">Check-Out</button></a>
-                                                <?php if ($demande['date_r'] < date("Y-m-d")) { ?> <a href="index.php?action=demprunt&EC&Remind=<?= $demande['idEmprunt']; ?>"> <button class="btn btn-primary btn-xs"><i class="fa fa-bell "></i></button></a> <?php } ?>
-                                            </td>
-                                        <?php } ?>
-                        <?php if ($demande['fkStatutsE'] == 3 || $demande['fkStatutsE'] == 4) { ?> <td><?= $demande['Statut']; ?></td> <?php } ?>
+                            <?php if ($demande['fkStatutsE'] == 1) { ?>
+                                <td>
+                                    <a href="index.php?action=demprunt&EA&Accept=<?= $demande['idEmprunt']; ?>" onclick="return confirm('Accepter cette demande ?')"><button class="btn btn-success btn-xs"><i class="fa fa-check"></i></button></a>
+                                    <a href="index.php?action=demprunt&EA&Decline=<?= $demande['idEmprunt']; ?>&Materiel=<?= $demande['idMateriels']; ?>" onclick="return confirm('Refuser cette demande ?')"> <button class="btn btn-danger btn-xs"><i class="fa fa-times "></i></button></a>
+                                </td>
+                            <?php } ?>
+                            <?php if ($demande['fkStatutsE'] == 3 || $demande['fkStatutsE'] == 4) { ?> <td><?= $demande['Statut']; ?></td> <?php } ?>
                         </tr>
                     <?php endforeach; ?>
                     </tbody>

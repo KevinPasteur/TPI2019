@@ -274,18 +274,22 @@ function demprunt()
             if (isset($_GET['Accept']))
             {
                 $info = $_GET['Accept'];
-                AcceptRequest($info);
+                AcceptRequestM($info);
+                header('Location: index.php?action=demprunt&EA');
+                exit;
             }
 
             if (isset($_GET['Decline']) && isset($_GET['Materiel']))
             {
                 $emprunt = $_GET['Decline'];
                 $materiel = $_GET['Materiel'];
-                DeclineRequest($emprunt, $materiel);
+                DeclineRequestM($emprunt, $materiel);
+                header('Location: index.php?action=demprunt&EA');
+                exit;
             }
 
             $statut = 1;
-            $result = GetRequests($statut);
+            $result = GetRequestsM($statut);
 
             require "vue/demprunt.php";
         }
@@ -294,20 +298,24 @@ function demprunt()
         if (isset($_GET['EC']))
         {
             $statut = 2;
-            $result = GetRequests($statut);
+            $result = GetRequestsM($statut);
 
 
             if(isset($_GET['Check']) && isset($_GET['Materiel']))
             {
                 $emprunt = $_GET['Check'];
                 $materiel = $_GET['Materiel'];
-                CheckRequest($emprunt, $materiel);
+                CheckRequestM($emprunt, $materiel);
+                header('Location: index.php?action=demprunt&EC');
+                exit;
             }
 
             if (isset($_GET['Remind']))
             {
                 $id = $_GET['Remind'];
                 email_remind($id);
+                header('Location: index.php?action=demprunt&EC');
+                exit;
             }
             require "vue/demprunt.php";
         }
@@ -316,7 +324,7 @@ function demprunt()
         if (isset($_GET['AV']))
         {
             $statut = "'3' or fkStatutsE = '4'";
-            $result = GetRequests($statut);
+            $result = GetRequestsM($statut);
             require "vue/demprunt.php";
         }
     }
@@ -354,6 +362,50 @@ function octroi()
         erreur403();
 }
 
+function doctroi()
+{
+    if(!empty($_SESSION['role']) && $_SESSION['role'] == "Administrateur" ) {
+
+        //Vue lorsque les demandes sont "en attente"
+        if (isset($_GET['EA']))
+        {
+            if (isset($_GET['Accept']))
+            {
+                $info = $_GET['Accept'];
+                AcceptRequestC($info);
+                header('Location: index.php?action=doctroi&EA');
+                exit;
+            }
+
+            if (isset($_GET['Decline']) && isset($_GET['Consommable']))
+            {
+                $octroi = $_GET['Decline'];
+                $consommable = $_GET['$consommable'];
+                DeclineRequestC($octroi, $consommable);
+                header('Location: index.php?action=doctroi&EA');
+                exit;
+            }
+
+            $statut = 1;
+            $result = GetRequestsC($statut);
+
+            require "vue/doctroi.php";
+        }
+
+        //Vue lorsque les demandes sont "Archivés"
+        if (isset($_GET['AV']))
+        {
+            $statut = "'3' or fkStatutsE = '4'";
+            $result = GetRequestsC($statut);
+            require "vue/doctroi.php";
+        }
+    }
+    else
+        erreur403();
+
+
+}
+
 
 function ajoutmateriel()
 {
@@ -361,7 +413,8 @@ function ajoutmateriel()
 
         $result = GetAllCategoriesM();
         if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-            if(!empty($_POST['modele']) && !empty($_POST['n_inventaire']) && !empty($_POST['n_serie']) && !empty($_POST['n_reference']) && !empty($_POST['prix']) && !empty($_POST['categorie']) ) {
+            if(!empty($_POST['modele']) && !empty($_POST['n_inventaire'])  && !empty($_POST['prix']) && !empty($_POST['categorie']) ) {
+
                 $infos = $_POST;
 
                 AddMaterial($infos);
@@ -378,6 +431,42 @@ function ajoutmateriel()
     else
        erreur403();
 
+}
+
+function mesemprunts()
+{
+    if(!empty($_SESSION['role'])) {
+//Vue lorsque les demandes sont "en attente"
+        if (isset($_GET['EA']))
+        {
+
+            $statut = 1;
+            $result = GetMyRequestsM($statut);
+
+            require "vue/mes_emprunts.php";
+        }
+
+        //Vue lorsque les demandes sont "en cours"
+        if (isset($_GET['EC']))
+        {
+            $statut = 2;
+            $result = GetMyRequestsM($statut);
+
+            require "vue/mes_emprunts.php";
+        }
+
+        //Vue lorsque les demandes sont "Archivés"
+        if (isset($_GET['AV']))
+        {
+            $statut = "'3' or fkStatutsE = '4'";
+            $result = GetMyRequestsM($statut);
+            require "vue/mes_emprunts.php";
+        }
+
+        require "vue/mes_emprunts.php";
+    }
+    else
+        erreur403();
 }
 
 function erreur403()
