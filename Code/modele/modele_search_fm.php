@@ -14,7 +14,7 @@ require "modele_getbd.php";
         // connexion au server de BD MySQL et à la BD
         $connexion = GetBD();
 
-        $requete = "select * from Materiels Inner Join CategoriesM on fkCategoriesM = idCategoriesM WHERE fkCategoriesM = '".$_POST["idCategoriesM"]."' and fkStatutsM = '1'";
+        $requete = "select * from Materiels Inner Join CategoriesM on fkCategoriesM = idCategoriesM WHERE fkCategoriesM = '".$_POST["idCategoriesM"]."' and fkStatutsM = '1' and Materiels.actif= '1' ";
         // Exécution de la requête
         $resultat = $connexion->query($requete);
 

@@ -37,12 +37,12 @@ Ob_start(); ?>
     </form>
 
     <?php if ($_SESSION['role'] == "Administrateur") {  ?>
-        <a class="btn btn-primary btn-icon-split" href="index.php?action=ajoutmateriel">
+        <a class="btn btn-primary btn-icon-split float-right" href="index.php?action=ajoutmateriel">
             <span class="text">Ajouter un matériel</span>
         </a>
     <?php } ?>
 
-
 </div>
+<br>
 
 

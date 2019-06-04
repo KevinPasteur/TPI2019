@@ -13,6 +13,8 @@ require "modele/modele_materiel.php";
 require "modele/modele_consommables.php";
 require "modele/modele_search.php";
 require "modele/modele_mail.php";
+require "modele/modele_categories.php";
+require "modele/modele_accounts.php";
 
 /**
  * Description : Affiche l'accueil ()
@@ -37,6 +39,10 @@ function connexion()
 
             //Boucle afin de récupérer les infos dans des variables session
             foreach ($resultat as $compte) :
+                if($compte['actif']==0) {
+                    header('Location: index.php?action=connexion&disable');
+                    exit;
+                }
                 $_SESSION['id'] = $compte['idComptes'];
                 $_SESSION['email'] = $compte['email'];
                 $_SESSION['prenom'] = $compte['prenom'];
@@ -79,10 +85,12 @@ function inscription()
         if (!(empty($_POST['prenom'])) || !(empty($_POST['nom'])) || !(empty($_POST['email']))|| !(empty($_POST['mdp']))|| !(empty($_POST['confM']))) {
             if ($_POST['mdp'] == $_POST['confM']) {
                 $infos = $_POST;
-                Register($infos);
+                $role=2;
+                $ac =0;
+                Register($infos,$role);
             }
-            else {
-
+            else
+            {
                 header('Location: index.php?action=inscription&erreur');
                 exit;
             }
@@ -127,11 +135,31 @@ function materiel()
 
         }
         else {
+            if(@$_GET['disable'])
+            {
+                $infos = $_GET['disable'];
+                DisableM($infos);
+
+                header('Location: index.php?action=materiel&dok');
+                exit;
+
+            }
+            if(@$_GET['activate'])
+            {
+                $infos = $_GET['activate'];
+                ActivateM($infos);
+
+                header('Location: index.php?action=materiel&aok');
+                exit;
+
+            }
+
             $result = GetAllMaterial();
+            $result2 = TestMaterialExist();
+            $result2 = $result2->fetchAll();
+            $count = count($result2);
             require "vue/toutlemateriel.php";
         }
-
-
     }
     else
         erreur403();
@@ -253,7 +281,7 @@ function emprunt()
             }
         }
         else {
-            $result = GetAllCategoriesM();
+            $result = GetAllCategoriesMA();
             require "vue/emprunt.php";
         }
 
@@ -338,18 +366,22 @@ function octroi()
 
         if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
-            if($_POST['modele'] == -1 || !isset($_POST['modele']))
-            {
-                header('Location: index.php?action=octroi&erreur');
-                exit;
-            }
-            else
-            {
-                $infos = $_POST;
-                //LoanConsumable($infos);
+            $test = array_values($_POST);
+            $row = count($test)/3;
 
-                header('Location: index.php?action=octroi&ok');
-                exit;
+            for ($x = 1; $x <= $row; $x++) {
+                if ($_POST["modele$x"] == -1 || !isset($_POST["modele$x"])) {
+                    header('Location: index.php?action=octroi&erreur');
+                    exit;
+                } else {
+                    $infos = $_POST;
+                    LoanConsumable($infos,$x);
+
+                    if($x==$row) {
+                        header('Location: index.php?action=octroi&ok');
+                        exit;
+                    }
+                }
             }
         }
         else {
@@ -373,16 +405,17 @@ function doctroi()
             {
                 $info = $_GET['Accept'];
                 AcceptRequestC($info);
-                header('Location: index.php?action=doctroi&EA');
+                header('Location: index.php?action=doctroi&EA&aok');
                 exit;
             }
 
             if (isset($_GET['Decline']) && isset($_GET['Consommable']))
             {
                 $octroi = $_GET['Decline'];
-                $consommable = $_GET['$consommable'];
+                $consommable = $_GET['Consommable'];
                 DeclineRequestC($octroi, $consommable);
-                header('Location: index.php?action=doctroi&EA');
+
+                header('Location: index.php?action=doctroi&EA&dok');
                 exit;
             }
 
@@ -395,7 +428,7 @@ function doctroi()
         //Vue lorsque les demandes sont "Archivés"
         if (isset($_GET['AV']))
         {
-            $statut = "'3' or fkStatutsE = '4'";
+            $statut = "'2' or fkStatutsO = '3'";
             $result = GetRequestsC($statut);
             require "vue/doctroi.php";
         }
@@ -411,7 +444,7 @@ function ajoutmateriel()
 {
     if(!empty($_SESSION['role']) && $_SESSION['role'] == "Administrateur" ) {
 
-        $result = GetAllCategoriesM();
+        $result = GetAllCategoriesMA();
         if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             if(!empty($_POST['modele']) && !empty($_POST['n_inventaire'])  && !empty($_POST['prix']) && !empty($_POST['categorie']) ) {
 
@@ -463,7 +496,254 @@ function mesemprunts()
             require "vue/mes_emprunts.php";
         }
 
-        require "vue/mes_emprunts.php";
+    }
+    else
+        erreur403();
+}
+
+function mesoctrois()
+{
+    if(!empty($_SESSION['role'])) {
+        //Vue lorsque mes demandes sont "en attente"
+        if (isset($_GET['EA']))
+        {
+
+            $statut = 1;
+            $result = GetMyRequestsC($statut);
+
+            require "vue/mes_octrois.php";
+        }
+
+        //Vue lorsque mes demandes sont "Archivés"
+        if (isset($_GET['AV']))
+        {
+            $statut = "'3' or fkStatutsO = '4'";
+            $result = GetMyRequestsC($statut);
+            require "vue/mes_octrois.php";
+        }
+
+    }
+    else
+        erreur403();
+}
+
+function gerercategories()
+{
+    if(!empty($_SESSION['role']) && $_SESSION['role'] == "Administrateur" ) {
+
+
+
+        if (isset($_GET['disableM']))
+        {
+            $infos = $_GET['disableM'];
+            DisableCat($infos);
+
+            header('Location: index.php?action=gerercategories&Materiels&dok');
+            exit;
+        }
+
+        if (isset($_GET['disableC']))
+        {
+            $infos = $_GET['disableC'];
+            DisableCat($infos);
+
+            header('Location: index.php?action=gerercategories&Consommables&dok');
+            exit;
+        }
+
+        if (isset($_GET['activateM']))
+        {
+            $infos = $_GET['activateM'];
+            ActivateCat($infos);
+
+            header('Location: index.php?action=gerercategories&Materiels&aok');
+            exit;
+        }
+
+
+        if (isset($_GET['activateC']))
+        {
+            $infos = $_GET['activateC'];
+            ActivateCat($infos);
+
+            header('Location: index.php?action=gerercategories&Consommables&aok');
+            exit;
+        }
+
+        if (isset($_GET['Consommables'])) {
+            $result = GetCategoriesC();
+        }
+
+        if (isset($_GET['Materiels'])) {
+            $result = GetCategoriesM();
+        }
+
+
+
+        require "vue/gerercategories.php";
+    }
+    else
+        erreur403();
+
+
+}
+
+function gerercomptes()
+{
+    if(!empty($_SESSION['role']) && $_SESSION['role'] == "Administrateur" ) {
+
+
+
+        if (isset($_GET['disable']))
+        {
+            $infos = $_GET['disable'];
+            DisableA($infos);
+
+            header('Location: index.php?action=gerercomptes&dok');
+            exit;
+        }
+
+        if (isset($_GET['activate']))
+        {
+            $infos = $_GET['activate'];
+            ActivateA($infos);
+
+            header('Location: index.php?action=gerercomptes&aok');
+            exit;
+        }
+        $result = GetAccounts();
+        require "vue/gerercomptes.php";
+    }
+    else
+        erreur403();
+
+
+}
+
+function ajoutcompte()
+{
+    if(!empty($_SESSION['role']) && $_SESSION['role'] == "Administrateur" ) {
+
+        if ($_SERVER['REQUEST_METHOD'] == 'POST')
+        {
+
+            $infos = $_POST;
+            $ac=1;
+            Register($infos,$ac);
+
+
+            header('Location: index.php?action=ajoutcompte&ok');
+            exit;
+
+        }
+
+        $result = GetRoles();
+        require "vue/ajoutcompte.php";
+    }
+    else
+        erreur403();
+}
+
+function modifcompte()
+{
+    if(!empty($_SESSION['role']) && $_SESSION['role'] == "Administrateur" ) {
+
+        @$id = @$_GET['id'];
+        if ($_SERVER['REQUEST_METHOD'] == 'POST')
+        {
+            @$id = @$_GET['id'];
+            $infos = $_POST;
+            UpdateAccount($infos,$id);
+
+            header('Location: index.php?action=modif&ok');
+            exit;
+        }
+
+        $result = GetAnAccount($id);
+        $result2 = GetRoles();
+
+
+        require "vue/modifcompte.php";
+    }
+    else
+        erreur403();
+}
+
+function modifcategorie()
+{
+    if(!empty($_SESSION['role']) && $_SESSION['role'] == "Administrateur" ) {
+        @$id = @$_GET['id'];
+        if ($_SERVER['REQUEST_METHOD'] == 'POST')
+        {
+            @$id = @$_GET['id'];
+            $infos = $_POST;
+            UpdateCategorie($infos,$id);
+        }
+
+        if (isset($_GET['Materiel']))
+        {
+            $cat = "materiel";
+            $result = GetAnCategorieM($id);
+        }
+
+        if (isset($_GET['Consommable']))
+        {
+            $cat = "consommable";
+            $result = GetAnCategorieC($id);
+        }
+
+        require "vue/modifcat.php";
+    }
+    else
+        erreur403();
+}
+
+function modifmateriel()
+{
+    if(!empty($_SESSION['role']) && $_SESSION['role'] == "Administrateur" ) {
+        @$id = @$_GET['id'];
+        if ($_SERVER['REQUEST_METHOD'] == 'POST')
+        {
+            @$id = @$_GET['id'];
+            $infos = $_POST;
+            UpdateMaterial($infos,$id);
+
+            header('Location: index.php?action=materiel&mok');
+            exit;
+
+        }
+            $result = GetAnMaterial($id);
+            $result2 = GetAllCategoriesMA();
+
+        require "vue/modifmateriel.php";
+    }
+    else
+        erreur403();
+}
+
+function ajoutcategorie()
+{
+    if(!empty($_SESSION['role']) && $_SESSION['role'] == "Administrateur" )
+    {
+        @$id = @$_GET['id'];
+        if ($_SERVER['REQUEST_METHOD'] == 'POST')
+        {
+            @$id = @$_GET['id'];
+            $infos = $_POST;
+            AddCategorie($infos,$id);
+        }
+
+        if (isset($_GET['Materiel']))
+        {
+            $cat = "materiel";
+        }
+
+        if (isset($_GET['Consommable']))
+        {
+            $cat = "consommable";
+        }
+
+        require "vue/ajoutcategorie.php";
     }
     else
         erreur403();
@@ -471,6 +751,7 @@ function mesemprunts()
 
 function erreur403()
 {
+    //Redirection sur la page d'erreur
     require "vue/erreur403.php";
 }
 

@@ -33,8 +33,8 @@ function GetAllConsumables()
                 FROM Consommables
                 LEFT JOIN CategoriesC on fkCategoriesC = idCategoriesC
                 LEFT JOIN FournisseursC on fkFournisseursC = idFournisseursC
-                WHERE nb_exemp >= 1
-                ORDER BY categoriesc";
+                WHERE nb_exemp >= 1 and Consommables.actif = 1
+                ORDER BY Consommables.actif DESC, CategoriesC.nom";
 
     // Exécution de la requête
     $resultat = $connexion->query($requete);
@@ -62,6 +62,21 @@ function GetAllCategoriesC()
     return $resultat;
 }
 
+/**
+ * @return false|PDOStatement
+ */
+function GetAnCategorieC($id)
+{
+    $connexion = GetBD();
+    //Récupération de toutes les catégories sauf celles en prêt
+
+    $requete = "SELECT * FROM CategoriesC where idCategoriesC = $id";
+
+    // Exécution de la requête
+    $resultat = $connexion->query($requete);
+
+    return $resultat;
+}
 
 /**
  * @param $infos
@@ -89,10 +104,11 @@ function GetRequestsC($statut)
 {
     $connexion = GetBD();
     //Récupération de toutes les catégories sauf celles en prêt
-    $requete = "SELECT idOctroi,idConsommables,email, modele, fkStatutsO,CategoriesC.nom as categorie FROM Octroi
+    $requete = "SELECT idOctroi,idConsommables,email, modele,nb_exemp,nb_octroi, fkStatutsO,CategoriesC.nom as categorie,StatutsO.nom as 'Statut'  FROM Octroi
                 INNER JOIN Comptes on idComptes = fkComptes
                 INNER JOIN OctroiConso on idOctroi = fkOctroi
                 INNER JOIN Consommables on idConsommables = fkConsommables
+                INNER JOIN StatutsO on idStatutsO = fkStatutsO
                 INNER JOIN CategoriesC on idCategoriesC = fkCategoriesC
                 WHERE fkStatutsO = $statut";
 
@@ -100,4 +116,77 @@ function GetRequestsC($statut)
     $resultat = $connexion->query($requete);
 
     return $resultat;
+}
+
+/**
+ * @param $infos
+ */
+function LoanConsumable($infos,$x)
+{
+
+    $connexion = GetBD();
+    $requeteIns = "INSERT INTO Octroi (fkComptes,fkStatutsO) values ('".$_SESSION['id']."','1')";
+    $connexion->exec($requeteIns);
+    $id = $connexion->lastInsertId();
+
+    $requeteIns = "INSERT INTO OctroiConso (fkOctroi,fkConsommables,nb_octroi) values ('".$id."','".$infos["modele$x"]."','".$infos["nb_exemp$x"]."')";
+    $connexion->exec($requeteIns);
+
+    $requeteUpd = "UPDATE Consommables SET nb_exemp=nb_exemp-'".$infos["nb_exemp$x"]."' WHERE idConsommables = '".$infos["modele$x"]."'";
+    $connexion->exec($requeteUpd);
+}
+
+
+/**
+ * @param $statut
+ * @return false|PDOStatement
+ */
+function GetMyRequestsC($statut)
+{
+    $connexion = GetBD();
+    //Récupération de toutes les catégories sauf celles en prêt
+    $requete = "SELECT idOctroi,idConsommables,email, modele, nb_octroi,fkStatutsO,StatutsO.nom as 'Statut',CategoriesC.nom as categorie FROM Octroi
+                INNER JOIN Comptes on idComptes = fkComptes
+                INNER JOIN OctroiConso on idOctroi = fkOctroi
+                INNER JOIN Consommables on idConsommables = fkConsommables
+                INNER JOIN StatutsO on idStatutsO = fkStatutsO
+                INNER JOIN CategoriesC on idCategoriesC = fkCategoriesC
+                WHERE fkStatutsO = $statut AND email =  '".$_SESSION['email']."'";
+
+    // Exécution de la requête
+    $resultat = $connexion->query($requete);
+
+    return $resultat;
+}
+
+/**
+ * @param $infos
+ */
+function AcceptRequestC($infos)
+{
+
+    $connexion = GetBD();
+    $requeteUpd = "UPDATE Octroi SET fkStatutsE=2 WHERE idOctroi = '".@$infos."'";
+
+    $connexion->exec($requeteUpd);
+}
+
+/**
+ * @param $emprunt
+ * @param $materiel
+ */
+function DeclineRequestC($octroi,$consommable)
+{
+
+    $connexion = GetBD();
+
+    $requeteUpd = "UPDATE Octroi SET fkStatutsO=3 WHERE idOctroi = '".@$octroi."'";
+    $connexion->exec($requeteUpd);
+
+    $requete = "SELECT nb_octroi FROM OctroiConso WHERE fkOctroi ='".@$octroi."'";
+    $resultat = $connexion->query($requete);
+    $result=$resultat->fetch();
+
+    $requeteUpd = "UPDATE Consommables SET nb_exemp=nb_exemp+'".$result['nb_octroi']."' WHERE idConsommables = '".@$consommable."'";
+    $connexion->exec($requeteUpd);
 }

@@ -8,7 +8,7 @@ function CountAllMaterial(){
     // Connexion à la BD et au serveur
     $connexion = GetBD();
 
-    $requete = "SELECT count(idMateriels) FROM Materiels";
+    $requete = "SELECT count(idMateriels) FROM Materiels where Materiels.actif = 1";
     // Exécution de la requête
     $resultat = $connexion->query($requete);
 
@@ -22,8 +22,40 @@ function CountAllMaterial(){
 function GetAllMaterial()
 {
     $connexion = GetBD();
-    $requete = "SELECT idMateriels, CategoriesM.nom as Catégorie, modele as 'Modèle',prix,n_inventaire as 'N° Inventaire', n_serie as 'N° Série', fkStatutsM as Statut FROM Materiels
-                LEFT JOIN CategoriesM on fkCategoriesM = idCategoriesM";
+    $requete = "SELECT idMateriels, CategoriesM.nom as Catégorie, modele as 'Modèle',prix,n_inventaire as 'N° Inventaire', n_serie as 'N° Série', fkStatutsM as Statut, Materiels.actif as actifM FROM Materiels
+                INNER JOIN CategoriesM on fkCategoriesM = idCategoriesM
+                ORDER BY Materiels.actif DESC, CategoriesM.nom";
+
+    // Exécution de la requête
+    $resultat = $connexion->query($requete);
+
+    return $resultat;
+
+}
+
+/**
+ * @return false|PDOStatement
+ */
+function GetAnCategorieM($id)
+{
+    $connexion = GetBD();
+    //Récupération de toutes les catégories sauf celles en prêt
+
+    $requete = "SELECT * FROM CategoriesM where idCategoriesM = $id";
+
+    // Exécution de la requête
+    $resultat = $connexion->query($requete);
+
+    return $resultat;
+}
+
+/**
+ * @return false|PDOStatement
+ */
+function TestMaterialExist()
+{
+    $connexion = GetBD();
+    $requete = "SELECT fkMateriels as tMat FROM EmpruntMate group by fkMateriels order by tMat asc";
 
     // Exécution de la requête
     $resultat = $connexion->query($requete);
@@ -43,6 +75,27 @@ function GetAllCategoriesM()
     $requete = "SELECT  distinct (nom), idCategoriesM FROM CategoriesM
                 INNER JOIN Materiels on idCategoriesM = fkCategoriesM
                 Where fkStatutsM in (1) ";
+
+    // Exécution de la requête
+    $resultat = $connexion->query($requete);
+
+    return $resultat;
+}
+
+/**
+ * @return false|PDOStatement
+ */
+function GetAllCategoriesMA()
+{
+    $connexion = GetBD();
+    //Récupération de toutes les catégories sauf celles en prêt
+
+    /*$requete = "SELECT  distinct (nom), idCategoriesM FROM CategoriesM
+                INNER JOIN Materiels on idCategoriesM = fkCategoriesM
+                Where fkStatutsM in (1) and CategoriesM.actif = 1";*/
+
+    $requete = "SELECT  distinct (nom), idCategoriesM FROM CategoriesM
+                Where CategoriesM.actif = 1";
 
     // Exécution de la requête
     $resultat = $connexion->query($requete);
@@ -170,5 +223,64 @@ function CheckRequestM($emprunt,$materiel)
     $connexion->exec($requeteUpd);
 
     $requeteUpd = "UPDATE Materiels SET fkStatutsM=1 WHERE idMateriels = '".@$materiel."'";
+    $connexion->exec($requeteUpd);
+}
+
+/**
+ * @param $infos
+ */
+function DisableM($infos)
+{
+
+    $connexion = GetBD();
+    $requeteUpd = "UPDATE Materiels SET Actif=0 WHERE idMateriels = '".@$infos."'";
+
+    $connexion->exec($requeteUpd);
+}
+
+/**
+ * @param $infos
+ */
+function ActivateM($infos)
+{
+
+    $connexion = GetBD();
+    $requeteUpd = "UPDATE Materiels SET Actif=1 WHERE idMateriels = '".@$infos."'";
+
+    $connexion->exec($requeteUpd);
+}
+
+
+/**
+ * @return false|PDOStatement
+ */
+function GetAnMaterial($id)
+{
+    $connexion = GetBD();
+    //Récupération de toutes les catégories sauf celles en prêt
+
+    $requete = "SELECT * FROM Materiels where idMateriels = $id";
+
+    // Exécution de la requête
+    $resultat = $connexion->query($requete);
+
+    return $resultat;
+}
+
+
+function UpdateMaterial($infos,$id)
+{
+
+    $connexion = GetBD();
+
+    if(!empty($infos['n_serie']))
+    {
+        $requeteUpd = "UPDATE Materiels SET modele ='".$infos['modele']."' ,n_inventaire='".$infos['n_inventaire']."',n_serie='".$infos['n_serie']."',prix='".$infos['prix']."',fkCategoriesM='".$infos['categorie']."' WHERE idMateriels = $id";
+    }
+    else
+    {
+        $requeteUpd = "UPDATE Materiels SET modele ='".$infos['modele']."' ,n_inventaire='".$infos['n_inventaire']."',prix='".$infos['prix']."',fkCategoriesM='".$infos['categorie']."' WHERE idMateriels = $id";
+    }
+
     $connexion->exec($requeteUpd);
 }

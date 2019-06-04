@@ -21,9 +21,9 @@ Ob_start();
             <?php if (isset($_GET['erreur'])) {?><div class="alert alert-danger" style="text-align: center" role="alert">Veuillez vérifier les champs</div> <?php }?>
 
             <!-- Si le ticket a bien été créé -->
-            <?php if (isset($_GET['ok'])) {?><div class="alert alert-success" style="text-align: center"  role="alert">Votre demande a bien été envoyé !</div> <?php }?>
+            <?php if (isset($_GET['ok'])) {?><div class="alert alert-success" style="text-align: center"  role="alert">Votre demande a bien été envoyé !</div> <?php } ?>
 
-            <form name="form_consommable" class="form-horizontal" enctype="multipart/form-data" >
+            <form name="form_consommable" method="POST" action="index.php?action=octroi" class="form-horizontal" enctype="multipart/form-data" >
                 <div id="dynamic_field">
                     <button type="button" name="add" onclick="add_fconsumable(i);" id="add" class="btn btn-success"><i class="fa fa-plus"></i></button>
                     <div class="form-group">
@@ -50,7 +50,7 @@ Ob_start();
                     <div class="form-group">
                         <label class="col-lg-2 control-label">Nombre d'exemplaire</label>
                         <div class="col-lg-6">
-                            <input class="form-control" type=number name="nb_exemp" required>
+                            <input class="form-control" type=number name="nb_exemp" id="nb_exemp" required>
                         </div>
                     </div>
                     <br>
@@ -67,7 +67,6 @@ Ob_start();
 
 </div>
 <!-- /.container-fluid -->
-</div>
 
 <script>
     var i = 1;
@@ -78,6 +77,9 @@ Ob_start();
 
     document.getElementById('modele').setAttribute("name","modele1");
     document.getElementById('modele').setAttribute("id","modele1");
+
+    document.getElementById('nb_exemp').setAttribute("name","nb_exemp1");
+    document.getElementById('nb_exemp').setAttribute("id","nb_exemp1");
 
 </script>
 

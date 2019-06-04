@@ -22,18 +22,6 @@ Ob_start();
         <?php if (isset($_GET['AV'])) echo " - Archivées"; ?>
     </h1>
     <hr>
-    <div>
-        <form class="d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100 navbar-search">
-            <div class="input-group">
-                <input class="form-control bg-light border-0 small" aria-describedby="basic-addon2" aria-label="Search" type="text" placeholder="Rechercher...">
-                <div class="input-group-append">
-                    <button class="btn btn-primary" type="button">
-                        <i class="fas fa-search fa-sm"></i>
-                    </button>
-                </div>
-            </div>
-        </form>
-    </div>
     <!-- DataTales Example -->
     <div class="card shadow mb-4">
         <div class="card-body">

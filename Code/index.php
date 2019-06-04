@@ -44,11 +44,35 @@ try {
             case 'mes_emprunts':
                 mesemprunts();
                 break;
+            case 'mes_octrois':
+                mesoctrois();
+                break;
             case 'doctroi':
                 doctroi();
                 break;
             case 'ajoutmateriel':
                 ajoutmateriel();
+                break;
+            case 'ajoutcompte':
+                ajoutcompte();
+                break;
+            case 'ajoutcategorie':
+                ajoutcategorie();
+                break;
+            case 'modifcompte':
+                modifcompte();
+                break;
+            case 'modifcat':
+                modifcategorie();
+                break;
+            case 'modifmateriel':
+                modifmateriel();
+                break;
+            case 'gerercomptes':
+                gerercomptes();
+                break;
+            case 'gerercategories':
+                gerercategories();
                 break;
 
             default:

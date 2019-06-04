@@ -1,12 +1,58 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="BookmarkManager">
-    <bookmark url="file://$PROJECT_DIR$/vue/connexion.php" line="61" />
+    <bookmark url="file://$PROJECT_DIR$/vue/connexion.php" line="63" />
     <bookmark url="file://$PROJECT_DIR$/modele/modele_search_fm.php" line="16" />
-    <bookmark url="file://$PROJECT_DIR$/modele/modele_materiel.php" line="123" />
+    <bookmark url="file://$PROJECT_DIR$/modele/modele_materiel.php" line="176" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d0964dfb-2937-459c-b8ae-a0b73ba1d265" name="Default Changelist" comment="" />
+    <list default="true" id="d0964dfb-2937-459c-b8ae-a0b73ba1d265" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/Electrostock.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Electrostock.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/deployment.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/deployment.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/webServers.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/webServers.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/contenu/js/add_form.js" beforeDir="false" afterPath="$PROJECT_DIR$/contenu/js/add_form.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/contenu/js/search_material.js" beforeDir="false" afterPath="$PROJECT_DIR$/contenu/js/search_material.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controleur/controleur.php" beforeDir="false" afterPath="$PROJECT_DIR$/controleur/controleur.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modele/modele_authentication.php" beforeDir="false" afterPath="$PROJECT_DIR$/modele/modele_authentication.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modele/modele_consommables.php" beforeDir="false" afterPath="$PROJECT_DIR$/modele/modele_consommables.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modele/modele_getCategoriesC.php" beforeDir="false" afterPath="$PROJECT_DIR$/modele/modele_getCategoriesC.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modele/modele_getChart.php" beforeDir="false" afterPath="$PROJECT_DIR$/modele/modele_getChart.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modele/modele_getbd.php" beforeDir="false" afterPath="$PROJECT_DIR$/modele/modele_getbd.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modele/modele_mail.php" beforeDir="false" afterPath="$PROJECT_DIR$/modele/modele_mail.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modele/modele_materiel.php" beforeDir="false" afterPath="$PROJECT_DIR$/modele/modele_materiel.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modele/modele_search.php" beforeDir="false" afterPath="$PROJECT_DIR$/modele/modele_search.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modele/modele_search_fc.php" beforeDir="false" afterPath="$PROJECT_DIR$/modele/modele_search_fc.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modele/modele_search_fm.php" beforeDir="false" afterPath="$PROJECT_DIR$/modele/modele_search_fm.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/accueil.php" beforeDir="false" afterPath="$PROJECT_DIR$/vue/accueil.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/ajoutmateriel.php" beforeDir="false" afterPath="$PROJECT_DIR$/vue/ajoutmateriel.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/connexion.php" beforeDir="false" afterPath="$PROJECT_DIR$/vue/connexion.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/demprunt.php" beforeDir="false" afterPath="$PROJECT_DIR$/vue/demprunt.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/doctroi.php" beforeDir="false" afterPath="$PROJECT_DIR$/vue/doctroi.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/emprunt.php" beforeDir="false" afterPath="$PROJECT_DIR$/vue/emprunt.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/erreur.php" beforeDir="false" afterPath="$PROJECT_DIR$/vue/erreur.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/erreur403.php" beforeDir="false" afterPath="$PROJECT_DIR$/vue/erreur403.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/gabarit.php" beforeDir="false" afterPath="$PROJECT_DIR$/vue/gabarit.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/inscription.php" beforeDir="false" afterPath="$PROJECT_DIR$/vue/inscription.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/menu_consommable.php" beforeDir="false" afterPath="$PROJECT_DIR$/vue/menu_consommable.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/menu_materiel.php" beforeDir="false" afterPath="$PROJECT_DIR$/vue/menu_materiel.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/mes_emprunts.php" beforeDir="false" afterPath="$PROJECT_DIR$/vue/mes_emprunts.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/mes_octrois.php" beforeDir="false" afterPath="$PROJECT_DIR$/vue/mes_octrois.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/octroi.php" beforeDir="false" afterPath="$PROJECT_DIR$/vue/octroi.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/recherchec.php" beforeDir="false" afterPath="$PROJECT_DIR$/vue/recherchec.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/recherchem.php" beforeDir="false" afterPath="$PROJECT_DIR$/vue/recherchem.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/toutlemateriel.php" beforeDir="false" afterPath="$PROJECT_DIR$/vue/toutlemateriel.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/toutlesconsommables.php" beforeDir="false" afterPath="$PROJECT_DIR$/vue/toutlesconsommables.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Documentation/BaseDeDonnees/Script/pasteurk_db.sql" beforeDir="false" afterPath="$PROJECT_DIR$/../Documentation/BaseDeDonnees/Script/pasteurk_db.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Documentation/BaseDeDonnees/Script/pasteurk_db2.sql" beforeDir="false" afterPath="$PROJECT_DIR$/../Documentation/BaseDeDonnees/Script/pasteurk_db2.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Documentation/Rapport/Rapport_TPI2019_KPR.docx" beforeDir="false" afterPath="$PROJECT_DIR$/../Documentation/Rapport/Rapport_TPI2019_KPR.docx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../README.md" beforeDir="false" afterPath="$PROJECT_DIR$/../README.md" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -24,55 +70,68 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/modele/modele_materiel.php">
+        <entry file="file://$PROJECT_DIR$/controleur/controleur.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2771">
-              <caret line="163" column="22" selection-start-line="163" selection-start-column="22" selection-end-line="163" selection-end-column="22" />
+            <state relative-caret-position="4000">
+              <caret line="350" column="46" selection-start-line="350" selection-start-column="46" selection-end-line="350" selection-end-column="46" />
+              <folding>
+                <element signature="e#6#95#0#PHP" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$USER_HOME$/AppData/Local/Temp/fz3temp-2/modele_authentication.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-451" />
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$USER_HOME$/AppData/Local/Temp/fz3temp-2/modele_getbd.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="272">
+              <caret line="20" lean-forward="true" selection-start-line="20" selection-end-line="20" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/modele/modele_accounts.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="127">
+              <caret line="12" column="44" lean-forward="true" selection-start-line="12" selection-start-column="44" selection-end-line="12" selection-end-column="44" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/vue/gabarit.php">
+        <entry file="file://$USER_HOME$/AppData/Local/Temp/fz3temp-2/modele_accounts.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1214">
-              <caret line="141" column="27" lean-forward="true" selection-start-line="141" selection-start-column="27" selection-end-line="141" selection-end-column="27" />
+            <state relative-caret-position="17">
+              <caret line="5" column="3" lean-forward="true" selection-start-line="5" selection-start-column="3" selection-end-line="5" selection-end-column="3" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/modele/modele_authentication.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="280">
+              <caret line="47" column="32" selection-start-line="47" selection-start-column="32" selection-end-line="47" selection-end-column="32" />
               <folding>
-                <element signature="e#6#95#0#PHP" expanded="true" />
+                <element signature="e#7#81#0#PHP" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/modele/modele_search_fm.php">
+        <entry file="file://$PROJECT_DIR$/modele/modele_categories.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="2" selection-start-column="2" selection-end-column="2" />
-              <folding>
-                <element signature="e#6#95#0#PHP" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/controleur/controleur.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="6256">
-              <caret line="373" column="31" selection-start-line="373" selection-start-column="31" selection-end-line="373" selection-end-column="31" />
-              <folding>
-                <element signature="e#6#95#0#PHP" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/vue/demprunt.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="765">
-              <caret line="49" column="18" selection-end-line="88" />
+            <state relative-caret-position="1768">
+              <caret line="104" selection-start-line="104" selection-end-line="104" />
               <folding>
                 <element signature="e#6#80#0#PHP" expanded="true" />
               </folding>
@@ -83,8 +142,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/modele/modele_consommables.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1496">
-              <caret line="92" column="48" selection-start-line="92" selection-start-column="48" selection-end-line="92" selection-end-column="48" />
+            <state relative-caret-position="1470">
+              <caret line="106" column="120" selection-start-line="106" selection-start-column="120" selection-end-line="106" selection-end-column="120" />
               <folding>
                 <element signature="e#6#80#0#PHP" expanded="true" />
               </folding>
@@ -93,49 +152,19 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/vue/mes_emprunts.php">
+        <entry file="file://$PROJECT_DIR$/modele/modele_materiel.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="289">
-              <caret line="21" column="61" selection-start-line="21" selection-start-column="61" selection-end-line="21" selection-end-column="61" />
-              <folding>
-                <element signature="e#6#80#0#PHP" expanded="true" />
-              </folding>
+            <state relative-caret-position="-510">
+              <caret line="57" column="59" selection-start-line="57" selection-start-column="59" selection-end-line="57" selection-end-column="59" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/index.php">
+        <entry file="file://$USER_HOME$/AppData/Local/Temp/fz3temp-2/modele_materiel.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="578">
-              <caret line="39" column="22" lean-forward="true" selection-start-line="39" selection-start-column="22" selection-end-line="39" selection-end-column="22" />
-              <folding>
-                <element signature="e#6#95#0#PHP" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/vue/emprunt.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="15" column="8" lean-forward="true" selection-start-line="15" selection-start-column="8" selection-end-line="15" selection-end-column="8" />
-              <folding>
-                <element signature="e#6#95#0#PHP" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/vue/doctroi.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="748">
-              <caret line="48" column="28" lean-forward="true" selection-start-line="48" selection-start-column="28" selection-end-line="48" selection-end-column="28" />
-              <folding>
-                <element signature="e#6#80#0#PHP" expanded="true" />
-              </folding>
+            <state relative-caret-position="198">
+              <caret line="57" column="59" selection-start-line="57" selection-start-column="59" selection-end-line="57" selection-end-column="59" />
             </state>
           </provider>
         </entry>
@@ -149,61 +178,69 @@
       </list>
     </option>
   </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>getaccount</find>
+      <find>getac</find>
+    </findStrings>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/vue/test.php" />
-        <option value="$PROJECT_DIR$/contenu/js/Graph.js" />
-        <option value="$PROJECT_DIR$/contenu/js/GraphC.js" />
-        <option value="$PROJECT_DIR$/vue/test_chart.php" />
-        <option value="$PROJECT_DIR$/contenu/js/GraphM.js" />
-        <option value="$PROJECT_DIR$/vue/graphM.php" />
-        <option value="$PROJECT_DIR$/modele/modele_materiels.php" />
-        <option value="$USER_HOME$/AppData/Local/Temp/fz3temp-2/modele_authentication.php" />
-        <option value="$PROJECT_DIR$/modele/modele_authentication.php" />
-        <option value="$PROJECT_DIR$/modele/modele_getbd.php" />
-        <option value="$USER_HOME$/AppData/Local/Temp/fz3temp-2/modele_consommables.php" />
         <option value="$USER_HOME$/AppData/Local/Temp/fz3temp-2/toutlemateriel.php" />
         <option value="$USER_HOME$/AppData/Local/Temp/fz3temp-2/modele_getbd 2.php" />
         <option value="$PROJECT_DIR$/modele/modele_getChart.php" />
         <option value="$USER_HOME$/AppData/Local/Temp/fz3temp-2/modele_getChart.php" />
-        <option value="$PROJECT_DIR$/vue/accueil.php" />
-        <option value="$USER_HOME$/AppData/Local/Temp/fz3temp-2/modele_materiel.php" />
         <option value="$USER_HOME$/AppData/Local/Temp/fz3temp-2/controleur.php" />
         <option value="$PROJECT_DIR$/vue/inscription.php" />
         <option value="$PROJECT_DIR$/vue/recherche.php" />
         <option value="$PROJECT_DIR$/vue/emprunt.php" />
         <option value="$PROJECT_DIR$/modele/modele_search_m.php" />
-        <option value="$USER_HOME$/AppData/Local/Temp/fz3temp-2/modele_getbd.php" />
         <option value="$PROJECT_DIR$/modele/modele_mail.php" />
         <option value="$PROJECT_DIR$/vue/erreur403.php" />
         <option value="$PROJECT_DIR$/vue/recherchec.php" />
-        <option value="$PROJECT_DIR$/vue/menu_consommable.php" />
         <option value="$PROJECT_DIR$/vue/toutlesconsommables.php" />
         <option value="$PROJECT_DIR$/contenu/js/add_fconsumable.js" />
-        <option value="$PROJECT_DIR$/modele/modele_search_fm.php" />
         <option value="$PROJECT_DIR$/modele/modele_search_fc.php" />
         <option value="$PROJECT_DIR$/contenu/js/add_form.js" />
         <option value="$PROJECT_DIR$/contenu/js/search_material.js" />
-        <option value="$PROJECT_DIR$/vue/octroi.php" />
-        <option value="$PROJECT_DIR$/modele/modele_getCategoriesC.php" />
-        <option value="$PROJECT_DIR$/vue/connexion.php" />
-        <option value="$PROJECT_DIR$/vue/ajoutmateriel.php" />
-        <option value="$PROJECT_DIR$/vue/toutlemateriel.php" />
         <option value="$PROJECT_DIR$/modele/modele_search.php" />
         <option value="$PROJECT_DIR$/vue/recherchem.php" />
+        <option value="$PROJECT_DIR$/vue/menu_consommable.php" />
         <option value="$PROJECT_DIR$/vue/menu_materiel.php" />
-        <option value="$PROJECT_DIR$/index.php" />
-        <option value="$PROJECT_DIR$/vue/mes_emprunts.php" />
+        <option value="$PROJECT_DIR$/modele/modele_search_fm.php" />
+        <option value="$PROJECT_DIR$/vue/connexion.php" />
         <option value="$PROJECT_DIR$/vue/demprunt.php" />
+        <option value="$PROJECT_DIR$/vue/mes_emprunts.php" />
+        <option value="$PROJECT_DIR$/vue/modifcatC.php" />
+        <option value="$PROJECT_DIR$/vue/gerercomptes.php" />
+        <option value="$PROJECT_DIR$/vue/modifcat.php" />
+        <option value="$PROJECT_DIR$/vue/ajoutcategorie.php" />
+        <option value="$PROJECT_DIR$/modele/modele_categories.php" />
+        <option value="$PROJECT_DIR$/vue/gerercategories.php" />
+        <option value="$PROJECT_DIR$/vue/ajoutmateriel.php" />
+        <option value="$PROJECT_DIR$/vue/modifmateriel.php" />
+        <option value="$PROJECT_DIR$/vue/toutlemateriel.php" />
+        <option value="$PROJECT_DIR$/modele/modele_getCategoriesC.php" />
+        <option value="$PROJECT_DIR$/vue/octroi.php" />
+        <option value="$PROJECT_DIR$/index.php" />
+        <option value="$PROJECT_DIR$/vue/gabarit.php" />
+        <option value="$PROJECT_DIR$/vue/mes_octrois.php" />
         <option value="$PROJECT_DIR$/modele/modele_consommables.php" />
         <option value="$PROJECT_DIR$/vue/doctroi.php" />
-        <option value="$PROJECT_DIR$/modele/modele_materiel.php" />
+        <option value="$PROJECT_DIR$/vue/accueil.php" />
+        <option value="$PROJECT_DIR$/modele/modele_authentication.php" />
+        <option value="$PROJECT_DIR$/vue/ajoutcompte.php" />
+        <option value="$PROJECT_DIR$/vue/modifcompte.php" />
         <option value="$PROJECT_DIR$/controleur/controleur.php" />
-        <option value="$PROJECT_DIR$/vue/gabarit.php" />
+        <option value="$USER_HOME$/AppData/Local/Temp/fz3temp-2/modele_getbd.php" />
+        <option value="$PROJECT_DIR$/modele/modele_materiel.php" />
+        <option value="$USER_HOME$/AppData/Local/Temp/fz3temp-2/modele_materiel.php" />
+        <option value="$PROJECT_DIR$/modele/modele_accounts.php" />
+        <option value="$USER_HOME$/AppData/Local/Temp/fz3temp-2/modele_accounts.php" />
       </list>
     </option>
   </component>
@@ -215,12 +252,13 @@
           <mapping local-root="$PROJECT_DIR$" remote-root="C:/Users/Kevin.PASTEUR/Desktop/TPI-KPR/Code" />
         </path_mappings>
       </server>
+      <server host="localhost" id="ae9d7dea-b4cb-47b0-90d5-fdb85717a651" name="localhost (1)" port="8083" />
     </servers>
   </component>
   <component name="PhpWebServerValidation" deployment_server_id="4a54447e-0f91-4e94-aa65-c0453428273e" path_to_validation_script="C:\Users\Kevin.PASTEUR\Desktop\TPI-KPR\Code" selected_validation_type="LOCAL" web_path_to_validation_script="http://localhost:8082/" />
   <component name="PhpWorkspaceProjectConfiguration" interpreter_name="PHP" />
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="953" />
+  <component name="ProjectFrameBounds" extendedState="7">
+    <option name="x" value="-7" />
     <option name="width" value="974" />
     <option name="height" value="1047" />
   </component>
@@ -241,6 +279,12 @@
               <item name="Electrostock" type="b2602c69:ProjectViewProjectNode" />
               <item name="Code" type="462c0819:PsiDirectoryNode" />
               <item name="contenu" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Electrostock" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Code" type="462c0819:PsiDirectoryNode" />
+              <item name="contenu" type="462c0819:PsiDirectoryNode" />
+              <item name="css" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Electrostock" type="b2602c69:ProjectViewProjectNode" />
@@ -279,12 +323,12 @@
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="C:/Program Files/nodejs/node.exe" />
-    <property name="nodejs_interpreter_path" value="C:/Program Files/nodejs/node" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="nodejs_interpreter_path" value="node" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="settings.nodejs" />
+    <property name="settings.editor.selected.configurable" value="reference.webide.settings.project.settings.php" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -305,12 +349,17 @@
     <configuration name="add_form.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="add_form.js" working-dir="$PROJECT_DIR$/contenu/js">
       <method v="2" />
     </configuration>
-    <configuration name="Serveur Web" type="PhpBuiltInWebServerConfigurationType" factoryName="PHP Built-in Web Server" document_root="$PROJECT_DIR$" port="8082">
+    <configuration name="Serveur Web" type="PhpBuiltInWebServerConfigurationType" factoryName="PHP Built-in Web Server" document_root="$PROJECT_DIR$" port="8083">
       <method v="2" />
     </configuration>
     <configuration default="true" type="PhpBuiltInWebServerConfigurationType" factoryName="PHP Built-in Web Server" document_root="$PROJECT_DIR$" port="8082">
       <method v="2" />
     </configuration>
+    <list>
+      <item itemvalue="Node.js.add_form.js" />
+      <item itemvalue="Node.js.GraphM.js" />
+      <item itemvalue="PHP Built-in Web Server.Serveur Web" />
+    </list>
     <recent_temporary>
       <list>
         <item itemvalue="Node.js.add_form.js" />
@@ -343,22 +392,31 @@
       <workItem from="1559024050069" duration="23339000" />
       <workItem from="1559112999923" duration="6347000" />
       <workItem from="1559122189570" duration="423000" />
+      <workItem from="1559203743314" duration="2002000" />
+      <workItem from="1559205763757" duration="213000" />
+      <workItem from="1559206000170" duration="3848000" />
+      <workItem from="1559302827491" duration="6488000" />
+      <workItem from="1559314836370" duration="10665000" />
+      <workItem from="1559380440945" duration="15953000" />
+      <workItem from="1559482366656" duration="10464000" />
+      <workItem from="1559631050184" duration="6358000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="127060000" />
+    <option name="totallyTimeSpent" value="183051000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49945828" visible="true" weight="0.20309168" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49945828" visible="true" weight="0.14072494" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" sideWeight="0.5005417" side_tool="true" weight="0.12793177" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.33260393" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49840087" weight="0.31960997" />
-      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.4978678" weight="0.40303358" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49840087" weight="0.13676149" />
+      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.49733475" weight="0.3672806" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -366,20 +424,20 @@
       <window_info anchor="bottom" id="Database Changes" order="8" />
       <window_info anchor="bottom" id="Version Control" order="9" />
       <window_info anchor="bottom" id="Terminal" order="10" weight="0.32936078" />
-      <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.5021322" side_tool="true" weight="0.40303358" />
+      <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.5026652" side_tool="true" weight="0.3716143" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="Database" order="3" />
     </layout>
     <layout-to-restore>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49945828" weight="0.3411514" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49945828" visible="true" weight="0.14072494" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" sideWeight="0.5005417" side_tool="true" weight="0.12793177" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.33260393" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49840087" weight="0.31960997" />
-      <window_info active="true" anchor="bottom" id="Debug" order="3" sideWeight="0.49840087" visible="true" weight="0.40303358" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49840087" weight="0.13676149" />
+      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.49733475" visible="true" weight="0.3672806" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -387,7 +445,7 @@
       <window_info anchor="bottom" id="Database Changes" order="8" />
       <window_info anchor="bottom" id="Version Control" order="9" />
       <window_info anchor="bottom" id="Terminal" order="10" weight="0.32936078" />
-      <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.50159913" side_tool="true" weight="0.39934355" />
+      <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.5026652" side_tool="true" weight="0.3716143" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -398,58 +456,23 @@
     <option name="version" value="1" />
   </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="php">
-          <url>file://$PROJECT_DIR$/vue/accueil.php</url>
-          <option name="timeStamp" value="4" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="php">
-          <url>file://$PROJECT_DIR$/modele/modele_materiel.php</url>
-          <line>119</line>
-          <option name="timeStamp" value="5" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
     <watches-manager>
       <configuration name="index.php">
         <watch expression="$titre" />
       </configuration>
     </watches-manager>
   </component>
+  <component name="debuggerHistoryManager">
+    <expressions id="setValue">
+      <expression>
+        <expression-string>&quot;UPDATE Comptes \r\n                   SET nom='test',prenom='teste',motdepasse='a665a45920422f9d417e4867efdc4fb8a04a1f3fff1fa07e998e86f7f7a27ae3',email='test@fersff',fkRoles=1\r\n                   WHERE idComptes = '3'&quot;</expression-string>
+        <language-id>PHP</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+    </expressions>
+  </component>
   <component name="editorHistoryManager">
-    <entry file="jar://$APPLICATION_HOME_DIR$/lib/platform-impl.jar!/resources/html5-schema/html5/web-forms.rnc">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="448">
-          <caret line="495" column="9" lean-forward="true" selection-start-line="495" selection-start-column="9" selection-end-line="495" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vue/test.php" />
-    <entry file="file://$PROJECT_DIR$/contenu/js/GraphM.js" />
-    <entry file="file://$PROJECT_DIR$/contenu/js/GraphC.js" />
-    <entry file="file://$PROJECT_DIR$/vue/graphM.php" />
-    <entry file="file://$PROJECT_DIR$/vue/test_chart.php" />
-    <entry file="file://$USER_HOME$/AppData/Local/Temp/fz3temp-2/modele_consommables.php" />
     <entry file="file://$USER_HOME$/AppData/Local/Temp/fz3temp-2/toutlemateriel.php" />
-    <entry file="file://$PROJECT_DIR$/modele/modele_getbd.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="15" selection-start-line="15" selection-end-line="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/modele/modele_authentication.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="5" lean-forward="true" selection-start-column="5" selection-end-column="5" />
-          <folding>
-            <element signature="e#7#81#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/AppData/Local/Temp/fz3temp-2/modele_authentication.php" />
     <entry file="file://$USER_HOME$/AppData/Local/Temp/fz3temp-2/modele_authentication 2.php" />
     <entry file="file://$USER_HOME$/AppData/Local/Temp/fz3temp-2/modele_getChart.php" />
     <entry file="file://$USER_HOME$/AppData/Local/Temp/fz3temp-2/modele_getbd 2.php" />
@@ -460,19 +483,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/AppData/Local/Temp/fz3temp-2/modele_materiel.php" />
-    <entry file="file://$PROJECT_DIR$/vue/accueil.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="17" column="53" selection-start-line="17" selection-start-column="53" selection-end-line="17" selection-end-column="53" />
-          <folding>
-            <element signature="e#6#80#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/AppData/Local/Temp/fz3temp-2/controleur.php" />
-    <entry file="file://$USER_HOME$/AppData/Local/Temp/fz3temp-2/modele_getbd.php" />
     <entry file="file://$PROJECT_DIR$/vue/erreur403.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="305">
@@ -503,23 +514,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/vue/menu_consommable.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="152">
-          <caret line="17" column="47" selection-start-line="17" selection-start-column="47" selection-end-line="17" selection-end-column="47" />
-          <folding>
-            <element signature="e#7#81#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vue/erreur.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="5" lean-forward="true" selection-start-column="5" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/vue/toutlesconsommables.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="263">
@@ -527,77 +521,6 @@
           <folding>
             <element signature="e#7#81#0#PHP" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/contenu/js/add_form.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" selection-start-line="3" selection-end-line="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/contenu/js/search_material.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="493">
-          <caret line="29" selection-start-line="29" selection-end-line="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vue/connexion.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="104">
-          <caret line="48" column="153" selection-start-line="48" selection-start-column="153" selection-end-line="48" selection-end-column="153" />
-          <folding>
-            <element signature="e#6#95#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vue/ajoutmateriel.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="297">
-          <caret line="53" column="22" selection-start-line="53" selection-start-column="22" selection-end-line="53" selection-end-column="22" />
-          <folding>
-            <element signature="e#6#95#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vue/octroi.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="469">
-          <caret line="73" column="14" selection-start-line="73" selection-start-column="14" selection-end-line="73" selection-end-column="14" />
-          <folding>
-            <element signature="e#6#95#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vue/toutlemateriel.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="42" column="85" selection-start-line="42" selection-start-column="85" selection-end-line="42" selection-end-column="85" />
-          <folding>
-            <element signature="e#6#80#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/modele/modele_search_fc.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="25" lean-forward="true" selection-start-line="25" selection-end-line="25" />
-          <folding>
-            <element signature="e#7#96#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/modele/modele_mail.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="798">
-          <caret line="66" lean-forward="true" selection-start-line="66" selection-end-line="66" />
         </state>
       </provider>
     </entry>
@@ -611,60 +534,20 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/modele/modele_search.php">
+    <entry file="file://$PROJECT_DIR$/vue/menu_consommable.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="391">
-          <caret line="26" column="112" selection-start-line="26" selection-start-column="112" selection-end-line="26" selection-end-column="112" />
-          <folding>
-            <element signature="e#7#161#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/modele/modele_getCategoriesC.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="561">
-          <caret line="36" column="21" lean-forward="true" selection-start-line="36" selection-start-column="21" selection-end-line="36" selection-end-column="21" />
-          <folding>
-            <element signature="e#6#95#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vue/menu_materiel.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="23" column="4" selection-start-line="23" selection-start-column="4" selection-end-line="23" selection-end-column="4" />
+          <caret line="27" column="53" lean-forward="true" selection-start-line="27" selection-start-column="53" selection-end-line="27" selection-end-column="64" />
           <folding>
             <element signature="e#7#81#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/vue/mes_octrois.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/modele/modele_materiel.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2771">
-          <caret line="163" column="22" selection-start-line="163" selection-start-column="22" selection-end-line="163" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/modele/modele_search_fm.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="2" selection-start-column="2" selection-end-column="2" />
-          <folding>
-            <element signature="e#6#95#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/controleur/controleur.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="6256">
-          <caret line="373" column="31" selection-start-line="373" selection-start-column="31" selection-end-line="373" selection-end-column="31" />
+        <state relative-caret-position="187">
+          <caret line="16" column="198" selection-start-line="16" selection-start-column="198" selection-end-line="16" selection-end-column="198" />
           <folding>
             <element signature="e#6#95#0#PHP" expanded="true" />
           </folding>
@@ -673,58 +556,159 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/vue/demprunt.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="765">
-          <caret line="49" column="18" selection-end-line="88" />
+        <state relative-caret-position="323">
+          <caret line="23" column="8" selection-start-line="23" selection-start-column="8" selection-end-line="23" selection-end-column="8" />
           <folding>
             <element signature="e#6#80#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/modele/modele_consommables.php">
+    <entry file="file://$PROJECT_DIR$/vue/connexion.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1496">
-          <caret line="92" column="48" selection-start-line="92" selection-start-column="48" selection-end-line="92" selection-end-column="48" />
-          <folding>
-            <element signature="e#6#80#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vue/mes_emprunts.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="21" column="61" selection-start-line="21" selection-start-column="61" selection-end-line="21" selection-end-column="61" />
-          <folding>
-            <element signature="e#6#80#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="578">
-          <caret line="39" column="22" lean-forward="true" selection-start-line="39" selection-start-column="22" selection-end-line="39" selection-end-column="22" />
+        <state relative-caret-position="748">
+          <caret line="49" column="193" selection-start-line="49" selection-start-column="193" selection-end-line="49" selection-end-column="193" />
           <folding>
             <element signature="e#6#95#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vue/menu_materiel.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="25" selection-start-line="25" selection-end-line="44" selection-end-column="6" />
+          <folding>
+            <element signature="e#7#81#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vue/gerercomptes.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="233">
+          <caret line="20" column="4" selection-start-line="20" selection-start-column="4" selection-end-line="25" selection-end-column="8" />
+          <folding>
+            <element signature="e#6#80#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vue/modifcat.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="14" column="8" lean-forward="true" selection-start-line="14" selection-start-column="8" selection-end-line="15" selection-end-column="78" />
+          <folding>
+            <element signature="e#6#80#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vue/gerercategories.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="50" column="1" lean-forward="true" selection-start-line="50" selection-start-column="1" selection-end-line="50" selection-end-column="1" />
+          <folding>
+            <element signature="e#6#80#0#PHP" expanded="true" />
+            <element signature="n#style#0;n#div#2;n#table#0;n#div#0;n#div#0;n#div#2;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#2;n#table#0;n#div#0;n#div#0;n#div#2;n#div#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vue/ajoutcategorie.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="280">
+          <caret line="19" column="103" selection-start-line="19" selection-start-column="103" selection-end-line="19" selection-end-column="103" />
+          <folding>
+            <element signature="e#6#80#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vue/ajoutmateriel.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="37" column="40" selection-start-line="37" selection-start-column="40" selection-end-line="37" selection-end-column="40" />
+          <folding>
+            <element signature="e#6#95#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vue/toutlemateriel.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="130">
+          <caret line="14" column="161" selection-start-line="14" selection-start-column="161" selection-end-line="14" selection-end-column="161" />
+          <folding>
+            <element signature="e#6#80#0#PHP" expanded="true" />
+            <element signature="n#style#0;n#div#2;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/vue/emprunt.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="15" column="8" lean-forward="true" selection-start-line="15" selection-start-column="8" selection-end-line="15" selection-end-column="8" />
+        <state relative-caret-position="323">
+          <caret line="24" column="89" lean-forward="true" selection-start-line="24" selection-start-column="30" selection-end-line="24" selection-end-column="89" />
           <folding>
             <element signature="e#6#95#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/vue/doctroi.php">
+    <entry file="file://$PROJECT_DIR$/vue/modifmateriel.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="748">
-          <caret line="48" column="28" lean-forward="true" selection-start-line="48" selection-start-column="28" selection-end-line="48" selection-end-column="28" />
+        <state relative-caret-position="323">
+          <caret line="24" column="106" selection-start-line="24" selection-start-column="106" selection-end-line="24" selection-end-column="106" />
+          <folding>
+            <element signature="e#6#95#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vue/erreur.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="21" selection-start-line="21" selection-end-line="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/contenu/js/search_material.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="45" column="31" selection-start-line="45" selection-start-column="31" selection-end-line="45" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/contenu/js/add_form.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" selection-start-line="3" selection-end-line="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/modele/modele_search.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="177">
+          <caret line="37" selection-start-line="37" selection-end-line="37" />
+          <folding>
+            <element signature="e#7#161#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/modele/modele_getbd.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="15" selection-start-line="15" selection-end-line="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vue/accueil.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1054">
+          <caret line="66" column="33" selection-start-line="66" selection-start-column="33" selection-end-line="66" selection-end-column="33" />
           <folding>
             <element signature="e#6#80#0#PHP" expanded="true" />
           </folding>
@@ -733,11 +717,185 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/vue/gabarit.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1214">
-          <caret line="141" column="27" lean-forward="true" selection-start-line="141" selection-start-column="27" selection-end-line="141" selection-end-column="27" />
+        <state relative-caret-position="1581">
+          <caret line="98" column="79" selection-start-line="98" selection-start-column="79" selection-end-line="98" selection-end-column="79" />
           <folding>
             <element signature="e#6#95#0#PHP" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vue/mes_octrois.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="748">
+          <caret line="48" column="7" selection-start-line="48" selection-start-column="7" selection-end-line="48" selection-end-column="7" />
+          <folding>
+            <element signature="e#6#80#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vue/mes_emprunts.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="23" column="8" selection-end-line="62" />
+          <folding>
+            <element signature="e#6#80#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vue/octroi.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="22" column="12" selection-start-line="22" selection-start-column="12" selection-end-line="23" selection-end-column="169" />
+          <folding>
+            <element signature="e#6#95#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="697">
+          <caret line="41" column="26" lean-forward="true" selection-start-line="41" selection-start-column="26" selection-end-line="41" selection-end-column="26" />
+          <folding>
+            <element signature="e#6#95#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/modele/modele_mail.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="280">
+          <caret line="51" selection-start-line="51" selection-end-line="51" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vue/doctroi.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="646">
+          <caret line="38" column="45" selection-start-line="38" selection-start-column="45" selection-end-line="38" selection-end-column="45" />
+          <folding>
+            <element signature="e#6#80#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vue/modifcompte.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="527">
+          <caret line="31" column="1" selection-start-line="31" selection-start-column="1" selection-end-line="31" selection-end-column="1" />
+          <folding>
+            <element signature="e#6#80#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/modele/modele_search_fc.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="425">
+          <caret line="25" selection-start-line="25" selection-end-line="25" />
+          <folding>
+            <element signature="e#7#96#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vue/ajoutcompte.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="416">
+          <caret line="56" column="108" selection-start-line="56" selection-start-column="108" selection-end-line="56" selection-end-column="108" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/modele/modele_getCategoriesC.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="535">
+          <caret line="34" column="47" selection-start-line="34" selection-start-column="47" selection-end-line="34" selection-end-column="47" />
+          <folding>
+            <element signature="e#6#95#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Temp/fz3temp-2/modele_authentication.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-451" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/modele/modele_authentication.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="280">
+          <caret line="47" column="32" selection-start-line="47" selection-start-column="32" selection-end-line="47" selection-end-column="32" />
+          <folding>
+            <element signature="e#7#81#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/modele/modele_consommables.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1470">
+          <caret line="106" column="120" selection-start-line="106" selection-start-column="120" selection-end-line="106" selection-end-column="120" />
+          <folding>
+            <element signature="e#6#80#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/controleur/controleur.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4000">
+          <caret line="350" column="46" selection-start-line="350" selection-start-column="46" selection-end-line="350" selection-end-column="46" />
+          <folding>
+            <element signature="e#6#95#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Temp/fz3temp-2/modele_getbd.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="20" lean-forward="true" selection-start-line="20" selection-end-line="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/modele/modele_categories.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1768">
+          <caret line="104" selection-start-line="104" selection-end-line="104" />
+          <folding>
+            <element signature="e#6#80#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/modele/modele_materiel.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-510">
+          <caret line="57" column="59" selection-start-line="57" selection-start-column="59" selection-end-line="57" selection-end-column="59" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Temp/fz3temp-2/modele_materiel.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="57" column="59" selection-start-line="57" selection-start-column="59" selection-end-line="57" selection-end-column="59" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/modele/modele_accounts.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="127">
+          <caret line="12" column="44" lean-forward="true" selection-start-line="12" selection-start-column="44" selection-end-line="12" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Temp/fz3temp-2/modele_accounts.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="5" column="3" lean-forward="true" selection-start-line="5" selection-start-column="3" selection-end-line="5" selection-end-column="3" />
         </state>
       </provider>
     </entry>

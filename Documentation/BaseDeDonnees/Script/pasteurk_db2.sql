@@ -21,6 +21,7 @@ USE `pasteurk_db` ;
 CREATE TABLE IF NOT EXISTS `pasteurk_db`.`CategoriesC` (
   `idCategoriesC` INT(11) NOT NULL AUTO_INCREMENT,
   `nom` VARCHAR(50) NOT NULL,
+  `actif` BOOLEAN NOT NULL DEFAULT 1,
   PRIMARY KEY (`idCategoriesC`))
 ENGINE = InnoDB
 DEFAULT CHARACTER SET = utf8;
@@ -32,6 +33,7 @@ DEFAULT CHARACTER SET = utf8;
 CREATE TABLE IF NOT EXISTS `pasteurk_db`.`CategoriesM` (
   `idCategoriesM` INT(11) NOT NULL AUTO_INCREMENT,
   `nom` VARCHAR(50) NOT NULL,
+  `actif` BOOLEAN NOT NULL DEFAULT 1,
   PRIMARY KEY (`idCategoriesM`))
 ENGINE = InnoDB
 DEFAULT CHARACTER SET = utf8;
@@ -58,6 +60,7 @@ CREATE TABLE IF NOT EXISTS `pasteurk_db`.`Comptes` (
   `prenom` VARCHAR(50) NOT NULL,
   `email` VARCHAR(255) NOT NULL,
   `motdepasse` VARCHAR(254) NOT NULL,
+  `actif` BOOLEAN NOT NULL DEFAULT 1,
   PRIMARY KEY (`idComptes`),
   INDEX `fk_Comptes_Roles_idx` (`fkRoles` ASC) ,
   CONSTRAINT `fk_Comptes_Roles`
@@ -92,6 +95,7 @@ CREATE TABLE IF NOT EXISTS `pasteurk_db`.`Consommables` (
   `limite_inf` TINYINT(11) NULL,
   `fkCategoriesC` INT(11) NOT NULL,
   `fkFournisseursC` INT(11) NOT NULL,
+  `actif` BOOLEAN NOT NULL DEFAULT 1,
   PRIMARY KEY (`idConsommables`),
   INDEX `fk_Consommables_CategoriesC1_idx` (`fkCategoriesC` ASC) ,
   INDEX `fk_consommables_fournisseursc1_idx` (`fkFournisseursC` ASC) ,
@@ -157,11 +161,12 @@ DEFAULT CHARACTER SET = utf8;
 CREATE TABLE IF NOT EXISTS `pasteurk_db`.`Materiels` (
   `idMateriels` INT(11) NOT NULL AUTO_INCREMENT,
   `modele` VARCHAR(50) NOT NULL,
-  `n_inventaire` INT(11) NOT NULL,
+  `n_inventaire` VARCHAR(50) NOT NULL,
   `n_serie` VARCHAR(50) NULL DEFAULT NULL,
   `prix` FLOAT(11) NULL DEFAULT NULL,
   `fkCategoriesM` INT(11) NOT NULL,
   `fkStatutsM` INT(11) NOT NULL,
+  `actif` BOOLEAN NOT NULL DEFAULT 1,
   PRIMARY KEY (`idMateriels`),
   INDEX `fk_Materiels_CategoriesM1_idx` (`fkCategoriesM` ASC) ,
   INDEX `fk_materiels_statutsM1_idx` (`fkStatutsM` ASC) ,
@@ -212,6 +217,7 @@ DEFAULT CHARACTER SET = utf8;
 CREATE TABLE IF NOT EXISTS `pasteurk_db`.`OctroiConso` (
   `fkOctroi` INT(11) NOT NULL,
   `fkConsommables` INT(11) NOT NULL,
+  `nb_octroi` INT(11) NOT NULL,
   PRIMARY KEY (`fkOctroi`, `fkConsommables`),
   INDEX `fk_octroi_has_consommables_consommables1_idx` (`fkConsommables` ASC) ,
   INDEX `fk_octroi_has_consommables_octroi1_idx` (`fkOctroi` ASC) ,
@@ -233,9 +239,10 @@ DEFAULT CHARACTER SET = utf8;
 -- Table `pasteurk_db`.`EmpruntMate`
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `pasteurk_db`.`EmpruntMate` (
+  `fkEmpruntMate` INT(11) NOT NULL AUTO_INCREMENT,
   `fkEmprunt` INT(11) NOT NULL,
-  `fkMateriels` INT(11) NOT NULL,
-  PRIMARY KEY (`fkEmprunt`, `fkMateriels`),
+  `fkMateriels` INT(11) NULL,
+  PRIMARY KEY (`fkEmpruntMate`),
   INDEX `fk_emprunt_has_materiels_materiels1_idx` (`fkMateriels` ASC) ,
   INDEX `fk_emprunt_has_materiels_emprunt1_idx` (`fkEmprunt` ASC) ,
   CONSTRAINT `fk_emprunt_has_materiels_emprunt1`
@@ -246,7 +253,7 @@ CREATE TABLE IF NOT EXISTS `pasteurk_db`.`EmpruntMate` (
   CONSTRAINT `fk_emprunt_has_materiels_materiels1`
     FOREIGN KEY (`fkMateriels`)
     REFERENCES `pasteurk_db`.`Materiels` (`idMateriels`)
-    ON DELETE NO ACTION
+    ON DELETE SET NULL
     ON UPDATE NO ACTION)
 ENGINE = InnoDB
 DEFAULT CHARACTER SET = utf8;

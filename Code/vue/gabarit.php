@@ -89,9 +89,17 @@
         </li>
 
         <li class="nav-item">
-            <a class="nav-link" href="#">
+            <a class="nav-link collapsed" href="index.php?action=demprunt" data-toggle="collapse" data-target="#collapsePages5" aria-expanded="true" aria-controls="collapsePages5">
                 <i class="fas fa-fw fa-tasks"></i>
-                <span>Mes octrois</span></a>
+                <span>Mes octrois</span>
+            </a>
+            <div id="collapsePages5" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
+                <div class="bg-white py-2 collapse-inner rounded">
+                    <h6 class="collapse-header">Mes demandes :</h6>
+                    <a class="collapse-item" href="index.php?action=mes_octrois&EA">En attente</a>
+                    <a class="collapse-item" href="index.php?action=mes_octrois&AV">Archivés</a>
+                </div>
+            </div>
         </li>
 
         <?php if ($_SESSION['role'] == "Administrateur") { ?>
@@ -127,6 +135,27 @@
                         <a class="collapse-item" href="index.php?action=doctroi&AV">Archivés</a>
                     </div>
                 </div>
+            </li>
+            <!-- Divider -->
+            <hr class="sidebar-divider d-none d-md-block">
+            <!-- Nav Item - Pages Collapse Menu -->
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePages4" aria-expanded="true" aria-controls="collapsePages2">
+                    <i class="fas fa-fw fa-tasks"></i>
+                    <span>Gérer les catégories</span>
+                </a>
+                <div id="collapsePages4" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
+                    <div class="bg-white py-2 collapse-inner rounded">
+                        <h6 class="collapse-header">Catégories :</h6>
+                        <a class="collapse-item" href="index.php?action=gerercategories&Materiels">Matériels</a>
+                        <a class="collapse-item" href="index.php?action=gerercategories&Consommables">Consommables</a>
+                    </div>
+                </div>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="index.php?action=gerercomptes">
+                    <i class="fas fa-fw fa-user"></i>
+                    <span>Gérer les comptes</span></a>
             </li>
 
         <?php } ?>

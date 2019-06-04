@@ -15,7 +15,7 @@ $requete = "select distinct(CategoriesC.nom) as Categorie, idCategoriesC from Co
 // Exécution de la requête
 $resultat = $connexion->query($requete);
 
-
+$_SERVER['row'] = $_GET['cat'];
 ?>
     <div class="form-group">
         <label class="col-lg-2 control-label">Catégorie</label>
@@ -40,7 +40,7 @@ $resultat = $connexion->query($requete);
     <div>
         <label class="col-lg-2 control-label">Nombre d'exemplaire</label>
         <div class="col-lg-2">
-            <input class="form-control" type=number name="nb_exemp" required/>
+            <input class="form-control" type=number name="nb_exemp<?= $_GET['cat']; ?>" id="nb_exemp<?= $_GET['cat']; ?>" required/>
         </div>
     </div>
 

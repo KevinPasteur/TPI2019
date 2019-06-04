@@ -47,6 +47,8 @@
                                     <h1 class="h4 text-gray-900 mb-4">Bienvenue sur ElectroStock</h1>
                                 </div>
                                 <?php if(isset($_GET['erreur'])) { ?> <div class="alert alert-danger" style="text-align: center" role="alert">Votre email ou mot de passe est incorrect</div> <?php } ?>
+                                <?php if(isset($_GET['disable'])) { ?> <div class="alert alert-danger" style="text-align: center" role="alert">Votre compte a été désactivé. Si c'est une erreur, contactez : contact@electrostock.mycpnv.ch</div> <?php } ?>
+                                <?php if(isset($_GET['ok'])) { ?> <div class="alert alert-success" style="text-align: center" role="alert">Votre compte a bien été créé !</div> <?php } ?>
                                 <form method="POST" action="index.php?action=connexion">
                                     <div class="form-group">
                                         <input type="email" class="form-control form-control-user" id="email" name="email" placeholder="Adresse email" required>
