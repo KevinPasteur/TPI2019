@@ -84,15 +84,12 @@ function GetAllCategoriesM()
 
 /**
  * @return false|PDOStatement
+ * Description : Récupération de toutes les catégories (matériel) étant actives
  */
 function GetAllCategoriesMA()
 {
     $connexion = GetBD();
     //Récupération de toutes les catégories sauf celles en prêt
-
-    /*$requete = "SELECT  distinct (nom), idCategoriesM FROM CategoriesM
-                INNER JOIN Materiels on idCategoriesM = fkCategoriesM
-                Where fkStatutsM in (1) and CategoriesM.actif = 1";*/
 
     $requete = "SELECT  distinct (nom), idCategoriesM FROM CategoriesM
                 Where CategoriesM.actif = 1";

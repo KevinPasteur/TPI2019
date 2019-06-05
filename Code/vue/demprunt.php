@@ -27,6 +27,8 @@ Ob_start();
         <div class="card-body">
             <div class="table-responsive">
                 <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                    <?php if (isset($_GET['dok'])) {?><div class="alert alert-success" style="text-align: center"  role="alert">Votre demande a bien été refusé !</div> <?php } ?>
+                    <?php if (isset($_GET['aok'])) {?><div class="alert alert-success" style="text-align: center"  role="alert">Votre demande a bien été accepté !</div> <?php } ?>
                     <thead>
                     <tr>
                         <th>Compte</th>

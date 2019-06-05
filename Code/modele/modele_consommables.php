@@ -29,11 +29,11 @@ function CountAllConsumables(){
 function GetAllConsumables()
 {
     $connexion = GetBD();
-    $requete = "SELECT CategoriesC.nom as categoriesc, modele, nb_exemp, n_reference, prix,FournisseursC.nom as fournisseur
+    $requete = "SELECT idConsommables,CategoriesC.nom as categoriesc, modele, nb_exemp, n_reference, prix,FournisseursC.nom as fournisseur,Consommables.actif as actifC,limite_inf
                 FROM Consommables
                 LEFT JOIN CategoriesC on fkCategoriesC = idCategoriesC
                 LEFT JOIN FournisseursC on fkFournisseursC = idFournisseursC
-                WHERE nb_exemp >= 1 and Consommables.actif = 1
+                WHERE nb_exemp >= 1
                 ORDER BY Consommables.actif DESC, CategoriesC.nom";
 
     // Exécution de la requête
@@ -62,6 +62,24 @@ function GetAllCategoriesC()
     return $resultat;
 }
 
+
+/**
+ * @return false|PDOStatement
+ */
+function GetAllCategoriesCA()
+{
+    $connexion = GetBD();
+    //Récupération de toutes les catégories sauf celles en prêt
+
+    $requete = "SELECT  distinct (nom), idCategoriesC FROM CategoriesC
+                INNER JOIN Consommables on idCategoriesC = fkCategoriesC
+                WHERE nb_exemp >= 1 and CategoriesC.actif = 1";
+
+    // Exécution de la requête
+    $resultat = $connexion->query($requete);
+
+    return $resultat;
+}
 /**
  * @return false|PDOStatement
  */
@@ -71,6 +89,22 @@ function GetAnCategorieC($id)
     //Récupération de toutes les catégories sauf celles en prêt
 
     $requete = "SELECT * FROM CategoriesC where idCategoriesC = $id";
+
+    // Exécution de la requête
+    $resultat = $connexion->query($requete);
+
+    return $resultat;
+}
+
+/**
+ * @return false|PDOStatement
+ */
+function GetAnConsumable($id)
+{
+    $connexion = GetBD();
+    //Récupération de toutes les catégories sauf celles en prêt
+
+    $requete = "SELECT * FROM Consommables where idConsommables = $id";
 
     // Exécution de la requête
     $resultat = $connexion->query($requete);
@@ -166,7 +200,7 @@ function AcceptRequestC($infos)
 {
 
     $connexion = GetBD();
-    $requeteUpd = "UPDATE Octroi SET fkStatutsE=2 WHERE idOctroi = '".@$infos."'";
+    $requeteUpd = "UPDATE Octroi SET fkStatutsO=2 WHERE idOctroi = '".@$infos."'";
 
     $connexion->exec($requeteUpd);
 }
@@ -189,4 +223,57 @@ function DeclineRequestC($octroi,$consommable)
 
     $requeteUpd = "UPDATE Consommables SET nb_exemp=nb_exemp+'".$result['nb_octroi']."' WHERE idConsommables = '".@$consommable."'";
     $connexion->exec($requeteUpd);
+}
+
+/**
+ * @param $infos
+ */
+function DisableC($infos)
+{
+
+    $connexion = GetBD();
+    $requeteUpd = "UPDATE Consommables SET Actif=0 WHERE idConsommables = '".@$infos."'";
+
+    $connexion->exec($requeteUpd);
+}
+
+/**
+ * @param $infos
+ */
+function ActivateC($infos)
+{
+
+    $connexion = GetBD();
+    $requeteUpd = "UPDATE Consommables SET Actif=1 WHERE idConsommables = '".@$infos."'";
+
+    $connexion->exec($requeteUpd);
+}
+
+function UpdateConsumable($infos,$id)
+{
+
+    $connexion = GetBD();
+
+    $requeteUpd = "UPDATE Consommables SET modele ='".$infos['modele']."' ,nb_exemp='".$infos['nb_exemp']."',n_reference='".$infos['n_reference']."',prix='".$infos['prix']."',limite_inf='".$infos['limite_inf']."',fkFournisseursC='1',fkCategoriesC='".$infos['categorie']."' WHERE idConsommables = $id";
+
+    $connexion->exec($requeteUpd);
+}
+
+function AddConsumable($infos)
+{
+
+    $connexion = GetBD();
+    $requeteIns = "INSERT INTO Consommables (modele,nb_exemp,n_reference,prix,limite_inf,fkCategoriesC,fkFournisseursC) values ('".$infos['modele']."','".$infos['nb_exemp']."','".$infos['n_reference']."','".$infos['prix']."','".$infos['limite_inf']."','".$infos['categorie']."','1')";
+
+    $connexion->exec($requeteIns);
+}
+
+
+function GetExemplaryNumber($id)
+{
+
+    $connexion = GetBD();
+    $requete = "";
+
+    $connexion->exec($requete);
 }

@@ -37,25 +37,29 @@ Ob_start();
                 <br>
                 <div class="form-group">
                     <div class="form-group">
+                        <span> <b>Modèle:</b></span>
                         <input type="text" class="form-control form-control-user col-lg-3" name="modele" placeholder="Modèle" required>
                     </div>
                 </div>
                 <br>
                 <div class="form-group">
                     <div class="form-group">
-                        <input type="text" class="form-control form-control-user col-lg-3"  name="n_inventaire" placeholder="N° inventaire"" required>
+                        <span> <b>N° inventaire :</b></span>
+                        <input type="text" class="form-control form-control-user col-lg-3"  name="n_inventaire" placeholder="N° inventaire" required>
                     </div>
                 </div>
                 <br>
                 <div class="form-group">
                     <div class="form-group">
+                        <span> <b>N° de série :</b></span>
                         <input type="text" class="form-control form-control-user col-lg-3"  name="n_serie" placeholder="N° de série">
                     </div>
                 </div>
                 <br>
                 <div class="form-group">
                     <div class="form-group">
-                        <input type="number" class="form-control form-control-user col-lg-3" name="prix" placeholder="Prix"  required>
+                        <span> <b>Prix :</b></span>
+                        <input type="number" step="any" class="form-control form-control-user col-lg-3" name="prix" placeholder="Prix"  required>
                     </div>
                 </div>
                 <hr>

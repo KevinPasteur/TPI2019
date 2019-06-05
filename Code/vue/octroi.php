@@ -9,6 +9,10 @@
 $titre = "Faire une demande d'octroi";
 Ob_start();
 ?>
+<script>
+
+
+</script>
 
 <!-- Begin Page Content -->
 <div class="container-fluid">
@@ -25,11 +29,15 @@ Ob_start();
 
             <form name="form_consommable" method="POST" action="index.php?action=octroi" class="form-horizontal" enctype="multipart/form-data" >
                 <div id="dynamic_field">
-                    <button type="button" name="add" onclick="add_fconsumable(i);" id="add" class="btn btn-success"><i class="fa fa-plus"></i></button>
+                    <div class="form-group">
+                        <div class="col-lg-6">
+                            <button type="button" name="add" onclick="add_fconsumable(i);" id="add" class="btn btn-success"><i class="fa fa-plus"></i></button>
+                        </div>
+                    </div>
                     <div class="form-group">
                         <label class="col-lg-2 control-label">Catégorie</label>
                         <div class="col-lg-6">
-                            <SELECT class="form-control" name="categorie" id="categorie" onchange='search_fc(1);' size="1" required>
+                            <SELECT class="form-control" name="categorie" id="categorie" onchange={search_fc(1);search_ex(1);} size="1" required>
                                 <option value='-1'>Aucun</option>
                                 <?php
                                 foreach ($result as $row) :
@@ -42,15 +50,15 @@ Ob_start();
                     <div class="form-group">
                         <label class="col-lg-2 control-label">Modèle</label>
                         <div class="col-lg-6">
-                            <select class="form-control" id="modele" name='modele' required>
+                            <select class="form-control" id="modele" onchange='search_ex(1);' name='modele' required>
                                 <option value='-1'>Choisissez d'abord une catégorie</option>
                             </select>
                         </div>
                     </div>
-                    <div class="form-group">
+                    <div class="form-group" id="f_nb_exemp">
                         <label class="col-lg-2 control-label">Nombre d'exemplaire</label>
                         <div class="col-lg-6">
-                            <input class="form-control" type=number name="nb_exemp" id="nb_exemp" required>
+                            <input class="form-control" type=number max=""  name='nb_exemp' id="nb_exemp" required>
                         </div>
                     </div>
                     <br>
@@ -71,6 +79,7 @@ Ob_start();
 <script>
     var i = 1;
     var a = 1;
+    var b = 1;
 
     document.getElementById('categorie').setAttribute("name","categorie1");
     document.getElementById('categorie').setAttribute("id","categorie1");

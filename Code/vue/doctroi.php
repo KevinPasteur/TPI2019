@@ -36,8 +36,6 @@ Ob_start();
                         <th>Modèle</th>
                         <th>Nb d'exemplaires</th>
                         <th>Nb octroyés</th>
-                        <th>Limite inférieure</th>
-
                     </tr>
                     </thead>
                     <tbody>
@@ -55,7 +53,7 @@ Ob_start();
                                     <a href="index.php?action=doctroi&EA&Decline=<?= $demande['idOctroi']; ?>&Consommable=<?= $demande['idConsommables']; ?>" onclick="return confirm('Refuser cette demande ?')"> <button class="btn btn-danger btn-xs"><i class="fa fa-times "></i></button></a>
                                 </td>
                             <?php } ?>
-                            <?php if ($demande['fkStatutsO'] == 3 || $demande['fkStatutsO'] == 4) { ?> <td><?= $demande['Statut']; ?></td> <?php } ?>
+                            <?php if ($demande['fkStatutsO'] == 2 || $demande['fkStatutsO'] == 3) { ?> <td><?= $demande['Statut']; ?></td> <?php } ?>
                         </tr>
                     <?php endforeach; ?>
                     </tbody>

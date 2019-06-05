@@ -16,7 +16,7 @@ if (isset($_POST["idCategoriesC"])) {
     // connexion au server de BD MySQL et à la BD
     $connexion = GetBD();
 
-    $requete = "select * from Consommables Inner Join CategoriesC on fkCategoriesC = idCategoriesC WHERE fkCategoriesC = '".$_POST["idCategoriesC"]."'";
+    $requete = "select * from Consommables Inner Join CategoriesC on fkCategoriesC = idCategoriesC WHERE fkCategoriesC = '".$_POST["idCategoriesC"]."' and Consommables.actif = 1";
     // Exécution de la requête
     $resultat = $connexion->query($requete);
 

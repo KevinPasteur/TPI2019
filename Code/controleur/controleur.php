@@ -180,6 +180,25 @@ function consommables()
 
         }
         else {
+
+            if(@$_GET['disable'])
+            {
+                $infos = $_GET['disable'];
+                DisableC($infos);
+
+                header('Location: index.php?action=consommables&dok');
+                exit;
+
+            }
+            if(@$_GET['activate'])
+            {
+                $infos = $_GET['activate'];
+                ActivateC($infos);
+
+                header('Location: index.php?action=consommables&aok');
+                exit;
+
+            }
             $result = GetAllConsumables();
             require "vue/toutlesconsommables.php";
         }
@@ -303,7 +322,12 @@ function demprunt()
             {
                 $info = $_GET['Accept'];
                 AcceptRequestM($info);
-                header('Location: index.php?action=demprunt&EA');
+
+                $type="A";
+                $demande="M";
+                email_request($info,$type,$demande);
+
+                header('Location: index.php?action=demprunt&EA&aok');
                 exit;
             }
 
@@ -312,7 +336,11 @@ function demprunt()
                 $emprunt = $_GET['Decline'];
                 $materiel = $_GET['Materiel'];
                 DeclineRequestM($emprunt, $materiel);
-                header('Location: index.php?action=demprunt&EA');
+
+                $type="D";
+                $demande="M";
+                email_request($materiel,$type,$demande);
+                header('Location: index.php?action=demprunt&EA&dok');
                 exit;
             }
 
@@ -385,6 +413,7 @@ function octroi()
             }
         }
         else {
+            $result2 =
             $result = GetAllCategoriesC();
             require "vue/octroi.php";
         }
@@ -405,6 +434,10 @@ function doctroi()
             {
                 $info = $_GET['Accept'];
                 AcceptRequestC($info);
+
+                $type="A";
+                $demande="C";
+                email_request($info,$type,$demande);
                 header('Location: index.php?action=doctroi&EA&aok');
                 exit;
             }
@@ -415,6 +448,9 @@ function doctroi()
                 $consommable = $_GET['Consommable'];
                 DeclineRequestC($octroi, $consommable);
 
+                $type="D";
+                $demande="C";
+                email_request($consommable,$type,$demande);
                 header('Location: index.php?action=doctroi&EA&dok');
                 exit;
             }
@@ -463,6 +499,32 @@ function ajoutmateriel()
     }
     else
        erreur403();
+
+}
+
+function ajoutconso()
+{
+    if(!empty($_SESSION['role']) && $_SESSION['role'] == "Administrateur" ) {
+
+        $result = GetAllCategoriesCA();
+        if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+            if(!empty($_POST['modele']) && !empty($_POST['nb_exemp']) && !empty($_POST['n_reference']) && !empty($_POST['limite_inf']) && !empty($_POST['prix']) && !empty($_POST['categorie']) ) {
+
+                $infos = $_POST;
+
+                AddConsumable($infos);
+
+                header('Location: index.php?action=ajoutconso&ok');
+                exit;
+            }
+        }
+
+
+        require "vue/ajoutconso.php";
+
+    }
+    else
+        erreur403();
 
 }
 
@@ -716,6 +778,29 @@ function modifmateriel()
             $result2 = GetAllCategoriesMA();
 
         require "vue/modifmateriel.php";
+    }
+    else
+        erreur403();
+}
+
+function modifconso()
+{
+    if(!empty($_SESSION['role']) && $_SESSION['role'] == "Administrateur" ) {
+        @$id = @$_GET['id'];
+        if ($_SERVER['REQUEST_METHOD'] == 'POST')
+        {
+            @$id = @$_GET['id'];
+            $infos = $_POST;
+            UpdateConsumable($infos,$id);
+
+            header('Location: index.php?action=consommables&mok');
+            exit;
+
+        }
+        $result = GetAnConsumable($id);
+        $result2 = GetAllCategoriesCA();
+
+        require "vue/modifconso.php";
     }
     else
         erreur403();

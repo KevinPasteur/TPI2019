@@ -25,7 +25,7 @@ Ob_start(); ?>
                 </div>
             </div>
         </form>
-            <a class="btn btn-primary btn-icon-split float-right" href="#">
+            <a class="btn btn-primary btn-icon-split float-right" href="index.php?action=ajoutconso">
                 <span class="text">Ajouter un consommable</span>
             </a>
     </div>

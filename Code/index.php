@@ -59,6 +59,9 @@ try {
             case 'ajoutcategorie':
                 ajoutcategorie();
                 break;
+            case 'ajoutconso':
+                ajoutconso();
+                break;
             case 'modifcompte':
                 modifcompte();
                 break;
@@ -67,6 +70,9 @@ try {
                 break;
             case 'modifmateriel':
                 modifmateriel();
+                break;
+            case 'modifconso':
+                modifconso();
                 break;
             case 'gerercomptes':
                 gerercomptes();

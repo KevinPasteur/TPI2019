@@ -62,7 +62,7 @@ Ob_start();
                 <div class="form-group">
                     <div class="form-group">
                         <span> <b>Prix :</b></span>
-                        <input type="number" class="form-control form-control-user col-lg-3" value="<?= $materiel['prix']; ?>" name="prix" placeholder="Prix"  required>
+                        <input type="number" step="any" class="form-control form-control-user col-lg-3" value="<?= $materiel['prix']; ?>" name="prix" placeholder="Prix"  required>
                     </div>
                 </div>
                 <hr>

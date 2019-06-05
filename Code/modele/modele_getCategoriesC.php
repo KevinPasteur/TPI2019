@@ -11,11 +11,10 @@ require "modele_getbd.php";
 // connexion au server de BD MySQL et à la BD
 $connexion = GetBD();
 
-$requete = "select distinct(CategoriesC.nom) as Categorie, idCategoriesC from Consommables Inner Join CategoriesC on fkCategoriesC = idCategoriesC WHERE nb_exemp >= 1";
+$requete = "select distinct(CategoriesC.nom) as Categorie, idCategoriesC from Consommables Inner Join CategoriesC on fkCategoriesC = idCategoriesC WHERE nb_exemp >= 1 and CategoriesC.actif = 1";
 // Exécution de la requête
 $resultat = $connexion->query($requete);
 
-$_SERVER['row'] = $_GET['cat'];
 ?>
     <div class="form-group">
         <label class="col-lg-2 control-label">Catégorie</label>
@@ -32,7 +31,7 @@ $_SERVER['row'] = $_GET['cat'];
     <div class="form-group">
         <label class="col-lg-2 control-label">Modèle</label>
         <div id="modele" class="col-lg-6">
-            <select class="form-control" name='modele<?= $_GET['cat']; ?>' id="modele<?= $_GET['cat']; ?>" required>
+            <select class="form-control" name='modele<?= $_GET['cat']; ?>' onchange="search_ex(<?=  $_GET['cat']; ?>);" id="modele<?= $_GET['cat']; ?>" required>
                 <option value='-1'>Choisissez d'abord une catégorie</option>
             </select>
         </div>

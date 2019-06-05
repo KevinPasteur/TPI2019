@@ -53,7 +53,7 @@ Ob_start();
                 <div class="form-group">
                     <label class="col-lg-2 control-label">Date de retour</label>
                     <div class="col-lg-6">
-                        <input class="form-control" type="date" min="<?= date("Y-m-d"); ?>" name="date_r" required>
+                        <input class="form-control" type="date" min="<?= date("Y-m-d"); ?>" value="<?= date("Y-m-d"); ?>" name="date_r" required>
                     </div>
                 </div>
                 <br>
