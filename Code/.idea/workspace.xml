@@ -7,31 +7,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d0964dfb-2937-459c-b8ae-a0b73ba1d265" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/contenu/js/search_material.js" beforeDir="false" afterPath="$PROJECT_DIR$/contenu/js/search_material.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controleur/controleur.php" beforeDir="false" afterPath="$PROJECT_DIR$/controleur/controleur.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modele/modele_accounts.php" beforeDir="false" afterPath="$PROJECT_DIR$/modele/modele_accounts.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modele/modele_categories.php" beforeDir="false" afterPath="$PROJECT_DIR$/modele/modele_categories.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modele/modele_consommables.php" beforeDir="false" afterPath="$PROJECT_DIR$/modele/modele_consommables.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modele/modele_getCategoriesC.php" beforeDir="false" afterPath="$PROJECT_DIR$/modele/modele_getCategoriesC.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modele/modele_mail.php" beforeDir="false" afterPath="$PROJECT_DIR$/modele/modele_mail.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modele/modele_materiel.php" beforeDir="false" afterPath="$PROJECT_DIR$/modele/modele_materiel.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modele/modele_search_fc.php" beforeDir="false" afterPath="$PROJECT_DIR$/modele/modele_search_fc.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vue/ajoutcategorie.php" beforeDir="false" afterPath="$PROJECT_DIR$/vue/ajoutcategorie.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vue/ajoutcompte.php" beforeDir="false" afterPath="$PROJECT_DIR$/vue/ajoutcompte.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vue/ajoutmateriel.php" beforeDir="false" afterPath="$PROJECT_DIR$/vue/ajoutmateriel.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vue/demprunt.php" beforeDir="false" afterPath="$PROJECT_DIR$/vue/demprunt.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vue/doctroi.php" beforeDir="false" afterPath="$PROJECT_DIR$/vue/doctroi.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vue/emprunt.php" beforeDir="false" afterPath="$PROJECT_DIR$/vue/emprunt.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vue/gabarit.php" beforeDir="false" afterPath="$PROJECT_DIR$/vue/gabarit.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vue/gerercategories.php" beforeDir="false" afterPath="$PROJECT_DIR$/vue/gerercategories.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vue/gerercomptes.php" beforeDir="false" afterPath="$PROJECT_DIR$/vue/gerercomptes.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vue/menu_consommable.php" beforeDir="false" afterPath="$PROJECT_DIR$/vue/menu_consommable.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vue/modifcat.php" beforeDir="false" afterPath="$PROJECT_DIR$/vue/modifcat.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vue/modifcompte.php" beforeDir="false" afterPath="$PROJECT_DIR$/vue/modifcompte.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vue/modifmateriel.php" beforeDir="false" afterPath="$PROJECT_DIR$/vue/modifmateriel.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vue/octroi.php" beforeDir="false" afterPath="$PROJECT_DIR$/vue/octroi.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vue/toutlesconsommables.php" beforeDir="false" afterPath="$PROJECT_DIR$/vue/toutlesconsommables.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Documentation/Rapport/Rapport_TPI2019_KPR.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/../Documentation/Rapport/Rapport_TPI2019_KPR.pdf" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -52,7 +28,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/vue/octroi.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="374">
+            <state relative-caret-position="799">
               <caret line="52" column="93" selection-start-line="52" selection-start-column="93" selection-end-line="52" selection-end-column="93" />
               <folding>
                 <element signature="e#6#95#0#PHP" expanded="true" />
@@ -64,7 +40,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/modele/modele_search_fc.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
+            <state relative-caret-position="68">
               <caret line="9" selection-start-line="9" selection-end-line="9" selection-end-column="27" />
               <folding>
                 <element signature="e#7#96#0#PHP" expanded="true" />
@@ -85,29 +61,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/contenu/js/search_material.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="315">
+            <state relative-caret-position="1071">
               <caret line="63" column="52" lean-forward="true" selection-start-line="63" selection-start-column="52" selection-end-line="63" selection-end-column="52" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/modele/modele_search_exemp.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="536">
+            <state relative-caret-position="510">
               <caret line="34" lean-forward="true" selection-start-line="34" selection-end-line="34" />
-              <folding>
-                <element signature="e#7#96#0#PHP" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$USER_HOME$/AppData/Local/Temp/fz3temp-2/modele_getbd.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="11" column="81" selection-start-line="11" selection-start-column="81" selection-end-line="11" selection-end-column="81" />
             </state>
           </provider>
         </entry>
@@ -115,7 +79,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/vue/gabarit.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
+            <state relative-caret-position="323">
               <caret line="24" lean-forward="true" selection-start-line="24" selection-end-line="24" />
               <folding>
                 <element signature="e#6#95#0#PHP" expanded="true" />
@@ -136,20 +100,11 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/modele/modele_getCategoriesC.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="357">
+            <state relative-caret-position="476">
               <caret line="33" column="118" selection-start-line="33" selection-start-column="118" selection-end-line="33" selection-end-column="118" />
               <folding>
                 <element signature="e#6#95#0#PHP" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$USER_HOME$/AppData/Local/Temp/fz3temp-2/emprunt.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret line="20" selection-start-line="20" selection-end-line="20" />
             </state>
           </provider>
         </entry>
@@ -254,6 +209,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -303,7 +259,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -387,17 +342,18 @@
       <workItem from="1559482366656" duration="10464000" />
       <workItem from="1559631050184" duration="6358000" />
       <workItem from="1559715066648" duration="9615000" />
+      <workItem from="1559802438511" duration="798000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="192666000" />
+    <option name="totallyTimeSpent" value="193464000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49945828" visible="true" weight="0.14232409" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49945828" visible="true" weight="0.14392324" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" sideWeight="0.5005417" side_tool="true" weight="0.12793177" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -803,10 +759,47 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/AppData/Local/Temp/fz3temp-2/emprunt.php">
+    <entry file="file://$PROJECT_DIR$/vue/octroi.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret line="20" selection-start-line="20" selection-end-line="20" />
+        <state relative-caret-position="799">
+          <caret line="52" column="93" selection-start-line="52" selection-start-column="93" selection-end-line="52" selection-end-column="93" />
+          <folding>
+            <element signature="e#6#95#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/modele/modele_search_fc.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="9" selection-start-line="9" selection-end-line="9" selection-end-column="27" />
+          <folding>
+            <element signature="e#7#96#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/contenu/js/add_form.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/contenu/js/search_material.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1071">
+          <caret line="63" column="52" lean-forward="true" selection-start-line="63" selection-start-column="52" selection-end-line="63" selection-end-column="52" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vue/gabarit.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="24" lean-forward="true" selection-start-line="24" selection-end-line="24" />
+          <folding>
+            <element signature="e#6#95#0#PHP" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -819,7 +812,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/modele/modele_getCategoriesC.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
+        <state relative-caret-position="476">
           <caret line="33" column="118" selection-start-line="33" selection-start-column="118" selection-end-line="33" selection-end-column="118" />
           <folding>
             <element signature="e#6#95#0#PHP" expanded="true" />
@@ -827,57 +820,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/vue/gabarit.php">
+    <entry file="file://$USER_HOME$/AppData/Local/Temp/fz3temp-2/emprunt.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret line="24" lean-forward="true" selection-start-line="24" selection-end-line="24" />
-          <folding>
-            <element signature="e#6#95#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/modele/modele_search_exemp.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="536">
-          <caret line="34" lean-forward="true" selection-start-line="34" selection-end-line="34" />
-          <folding>
-            <element signature="e#7#96#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/contenu/js/search_material.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="63" column="52" lean-forward="true" selection-start-line="63" selection-start-column="52" selection-end-line="63" selection-end-column="52" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/contenu/js/add_form.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/modele/modele_search_fc.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" selection-start-line="9" selection-end-line="9" selection-end-column="27" />
-          <folding>
-            <element signature="e#7#96#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vue/octroi.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="52" column="93" selection-start-line="52" selection-start-column="93" selection-end-line="52" selection-end-column="93" />
-          <folding>
-            <element signature="e#6#95#0#PHP" expanded="true" />
-          </folding>
+        <state relative-caret-position="255">
+          <caret line="20" selection-start-line="20" selection-end-line="20" />
         </state>
       </provider>
     </entry>
@@ -885,6 +831,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
           <caret line="11" column="81" selection-start-line="11" selection-start-column="81" selection-end-line="11" selection-end-column="81" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/modele/modele_search_exemp.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="510">
+          <caret line="34" lean-forward="true" selection-start-line="34" selection-end-line="34" />
         </state>
       </provider>
     </entry>
